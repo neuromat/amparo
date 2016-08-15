@@ -1,0 +1,62 @@
+{% extends 'main/base.html' %}
+{% load i18n staticfiles %}
+
+{% block content %}
+    <!-- Banner -->
+    <header>
+        <div class="container">
+            <div class="row">
+                {% if banner %}
+                    <div class="col-lg-4">
+                        {% if banner.image %}
+                            <img src="{{ banner.image.url }}" class="img-responsive" alt="Banner - {{ banner.title }}"/>
+                        {% endif %}
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="intro-text">
+                            <span class="name">{{ banner.title }}</span>
+                            <hr class="star-primary">
+                            <span class="skills">
+                                {{ banner.date_time }} - {{ banner.local }}<br><br>
+                                <a href="{{ banner.url }}" target="_blank">{{ banner.url }}</a>
+                            </span>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="col-lg-12">
+                        <div class="intro-text text-center">
+                            <span class="name">{% trans "No banner found!" %}</span>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="projeto">
+        <div class="container">
+            {% if home_page %}
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>{{ home_page.title }}</h2>
+                        <hr class="star-light">
+                    </div>
+                </div>
+                <div class="row">
+                    {{ home_page.body|safe }}
+                </div>
+            {% else %}
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <br>
+                        <h2>OPS...</h2>
+                        <br><br>
+                        <p>{% trans "No home page found!" %}</p>
+                    </div>
+                </div>
+            {% endif %}
+            <br>
+        </div>
+    </section>
+{% endblock content %}

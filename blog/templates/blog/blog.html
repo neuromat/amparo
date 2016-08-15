@@ -1,0 +1,115 @@
+{% extends 'main/base.html' %}
+{% load i18n embed_video_tags %}
+
+{% block content %}
+    <!-- Header -->
+    <header>
+        <div class="my-container">
+        </div>
+    </header>
+
+    <!-- Content -->
+    <section id="programacao">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>{% trans "Schedule" %}</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+        </div>
+        {% if posts %}
+            {% for post in posts %}
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            {% if post.category.slug == 'programacao' %}
+                                <ul>
+                                    <h3>{{ post.title }}</h3><br>
+                                    {% if post.video %}
+                                        <div class="col-lg-5">
+                                            <p class="responsive-video">
+                                               {% video post.video %}
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-7 text-justify">
+                                            <p class="text-justify">{{ post.body|truncatewords:80|safe }}</p>
+                                            <p class="text-left"><i class="glyphicon glyphicon-plus-sign"></i><a href="{{ post.get_absolute_url }}"> {% trans "Read more" %}</a></p>
+                                        </div>
+                                        <br>
+                                    {% else %}
+                                        <p class="text-justify">{{ post.body|truncatewords:80|safe }}</p>
+                                        <p class="text-left"><i class="glyphicon glyphicon-plus-sign"></i><a href="{{ post.get_absolute_url }}"> {% trans "Read more" %}</a></p>
+                                    {% endif %}
+                                </ul>
+                            {% elif post.category.slug == 'banner' %}
+                                <ul>
+                                    <h3>{{ post.title }}</h3><br>
+                                    {% if post.image %}
+                                        <div class="col-lg-5">
+                                            <img src="{{ post.image.url }}" class="img-responsive pull-right" alt="{{ post.slug }}">
+                                        </div>
+                                        <div class="col-lg-7 text-justify">
+                                            <p class="text-justify">{{ post.body|truncatewords:80|safe }}</p>
+                                            <p class="text-left"><i class="glyphicon glyphicon-plus-sign"></i><a href="{{ post.get_absolute_url }}"> {% trans "Read more" %}</a></p>
+                                        </div>
+                                        <br>
+                                    {% else %}
+                                        <p class="text-justify">{{ post.body|truncatewords:80|safe }}</p>
+                                        <p class="text-left"><i class="glyphicon glyphicon-plus-sign"></i><a href="{{ post.get_absolute_url }}"> {% trans "Read more" %}</a></p>
+                                    {% endif %}
+                                </ul>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <p>{% trans "No schedule found!" %}</p>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        {#  Paginação #}
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-uppercase">
+                    {% if posts.paginator.num_pages != 1 %}
+                        <ul class="pager">
+                            <li>{% trans "page" %} {{ posts.number }} {% trans "of" %} {{ posts.paginator.num_pages }}</li>
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-uppercase">
+                    <ul class="pager" style="margin-top: -50px">
+                        {% if posts.has_previous %}
+                            <li class="previous"><a href="?page={{ posts.previous_page_number }}"><span aria-hidden="true">&larr;</span> {% trans "previous" %}</a></li>
+                        {% endif %}
+
+                        {% if posts.has_next %}
+                            <li class="next"><a href="?page={{ posts.next_page_number }}">{% trans "next" %} <span aria-hidden="true">&rarr;</span></a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}
