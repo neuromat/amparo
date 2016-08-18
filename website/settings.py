@@ -27,6 +27,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'users.CustomUser'
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,11 +41,15 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'embed_video',
     'parler',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 ]
 
 PROJECT_APPS = (
     'blog',
     'pages',
+    'users',
 )
 
 INSTALLED_APPS += PROJECT_APPS
@@ -115,6 +121,32 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# django-allauth options
+AUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django admin and to ensure compatibility with other packages
+    'django.contrib.auth.backends.ModelBackend',
+    # 'allauth' specific authentication methods
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
+# to send confirmation emails
+EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
+
+# Use email as the primary identifier
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_EMAIL_REQUIRED = True
+
+# Make email verification mandatory to avoid junk email accounts
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+
+# Eliminate need to provide username, as it's a very old practice
+ACCOUNT_USERNAME_REQUIRED = False
+
+# Page to redirect after login
+LOGIN_REDIRECT_URL='/'
+
+# Custom form to sign up
+ACCOUNT_SIGNUP_FORM_CLASS = 'users.forms.SignupForm'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/

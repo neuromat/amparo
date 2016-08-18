@@ -23,6 +23,7 @@ from views import index, language_change
 
 urlpatterns = [
     url(r'^$', index, name='main_page'),
+    url(r'^accounts/', include('allauth.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^blog/', include('blog.urls')),
     url(r'^contact/', include('contact_form.urls')),
