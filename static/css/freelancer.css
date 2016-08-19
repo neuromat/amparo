@@ -488,15 +488,15 @@ header .my-container {
   min-width: 250px;
   padding: 14px 14px 0;
   overflow:hidden;
-  /*background-color:rgba(255,255,255,.8);*/
   background-color: #555;
+}
+#login-dp label{
   color: white;
 }
 #login-dp .help-block{
   font-size:12px
 }
 #login-dp .bottom{
-  /*background-color:rgba(255,255,255,.8);*/
   background-color: #333;
   border-top:1px solid #ddd;
   clear:both;

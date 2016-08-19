@@ -36,27 +36,34 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <form class="form" role="form" method="POST" action="{% url 'account_login' %}" accept-charset="UTF-8" id="login-nav">
-                                    <div class="form-group">
-                                        <label class="sr-only" for="exampleInputEmail2">{% trans "Email" %}</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail2" placeholder={% trans "Email" %} required="">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="sr-only" for="exampleInputPassword2">{% trans "Password" %}</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder={% trans "Password" %} required="">
+                                    {% csrf_token %}
+                                    {% if login_form %}
+                                        {{ login_form }}
                                         <div class="help-block text-left"><a href="{% url 'account_reset_password' %}" style="color: white">{% trans "Forget the password?" %}</a></div>
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-success">{% trans "Sign in" %}</button>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox">{% trans "keep me logged-in" %}
-                                        </label>
-                                    </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-success">{% trans "Sign in" %}</button>
+                                        </div>
+                                    {% else %}
+                                        <div class="help-block text-left"><a href="{% url 'account_reset_password' %}" style="color: white">{% trans "Forget the password?" %}</a></div>
+                                    {% endif %}
+{#                                    <div class="form-group">#}
+{#                                        <label class="sr-only" for="exampleInputEmail2">{% trans "Email" %}</label>#}
+{#                                        <input type="email" class="form-control" id="exampleInputEmail2" placeholder={% trans "Email" %} required="">#}
+{#                                    </div>#}
+{#                                    <div class="form-group">#}
+{#                                        <label class="sr-only" for="exampleInputPassword2">{% trans "Password" %}</label>#}
+{#                                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder={% trans "Password" %} required="">#}
+{#                                        <div class="help-block text-left"><a href="{% url 'account_reset_password' %}" style="color: white">{% trans "Forget the password?" %}</a></div>#}
+{#                                    </div>#}
+{#                                    <div class="checkbox">#}
+{#                                        <label>#}
+{#                                            <input type="checkbox">{% trans "keep me logged-in" %}#}
+{#                                        </label>#}
+{#                                    </div>#}
                                 </form>
                             </div>
                             <div class="bottom text-center">
-                                {% trans "New here?" %} <a href="{% url 'account_signup' %}"><b>{% trans "Join Us" %}</b></a>
+                                <div class="text-left" style="color: white">{% trans "New here?" %}<a href="{% url 'account_signup' %}"> {% trans "Join Us" %}</a></div>
                             </div>
                          </div>
                     </li>
