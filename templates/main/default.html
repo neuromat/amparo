@@ -7,20 +7,40 @@
         <div class="container">
             <div class="row">
                 {% if banner %}
-                    <div class="col-lg-4">
-                        {% if banner.image %}
-                            <img src="{{ banner.image.url }}" class="img-responsive" alt="Banner - {{ banner.title }}"/>
-                        {% endif %}
-                    </div>
                     <div class="col-lg-8">
-                        <div class="intro-text">
-                            <span class="name">{{ banner.title }}</span>
-                            <hr class="star-primary">
-                            <span class="skills">
-                                {{ banner.date_time }} - {{ banner.local }}<br><br>
-                                <a href="{{ banner.url }}" target="_blank">{{ banner.url }}</a>
-                            </span>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                {% if banner.image %}
+                                    <img src="{{ banner.image.url }}" class="img-responsive" alt="Banner - {{ banner.title }}"/>
+                                {% endif %}
+                            </div>
+                            <div class="intro-text">
+                                <span class="name">{{ banner.title }}</span>
+                            </div>
                         </div>
+                        <div class="row">
+                            <div class="intro-text text-justify">
+                                <span class="skills">
+                                    <strong>Convidada:</strong> Michelle Hyczy de Siqueira Tosin<br>
+                                    <strong>Data/Hora:</strong> {{ banner.date_time }}<br>
+                                </span><br>
+                                <p class="my-banner">
+                                    Enfermeira do Centro Internacional SARAH de Neurorreabilitação e Neurociências, Rio de Janeiro, RJ, Brasil.
+                                    Possui especialização em Vigilância Sanitária pela Universidade Estácio de Sá...
+                                    <a href="#">Leia mais</a>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <blockquote class="quote-box">
+                            <h4 class="text-center">Participe</h4>
+                            <p class="quote-text text-justify">Faça seu cadastro para participar desta rede, seja você paciente, familiar, cuidador, profissional ou estudante.</p>
+                        </blockquote>
+                        <blockquote class="quote-box">
+                            <h4 class="text-center">Agenda</h4>
+                            <p class="quote-text text-justify">Acompanhe a agenda de palestras com especialistas e participe ao vivo com perguntas, discussões de casos e sugestões.</p>
+                        </blockquote>
                     </div>
                 {% else %}
                     <div class="col-lg-12">

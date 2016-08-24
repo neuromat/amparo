@@ -100,14 +100,14 @@ header .intro-text .skills {
 }
 @media (min-width: 768px) {
   header .container {
-    padding-top: 150px;
-    padding-bottom: 50px;
+    padding-top: 130px;
+    padding-bottom: 30px;
   }
   header .intro-text .name {
-    font-size: 2.5em;
+    font-size: 1.75em;
   }
   header .intro-text .skills {
-    font-size: 1.75em;
+    font-size: 1.5em;
   }
 }
 .navbar-custom {
@@ -517,4 +517,21 @@ header .my-container {
     background-color: inherit;
     border-top:0 none;
   }
+}
+blockquote{
+  border-left:none
+}
+.quote-box{
+  overflow: hidden;
+  border-radius: 17px;
+  background-color: #18BC9C;
+  color:white;
+  width: 325px;
+  box-shadow: 2px 2px 2px 2px #E0E0E0;
+}
+.quote-text{
+  font-size: 19px;
+}
+.my-banner{
+  color: black;
 }
