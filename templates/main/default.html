@@ -21,12 +21,11 @@
                         <div class="row">
                             <div class="intro-text text-justify">
                                 <span class="skills">
-                                    <strong>Convidada:</strong> Michelle Hyczy de Siqueira Tosin<br>
+                                    <strong>Convidada:</strong> {{ banner.speaker }}<br>
                                     <strong>Data/Hora:</strong> {{ banner.date_time }}<br>
                                 </span><br>
                                 <p class="my-banner">
-                                    Enfermeira do Centro Internacional SARAH de Neurorreabilitação e Neurociências, Rio de Janeiro, RJ, Brasil.
-                                    Possui especialização em Vigilância Sanitária pela Universidade Estácio de Sá...
+                                    {{ banner.resume_speaker|truncatewords:30 }}
                                     <a href="#">Leia mais</a>.
                                 </p>
                             </div>

@@ -41,17 +41,20 @@ class Blog(TranslatableModel):
     # The translated fields:
     translations = TranslatedFields(
         title=models.CharField(_('Title'), max_length=255),
-        body=models.TextField(_('Body')),
+        body=models.TextField(_('Body'), blank=True),
         local=models.CharField(_('Local'), max_length=255, blank=True),
         date_time=models.DateTimeField(_('Date/Time'), blank=True, null=True),
         video=EmbedVideoField(_('Video'), blank=True, null=True),
         url=models.URLField(_('URL'), blank=True, null=True),
-        image=models.FileField(_('Image'), upload_to='banner/%Y/%m/%d', blank=True, null=True),
-        publish=models.BooleanField(_('Publish'), default=True),
     )
     # Regular fields
-    category=models.ForeignKey(Category, verbose_name=_('Category'), blank=True, null=True)
+    speaker = models.CharField(_('Speaker'), max_length=255)
+    resume_speaker = models.TextField(_('Resume of speaker'), blank=True)
+    moderator = models.CharField(_('Moderator'), max_length=255, blank=True)
+    category = models.ForeignKey(Category, verbose_name=_('Category'), blank=True, null=True)
     slug = models.SlugField(_('Slug'), max_length=100, unique=True)
+    image = models.FileField(_('Image'), upload_to='banner/%Y/%m/%d', blank=True, null=True)
+    publish = models.BooleanField(_('Publish'), default=True)
     posted = models.DateField(_('Posted'), auto_now_add=True)
 
     def __unicode__(self):

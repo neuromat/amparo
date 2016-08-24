@@ -7,7 +7,8 @@ from models import Blog, Category
 class BlogAdmin(TranslatableAdmin):
     fieldsets = (
         (None, {
-            'fields': ['category', 'title', 'slug', 'body', 'local', 'date_time', 'video', 'url', 'image', 'publish']
+            'fields': ['category', 'title', 'slug', 'body', 'speaker', 'resume_speaker', 'moderator', 'local',
+                       'date_time', 'video', 'url', 'image', 'publish']
         }),
     )
     exclude = ['posted']
@@ -15,6 +16,7 @@ class BlogAdmin(TranslatableAdmin):
     def get_prepopulated_fields(self, request, obj=None):
         # Can't use prepopulated_fields= yet, but this is a workaround.
         return {'slug': ('title',)}
+
 
 class CategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
