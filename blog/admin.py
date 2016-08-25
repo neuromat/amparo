@@ -1,17 +1,23 @@
 from django.contrib import admin
 from parler.admin import TranslatableAdmin
 
-from models import Blog, Category
+from models import Blog, Category, LectureVideo
+
+
+class LectureVideoInline(admin.TabularInline):
+    model = LectureVideo
+    extra = 1
 
 
 class BlogAdmin(TranslatableAdmin):
     fieldsets = (
         (None, {
-            'fields': ['category', 'title', 'slug', 'body', 'speaker', 'resume_speaker', 'moderator', 'local',
-                       'date_time', 'video', 'url', 'image', 'publish']
+            'fields': ['category', 'title', 'slug', 'body', 'speaker', 'image', 'resume_speaker', 'resume_summary',
+                       'moderator', 'date_time', 'publish', 'banner']
         }),
     )
     exclude = ['posted']
+    inlines = (LectureVideoInline,)
 
     def get_prepopulated_fields(self, request, obj=None):
         # Can't use prepopulated_fields= yet, but this is a workaround.

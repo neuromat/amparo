@@ -10,9 +10,9 @@ from pages.models import Page
 def index(request):
     # Search banner
     try:
-        banner = Blog.objects.filter(category__slug='banner').latest('posted')
+        current_banner = Blog.objects.filter(banner=True, publish=True)
     except Blog.DoesNotExist:
-        banner = False
+        current_banner = False
 
     # Search home page
     try:
@@ -20,7 +20,7 @@ def index(request):
     except Page.DoesNotExist:
         home_page = False
 
-    context = {'banner': banner, 'home_page': home_page, 'login_form': LoginForm()}
+    context = {'current_banner': current_banner, 'home_page': home_page, 'login_form': LoginForm()}
     return render(request, 'main/default.html', context)
 
 
