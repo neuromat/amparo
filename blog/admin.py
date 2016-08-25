@@ -17,6 +17,9 @@ class BlogAdmin(TranslatableAdmin):
         }),
     )
     exclude = ['posted']
+    list_display = ('title', 'speaker', 'date_time', 'publish', 'banner')
+    list_display_links = ('title', )
+    search_fields = ['translations__title', 'speaker']
     inlines = (LectureVideoInline,)
 
     def get_prepopulated_fields(self, request, obj=None):
