@@ -23,13 +23,13 @@
                                 <div class="row">
                                     <div class="intro-text text-justify">
                                         <span class="skills">
-                                            <strong>Convidado(a):</strong> {{ banner.speaker }}<br>
-                                            <strong>Data / Hora:</strong> {{ banner.date_time }}<br>
+                                            <strong>{% trans "Speaker" %}:</strong> {{ banner.speaker }}<br>
+                                            <strong>{% trans "Date / Time" %}:</strong> {{ banner.date_time }}<br>
                                         </span><br>
                                         <p class="my-banner">
-                                            <strong>Currículo:</strong>
+                                            <strong>{% trans "Curriculum" %}:</strong>
                                             {{ banner.resume_summary }}
-                                            <a href="#">Leia mais</a>.
+                                            <a href="{{ banner.get_absolute_url }}">{% trans "Read more" %}</a>.
                                         </p>
                                     </div>
                                 </div>

@@ -14,10 +14,10 @@ def index(request):
     """
     current_language = str(request.LANGUAGE_CODE)
 
-    if request.user.is_authenticated() and request.user.has_perm('blog.view_private_posts'):
+    if request.user.is_authenticated() and request.user.type_of_person.name == 'Profissional':
         blog_list = Blog.objects.active_translations()
     else:
-        blog_list = Blog.objects.active_translations(publish=True)
+        blog_list = Blog.objects.filter(publish=True)
 
     number_of_posts = 3
     paginator = Paginator(blog_list, number_of_posts)

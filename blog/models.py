@@ -84,7 +84,7 @@ class Blog(TranslatableModel):
 
 
 class LectureVideo(models.Model):
-    blog_post = models.ForeignKey(Blog)
+    blog_post = models.ForeignKey(Blog, related_name="videos",)
     video = EmbedVideoField(_('Video'), blank=True, null=True)
 
     class Meta:

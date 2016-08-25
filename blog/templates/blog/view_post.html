@@ -1,5 +1,5 @@
 {% extends 'main/base.html' %}
-{% load embed_video_tags %}
+{% load embed_video_tags i18n %}
 
 {% block head_title %}{{ post.title }}{% endblock %}
 
@@ -16,15 +16,24 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h3 class="text-center">{{ post.title }}</h3><br>
-                    {% if post.body %}
-                        <p class="text-justify">{{ post.body|safe }}</p><br>
-                    {% endif %}
-                    {% if post.video %}
-                        <p class="text-center responsive-video">{% video post.video %}</p><br>
-                    {% endif %}
+                    <p><strong>{% trans "Date / Time" %}:</strong> {{ post.date_time }}</p>
+                    <p><strong>{% trans "Speaker" %}:</strong> {{ post.speaker }}</p>
+                    <p class="text-justify"><strong>{% trans "Curriculum" %}:</strong> {{ post.resume_speaker }}</p>
+                    <p><strong>{% trans "Moderator" %}:</strong> {{ post.moderator }}</p>
 
+                    {% if post.videos.all %}
+                        {% if post.videos.all|length == 1 %}
+                            <p><strong>{% trans "Video" %}:</strong></p>
+                        {% else %}
+                            <p><strong>{% trans "Videos" %}:</strong></p>
+                        {% endif %}
+                        {% for item in post.videos.all %}
+                            <p class="text-center responsive-video">{% video item.video %}</p><br>
+                        {% endfor %}
+                    {% endif %}
+                    <br>
                     <button type="button" class="btn btn-success btn-lg" onclick="window.history.back()">
-                        <span aria-hidden="true">&larr;</span> Voltar
+                        <span aria-hidden="true">&larr;</span> {% trans "Back" %}
                     </button>
 
                     <br><br>

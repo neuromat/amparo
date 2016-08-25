@@ -22,44 +22,14 @@
             {% for post in posts %}
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12 text-center">
-                            {% if post.category.slug == 'programacao' %}
-                                <ul>
-                                    <h3>{{ post.title }}</h3><br>
-                                    {% if post.video %}
-                                        <div class="col-lg-5">
-                                            <p class="responsive-video">
-                                               {% video post.video %}
-                                            </p>
-                                        </div>
-                                        <div class="col-lg-7 text-justify">
-                                            <p class="text-justify">{{ post.body|truncatewords:80|safe }}</p>
-                                            <p class="text-left"><i class="glyphicon glyphicon-plus-sign"></i><a href="{{ post.get_absolute_url }}"> {% trans "Read more" %}</a></p>
-                                        </div>
-                                        <br>
-                                    {% else %}
-                                        <p class="text-justify">{{ post.body|truncatewords:80|safe }}</p>
-                                        <p class="text-left"><i class="glyphicon glyphicon-plus-sign"></i><a href="{{ post.get_absolute_url }}"> {% trans "Read more" %}</a></p>
-                                    {% endif %}
-                                </ul>
-                            {% elif post.category.slug == 'banner' %}
-                                <ul>
-                                    <h3>{{ post.title }}</h3><br>
-                                    {% if post.image %}
-                                        <div class="col-lg-5">
-                                            <img src="{{ post.image.url }}" class="img-responsive pull-right" alt="{{ post.slug }}">
-                                        </div>
-                                        <div class="col-lg-7 text-justify">
-                                            <p class="text-justify">{{ post.body|truncatewords:80|safe }}</p>
-                                            <p class="text-left"><i class="glyphicon glyphicon-plus-sign"></i><a href="{{ post.get_absolute_url }}"> {% trans "Read more" %}</a></p>
-                                        </div>
-                                        <br>
-                                    {% else %}
-                                        <p class="text-justify">{{ post.body|truncatewords:80|safe }}</p>
-                                        <p class="text-left"><i class="glyphicon glyphicon-plus-sign"></i><a href="{{ post.get_absolute_url }}"> {% trans "Read more" %}</a></p>
-                                    {% endif %}
-                                </ul>
-                            {% endif %}
+                        <div class="col-lg-12">
+                            <ul>
+                                <h3 class="text-center">{{ post.title }}</h3><br>
+                                <p><strong>{% trans "Date / Time" %}:</strong> {{ post.date_time }}</p>
+                                <p><strong>{% trans "Speaker" %}:</strong> {{ post.speaker }}</p>
+                                <p class="text-justify"><strong>{% trans "Curriculum" %}:</strong> {{ post.resume_speaker }}</p>
+                                <p><i class="glyphicon glyphicon-plus-sign"></i><a href="{{ post.get_absolute_url }}"> {% trans "Read more" %}</a></p>
+                            </ul>
                         </div>
                     </div>
                 </div>
