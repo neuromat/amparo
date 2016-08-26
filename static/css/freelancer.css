@@ -532,6 +532,9 @@ blockquote{
 .quote-text{
   font-size: 19px;
 }
+.quote-text a{
+  color: #2f18bc;
+}
 .my-banner{
   color: black;
 }
