@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-26 15:23-0300\n"
+"POT-Creation-Date: 2016-08-26 15:49-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,7 +53,7 @@ msgstr "Resumo do currículo"
 #: blog/models.py:51 blog/templates/blog/blog.html:29
 #: blog/templates/blog/view_post.html:20 templates/main/default.html:26
 msgid "Speaker"
-msgstr "Palestrante"
+msgstr "Convidado(a)"
 
 #: blog/models.py:52 blog/templates/blog/view_post.html:22
 msgid "Moderator"
@@ -297,8 +297,8 @@ msgid ""
 "Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
 "address that belongs to you."
 msgstr ""
-"Por gentileza, confirme que <a href=\"mailto:%(email)s\">%(email)s</a> é um endereço de email "
-"que pertence a você."
+"Por gentileza, confirme que <a href=\"mailto:%(email)s\">%(email)s</a> é um "
+"endereço de email que pertence a você."
 
 #: templates/account/email_confirm.html:33
 msgid "Confirm"
@@ -533,7 +533,7 @@ msgid ""
 msgstr ""
 
 #: templates/contact_form/contact_form.html:16
-#: templates/contact_form/contact_form_sent.html:16 templates/main/menu.html:26
+#: templates/contact_form/contact_form_sent.html:16 templates/main/menu.html:31
 msgid "Contact"
 msgstr "Contato"
 
@@ -585,19 +585,23 @@ msgstr "NeuroMat na Web"
 msgid "This page is licensed under the"
 msgstr "Este projeto está licenciado sob os termos da"
 
-#: templates/main/default.html:56
+#: templates/main/default.html:63
 msgid "No banner found!"
 msgstr "Nenhum banner encontrado!"
 
-#: templates/main/default.html:83
+#: templates/main/default.html:90
 msgid "No home page found!"
 msgstr "Nenhuma home page encontrada!"
 
-#: templates/main/menu.html:30
+#: templates/main/menu.html:27
+msgid "Survey"
+msgstr "Formulário"
+
+#: templates/main/menu.html:35
 msgid "Logout"
 msgstr ""
 
-#: templates/main/menu.html:32
+#: templates/main/menu.html:37
 msgid "Login"
 msgstr ""
 
