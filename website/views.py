@@ -1,4 +1,3 @@
-from allauth.account.forms import LoginForm
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.utils.translation import activate, LANGUAGE_SESSION_KEY
@@ -20,7 +19,7 @@ def index(request):
     except Page.DoesNotExist:
         home_page = False
 
-    context = {'current_banner': current_banner, 'home_page': home_page, 'login_form': LoginForm()}
+    context = {'current_banner': current_banner, 'home_page': home_page}
     return render(request, 'main/default.html', context)
 
 
