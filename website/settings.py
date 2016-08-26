@@ -129,8 +129,8 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
-# to send confirmation emails
-EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
+# Use this to see the email confirmation on terminal
+#EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
 
 # Use email as the primary identifier
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
