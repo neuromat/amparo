@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-26 10:17-0300\n"
+"POT-Creation-Date: 2016-08-26 15:23-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -287,22 +287,24 @@ msgid "Password Reset E-mail"
 msgstr ""
 
 #: templates/account/email_confirm.html:6
-#: templates/account/email_confirm.html:10
+#: templates/account/email_confirm.html:20
 msgid "Confirm E-mail Address"
 msgstr ""
 
-#: templates/account/email_confirm.html:16
+#: templates/account/email_confirm.html:29
 #, python-format
 msgid ""
 "Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
-"address for user %(user_display)s."
+"address that belongs to you."
 msgstr ""
+"Por gentileza, confirme que <a href=\"mailto:%(email)s\">%(email)s</a> é um endereço de email "
+"que pertence a você."
 
-#: templates/account/email_confirm.html:20
+#: templates/account/email_confirm.html:33
 msgid "Confirm"
 msgstr ""
 
-#: templates/account/email_confirm.html:27
+#: templates/account/email_confirm.html:40
 #, python-format
 msgid ""
 "This e-mail confirmation link expired or is invalid. Please <a href="
@@ -469,7 +471,9 @@ msgstr ""
 #, python-format
 msgid ""
 "Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
-msgstr "Você já se cadastrou? Então clique <a href=\"%(login_url)s\">aqui</a> e faça login."
+msgstr ""
+"Você já se cadastrou? Então clique <a href=\"%(login_url)s\">aqui</a> e faça "
+"login."
 
 #: templates/account/signup_closed.html:5
 #: templates/account/signup_closed.html:8
@@ -490,18 +494,22 @@ msgid "you are already logged in as %(user_display)s."
 msgstr ""
 
 #: templates/account/verification_sent.html:5
-#: templates/account/verification_sent.html:8
+#: templates/account/verification_sent.html:18
 #: templates/account/verified_email_required.html:5
 #: templates/account/verified_email_required.html:8
 msgid "Verify Your E-mail Address"
 msgstr ""
 
-#: templates/account/verification_sent.html:10
+#: templates/account/verification_sent.html:24
 msgid ""
 "We have sent an e-mail to you for verification. Follow the link provided to "
 "finalize the signup process. Please contact us if you do not receive it "
 "within a few minutes."
 msgstr ""
+"Enviamos um e-mail para você.\n"
+"Por favor, clique no link enviado para o seu email para finalizar o processo "
+"de criação da sua conta.\n"
+"Caso não receba o email dentro de alguns minutos, entre em contato conosco."
 
 #: templates/account/verified_email_required.html:12
 msgid ""
@@ -577,11 +585,11 @@ msgstr "NeuroMat na Web"
 msgid "This page is licensed under the"
 msgstr "Este projeto está licenciado sob os termos da"
 
-#: templates/main/default.html:58
+#: templates/main/default.html:56
 msgid "No banner found!"
 msgstr "Nenhum banner encontrado!"
 
-#: templates/main/default.html:85
+#: templates/main/default.html:83
 msgid "No home page found!"
 msgstr "Nenhuma home page encontrada!"
 
@@ -589,24 +597,8 @@ msgstr "Nenhuma home page encontrada!"
 msgid "Logout"
 msgstr ""
 
-#: templates/main/menu.html:33
+#: templates/main/menu.html:32
 msgid "Login"
-msgstr ""
-
-#: templates/main/menu.html:42 templates/main/menu.html:47
-msgid "Forget the password?"
-msgstr ""
-
-#: templates/main/menu.html:44
-msgid "Sign in"
-msgstr ""
-
-#: templates/main/menu.html:66
-msgid "New here?"
-msgstr ""
-
-#: templates/main/menu.html:66
-msgid "Join Us"
 msgstr ""
 
 #: users/admin.py:21
