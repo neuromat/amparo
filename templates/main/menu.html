@@ -22,6 +22,11 @@
             <li class="page-scroll"><a href="{% url 'view_blog_index' %}"><span style="font-size: 0.85em;" class="glyphicon glyphicon-calendar"></span>&nbsp;{% trans "Schedule" %}</a></li>
         {% endif %}
 
+        <!-- Link to survey  -->
+        {% if user.is_authenticated %}
+            <li class="page-scroll"><a href="#"><span style="font-size: 0.85em;" class="glyphicon glyphicon-list"></span>&nbsp;{% trans "Survey" %}</a></li>
+        {% endif %}
+
         <!-- Link to contact form  -->
         <li class="page-scroll"><a href="{% url 'contact_form' %}"><span style="font-size: 0.85em;" class="glyphicon glyphicon-phone"></span>&nbsp;{% trans "Contact" %}</a></li>
 

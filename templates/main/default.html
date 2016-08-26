@@ -36,10 +36,17 @@
                             </div>
                             <div class="col-lg-4">
                                 <blockquote class="quote-box">
-                                    <h4 class="text-center">Participe</h4>
-                                    <p class="quote-text text-justify">
-                                        <a href="/accounts/signup/">Faça seu cadastro para participar desta rede, seja você paciente, familiar, cuidador, profissional ou estudante.</a>
-                                    </p>
+                                    {% if user.is_authenticated %}
+                                        <h4 class="text-center">Formulário</h4>
+                                        <p class="quote-text text-justify">
+                                            <a href="#">Mussum Ipsum, cacilds vidis litro abertis. Copo furadis é disculpa de bebadis, arcu quam euismod magna.</a>
+                                        </p>
+                                    {% else %}
+                                        <h4 class="text-center">Participe</h4>
+                                        <p class="quote-text text-justify">
+                                            <a href="/accounts/signup/">Faça seu cadastro para participar desta rede, seja você paciente, familiar, cuidador, profissional ou estudante.</a>
+                                        </p>
+                                    {% endif %}
                                 </blockquote>
                                 <blockquote class="quote-box">
                                     <h4 class="text-center">Agenda</h4>
