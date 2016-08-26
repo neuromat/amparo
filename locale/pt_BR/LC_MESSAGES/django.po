@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-25 17:13-0300\n"
+"POT-Creation-Date: 2016-08-26 10:17-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -90,7 +90,7 @@ msgid "Schedule"
 msgstr "Programação"
 
 #: blog/templates/blog/blog.html:28 blog/templates/blog/view_post.html:19
-#: templates/main/default.html:2
+#: templates/main/default.html:27
 msgid "Date / Time"
 msgstr "Data / Hora"
 
@@ -333,6 +333,8 @@ msgid ""
 "If you have not created an account yet, then please\n"
 "                        <a href=\"%(signup_url)s\">sign up</a> first."
 msgstr ""
+"Você ainda não tem uma conta no sistema AMPARO?\n"
+"                        <a href=\"%(signup_url)s\">Registre-se</a> agora."
 
 #: templates/account/login.html:52
 msgid "Forgot Password?"
@@ -467,7 +469,7 @@ msgstr ""
 #, python-format
 msgid ""
 "Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
-msgstr ""
+msgstr "Você já se cadastrou? Então clique <a href=\"%(login_url)s\">aqui</a> e faça login."
 
 #: templates/account/signup_closed.html:5
 #: templates/account/signup_closed.html:8
@@ -575,11 +577,11 @@ msgstr "NeuroMat na Web"
 msgid "This page is licensed under the"
 msgstr "Este projeto está licenciado sob os termos da"
 
-#: templates/main/default.html:52
+#: templates/main/default.html:58
 msgid "No banner found!"
 msgstr "Nenhum banner encontrado!"
 
-#: templates/main/default.html:79
+#: templates/main/default.html:85
 msgid "No home page found!"
 msgstr "Nenhuma home page encontrada!"
 
@@ -647,4 +649,3 @@ msgstr "Eu sou"
 #: website/settings.py:196
 msgid "The name of your project"
 msgstr "O nome do seu projeto"
-
