@@ -301,7 +301,7 @@ msgstr ""
 #: templates/account/email_confirm.html:6
 #: templates/account/email_confirm.html:20
 msgid "Confirm E-mail Address"
-msgstr ""
+msgstr "Confirmação de endereço de e-mail"
 
 #: templates/account/email_confirm.html:29
 #, python-format
