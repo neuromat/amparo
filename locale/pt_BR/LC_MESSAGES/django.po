@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-26 15:49-0300\n"
+"POT-Creation-Date: 2016-08-29 15:24-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,7 +50,7 @@ msgstr "Currículo do palestrante"
 msgid "Summary of the resume"
 msgstr "Resumo do currículo"
 
-#: blog/models.py:51 blog/templates/blog/blog.html:29
+#: blog/models.py:51 blog/templates/blog/blog.html:32
 #: blog/templates/blog/view_post.html:20 templates/main/default.html:26
 msgid "Speaker"
 msgstr "Convidado(a)"
@@ -64,22 +64,26 @@ msgid "Image"
 msgstr "Imagem"
 
 #: blog/models.py:56
+msgid "URL"
+msgstr ""
+
+#: blog/models.py:57
 msgid "Publish"
 msgstr "Público"
 
-#: blog/models.py:57
+#: blog/models.py:58
 msgid "Banner"
 msgstr "Banner"
 
-#: blog/models.py:58 pages/models.py:31
+#: blog/models.py:59 pages/models.py:31
 msgid "Posted"
 msgstr "Publicado"
 
-#: blog/models.py:88 blog/models.py:91 blog/templates/blog/view_post.html:26
+#: blog/models.py:89 blog/models.py:92 blog/templates/blog/view_post.html:26
 msgid "Video"
 msgstr "Vídeo"
 
-#: blog/models.py:92 blog/templates/blog/view_post.html:28
+#: blog/models.py:93 blog/templates/blog/view_post.html:28
 #, fuzzy
 #| msgid "Video"
 msgid "Videos"
@@ -89,38 +93,46 @@ msgstr "Vídeo"
 msgid "Schedule"
 msgstr "Programação"
 
-#: blog/templates/blog/blog.html:28 blog/templates/blog/view_post.html:19
+#: blog/templates/blog/blog.html:29
+msgid "Target audience"
+msgstr "Público-alvo"
+
+#: blog/templates/blog/blog.html:29
+msgid "Professionals"
+msgstr "Profissionais"
+
+#: blog/templates/blog/blog.html:31 blog/templates/blog/view_post.html:19
 #: templates/main/default.html:27
 msgid "Date / Time"
 msgstr "Data / Hora"
 
-#: blog/templates/blog/blog.html:30 blog/templates/blog/view_post.html:21
+#: blog/templates/blog/blog.html:33 blog/templates/blog/view_post.html:21
 #: templates/main/default.html:30
 msgid "Curriculum"
 msgstr "Currículo"
 
-#: blog/templates/blog/blog.html:31 blog/templates/blog/search.html:27
+#: blog/templates/blog/blog.html:34 blog/templates/blog/search.html:27
 #: blog/templates/blog/search.html:32 templates/main/default.html:32
 msgid "Read more"
 msgstr "Leia mais"
 
-#: blog/templates/blog/blog.html:49
+#: blog/templates/blog/blog.html:52
 msgid "No schedule found!"
 msgstr "Nenhuma programação encontrada!"
 
-#: blog/templates/blog/blog.html:61
+#: blog/templates/blog/blog.html:64
 msgid "page"
 msgstr "página"
 
-#: blog/templates/blog/blog.html:61
+#: blog/templates/blog/blog.html:64
 msgid "of"
 msgstr "de"
 
-#: blog/templates/blog/blog.html:73
+#: blog/templates/blog/blog.html:76
 msgid "previous"
 msgstr "anterior"
 
-#: blog/templates/blog/blog.html:77
+#: blog/templates/blog/blog.html:80
 msgid "next"
 msgstr "próximo"
 
