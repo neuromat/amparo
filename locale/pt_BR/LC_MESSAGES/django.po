@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-29 15:24-0300\n"
+"POT-Creation-Date: 2016-08-29 18:42-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -251,24 +251,24 @@ msgstr ""
 #: templates/account/email/email_confirmation_message.txt:1
 #, python-format
 msgid ""
-"Hello from %(site_name)s!\n"
+"Olá!\n"
 "\n"
-"You're receiving this e-mail because user %(user_display)s at "
-"%(site_domain)s has given yours as an e-mail address to connect their "
-"account.\n"
+"Para finalizar o processo de criação de conta no site %(site_domain)s é "
+"preciso que você confirme seu endereço de email. Para isso, clique neste "
+"link: %(activate_url)s\n"
 "\n"
-"To confirm this is correct, go to %(activate_url)s\n"
+"Se você não solicitou nenhum tipo de cadastro, apenas igonore este email.\n"
 msgstr ""
 
 #: templates/account/email/email_confirmation_message.txt:7
 #, python-format
 msgid ""
-"Thank you from %(site_name)s!\n"
-"%(site_domain)s"
+"Obrigado,\n"
+"%(site_name)s"
 msgstr ""
 
 #: templates/account/email/email_confirmation_subject.txt:3
-msgid "Please Confirm Your E-mail Address"
+msgid "Por favor, confirme seu endereço de email"
 msgstr ""
 
 #: templates/account/email/password_reset_key_message.txt:1
@@ -347,7 +347,7 @@ msgid ""
 "If you have not created an account yet, then please\n"
 "                        <a href=\"%(signup_url)s\">sign up</a> first."
 msgstr ""
-"Você ainda não tem uma conta no sistema AMPARO?\n"
+"Você ainda não tem uma conta na rede AMPARO?\n"
 "                        <a href=\"%(signup_url)s\">Registre-se</a> agora."
 
 #: templates/account/login.html:52
@@ -412,24 +412,26 @@ msgstr ""
 #: templates/account/password_change.html:8
 #: templates/account/password_change.html:13
 #: templates/account/password_reset_from_key.html:4
-#: templates/account/password_reset_from_key.html:7
+#: templates/account/password_reset_from_key.html:17
 #: templates/account/password_reset_from_key_done.html:4
-#: templates/account/password_reset_from_key_done.html:7
+#: templates/account/password_reset_from_key_done.html:17
 msgid "Change Password"
 msgstr ""
 
 #: templates/account/password_reset.html:6
 #: templates/account/password_reset.html:20
 #: templates/account/password_reset_done.html:6
-#: templates/account/password_reset_done.html:9
+#: templates/account/password_reset_done.html:19
 msgid "Password Reset"
-msgstr ""
+msgstr "Redefinição de senha"
 
 #: templates/account/password_reset.html:30
 msgid ""
 "Forgotten your password? Enter your e-mail address below, and we'll send you "
 "an e-mail allowing you to reset it."
 msgstr ""
+"Esqueceu a sua senha? Insira o seu endereço de e-mail abaixo que nós lhe "
+"enviaremos um email permitindo que você crie uma nova senha."
 
 #: templates/account/password_reset.html:35
 msgid "Reset My Password"
@@ -438,18 +440,22 @@ msgstr ""
 #: templates/account/password_reset.html:38
 msgid "Please contact us if you have any trouble resetting your password."
 msgstr ""
+"Entre em contato conosco se você tiver qualquer dificuldade para redefinir "
+"sua senha."
 
-#: templates/account/password_reset_done.html:15
+#: templates/account/password_reset_done.html:29
 msgid ""
 "We have sent you an e-mail. Please contact us if you do not receive it "
 "within a few minutes."
 msgstr ""
+"Enviamos um email para você. Entre em contato conosco se você não recebê-lo "
+"dentro de alguns minutos. Dica: consulte também a sua caixa de SPAM."
 
-#: templates/account/password_reset_from_key.html:7
+#: templates/account/password_reset_from_key.html:17
 msgid "Bad Token"
 msgstr ""
 
-#: templates/account/password_reset_from_key.html:11
+#: templates/account/password_reset_from_key.html:26
 #, python-format
 msgid ""
 "The password reset link was invalid, possibly because it has already been "
@@ -457,14 +463,25 @@ msgid ""
 "a>."
 msgstr ""
 
-#: templates/account/password_reset_from_key.html:17
-msgid "change password"
+#: templates/account/password_reset_from_key.html:32
+msgid "Change password"
 msgstr ""
 
-#: templates/account/password_reset_from_key.html:20
-#: templates/account/password_reset_from_key_done.html:8
+#: templates/account/password_reset_from_key.html:35
 msgid "Your password is now changed."
 msgstr ""
+
+#: templates/account/password_reset_from_key_done.html:23
+msgid "Your password is now changed. Click"
+msgstr "Sua senha foi alterada. Clique"
+
+#: templates/account/password_reset_from_key_done.html:23
+msgid "here"
+msgstr "aqui"
+
+#: templates/account/password_reset_from_key_done.html:23
+msgid "to sign in"
+msgstr "para acessar a rede AMPARO"
 
 #: templates/account/password_set.html:5 templates/account/password_set.html:8
 #: templates/account/password_set.html:13
