@@ -25,9 +25,12 @@
                         <div class="col-lg-12">
                             <ul>
                                 <h3 class="text-center">{{ post.title }}</h3><br>
+                                {% if post.publish == False %}
+                                    <p><strong>{% trans "Target audience" %}:</strong>  {% trans "Professionals" %} </p>
+                                {% endif %}
                                 <p><strong>{% trans "Date / Time" %}:</strong> {{ post.date_time }}</p>
                                 <p><strong>{% trans "Speaker" %}:</strong> {{ post.speaker }}</p>
-                                <p class="text-justify"><strong>{% trans "Curriculum" %}:</strong> {{ post.resume_speaker }}</p>
+                                <p class="text-justify"><strong>{% trans "Curriculum" %}:</strong> {{ post.resume_summary }}..</p>
                                 <p><i class="glyphicon glyphicon-plus-sign"></i><a href="{{ post.get_absolute_url }}"> {% trans "Read more" %}</a></p>
                             </ul>
                         </div>
