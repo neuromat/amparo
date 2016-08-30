@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-29 18:42-0300\n"
+"POT-Creation-Date: 2016-08-30 10:53-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -84,10 +84,8 @@ msgid "Video"
 msgstr "Vídeo"
 
 #: blog/models.py:93 blog/templates/blog/view_post.html:28
-#, fuzzy
-#| msgid "Video"
 msgid "Videos"
-msgstr "Vídeo"
+msgstr "Vídeos"
 
 #: blog/templates/blog/blog.html:16 templates/main/menu.html:22
 msgid "Schedule"
@@ -239,10 +237,8 @@ msgid "Add E-mail Address"
 msgstr ""
 
 #: templates/account/email.html:53
-#, fuzzy
-#| msgid "Email"
 msgid "Add E-mail"
-msgstr "Email"
+msgstr "Adicionar E-mail"
 
 #: templates/account/email.html:62
 msgid "Do you really want to remove the selected e-mail address?"
@@ -251,6 +247,14 @@ msgstr ""
 #: templates/account/email/email_confirmation_message.txt:1
 #, python-format
 msgid ""
+"Hello!\n"
+"\n"
+"To complete the account creation process on the site %(site_domain)s we need "
+"you to confirm your email address. To confirm this is correct, go to "
+"%(activate_url)s\n"
+"\n"
+"If you did not request any registration, just ignore this email.\n"
+msgstr ""
 "Olá!\n"
 "\n"
 "Para finalizar o processo de criação de conta no site %(site_domain)s é "
@@ -258,41 +262,42 @@ msgid ""
 "link: %(activate_url)s\n"
 "\n"
 "Se você não solicitou nenhum tipo de cadastro, apenas igonore este email.\n"
-msgstr ""
 
 #: templates/account/email/email_confirmation_message.txt:7
-#, python-format
-msgid ""
-"Obrigado,\n"
-"%(site_name)s"
-msgstr ""
-
-#: templates/account/email/email_confirmation_subject.txt:3
-msgid "Por favor, confirme seu endereço de email"
-msgstr ""
-
-#: templates/account/email/password_reset_key_message.txt:1
-#, python-format
-msgid ""
-"Hello from %(site_name)s!\n"
-"\n"
-"You're receiving this e-mail because you or someone else has requested a "
-"password for your user account at %(site_domain)s.\n"
-"It can be safely ignored if you did not request a password reset. Click the "
-"link below to reset your password."
-msgstr ""
-
-#: templates/account/email/password_reset_key_message.txt:8
-#, python-format
-msgid "In case you forgot, your username is %(username)s."
-msgstr ""
-
 #: templates/account/email/password_reset_key_message.txt:10
 #, python-format
 msgid ""
 "Thank you for using %(site_name)s!\n"
 "%(site_domain)s"
 msgstr ""
+"Obrigado por utilizar o site da %(site_name)s\n"
+"%(site_domain)s"
+
+#: templates/account/email/email_confirmation_subject.txt:3
+msgid "Please Confirm Your E-mail Address"
+msgstr "Por favor, confirme seu endereço de e-mail"
+
+#: templates/account/email/password_reset_key_message.txt:1
+#, python-format
+msgid ""
+"Hello!\n"
+"\n"
+"You're receiving this e-mail because you or someone else has requested a "
+"password for your user account at %(site_domain)s.\n"
+"It can be safely ignored if you did not request a password reset. Click the "
+"link below to reset your password."
+msgstr ""
+"Olá!\n"
+"\n"
+"Esta mensagem é uma resposta à sua solicitação de redefinição da senha da "
+"sua conta no site %(site_domain)s.\n"
+"Você pode ignorar este email caso não tenha feito esta solicitação. Clique "
+"no link abaixo para redefinir sua senha."
+
+#: templates/account/email/password_reset_key_message.txt:8
+#, python-format
+msgid "In case you forgot, your username is %(username)s."
+msgstr "Caso você tenha esquecido, seu nome de usuário é %(username)s."
 
 #: templates/account/email/password_reset_key_subject.txt:3
 msgid "Password Reset E-mail"

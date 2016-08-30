@@ -1,8 +1,8 @@
-{% load account %}{% user_display user as user_display %}{% load i18n %}{% autoescape off %}{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Olá!
+{% load account %}{% user_display user as user_display %}{% load i18n %}{% autoescape off %}{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Hello!
 
-Para finalizar o processo de criação de conta no site {{ site_domain }} é preciso que você confirme seu endereço de email. Para isso, clique neste link: {{ activate_url }}
+To complete the account creation process on the site {{ site_domain }} we need you to confirm your email address. To confirm this is correct, go to {{ activate_url }}
 
-Se você não solicitou nenhum tipo de cadastro, apenas igonore este email.
+If you did not request any registration, just ignore this email.
 {% endblocktrans %}{% endautoescape %}
-{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Obrigado,
-{{ site_name }}{% endblocktrans %}
+{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Thank you for using {{ site_name }}!
+{{ site_domain }}{% endblocktrans %}
