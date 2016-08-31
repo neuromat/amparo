@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-31 11:43-0300\n"
+"POT-Creation-Date: 2016-08-31 12:40-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,7 +51,7 @@ msgid "Summary of the resume"
 msgstr "Resumo do currículo"
 
 #: blog/models.py:51 blog/templates/blog/blog.html:32
-#: blog/templates/blog/view_post.html:20 templates/main/default.html:31
+#: blog/templates/blog/view_post.html:20 templates/main/default.html:33
 msgid "Speaker"
 msgstr "Convidado(a)"
 
@@ -87,7 +87,8 @@ msgstr "Vídeo"
 msgid "Videos"
 msgstr "Vídeos"
 
-#: blog/templates/blog/blog.html:16 templates/main/menu.html:22
+#: blog/templates/blog/blog.html:16 templates/main/default.html:59
+#: templates/main/menu.html:22
 msgid "Schedule"
 msgstr "Programação"
 
@@ -100,17 +101,17 @@ msgid "Professionals"
 msgstr "Profissionais"
 
 #: blog/templates/blog/blog.html:31 blog/templates/blog/view_post.html:19
-#: templates/main/default.html:32
+#: templates/main/default.html:34
 msgid "Date / Time"
 msgstr "Data / Hora"
 
 #: blog/templates/blog/blog.html:33 blog/templates/blog/view_post.html:21
-#: templates/main/default.html:35
+#: templates/main/default.html:37
 msgid "Curriculum"
 msgstr "Currículo"
 
 #: blog/templates/blog/blog.html:34 blog/templates/blog/search.html:27
-#: blog/templates/blog/search.html:32 templates/main/default.html:37
+#: blog/templates/blog/search.html:32 templates/main/default.html:39
 msgid "Read more"
 msgstr "Leia mais"
 
@@ -619,19 +620,19 @@ msgstr "Enviar"
 msgid "Your message was sent successfully!"
 msgstr "Email enviado com sucesso!"
 
-#: templates/main/base.html:67
+#: templates/main/base.html:69
 msgid "Support"
 msgstr "Apoio"
 
-#: templates/main/base.html:73
+#: templates/main/base.html:75
 msgid "Development"
 msgstr "Desenvolvimento"
 
-#: templates/main/base.html:79
+#: templates/main/base.html:81
 msgid "NeuroMat on the Web"
 msgstr "NeuroMat na Web"
 
-#: templates/main/base.html:99
+#: templates/main/base.html:101
 msgid "This page is licensed under the"
 msgstr "Este projeto está licenciado sob os termos da"
 
@@ -639,17 +640,21 @@ msgstr "Este projeto está licenciado sob os termos da"
 msgid "Next lecture:"
 msgstr "Próxima palestra:"
 
-#: templates/main/default.html:68
+#: templates/main/default.html:47 templates/main/menu.html:27
+msgid "Survey"
+msgstr "Formulário"
+
+#: templates/main/default.html:52
+msgid "Join us!"
+msgstr "Participe!"
+
+#: templates/main/default.html:70
 msgid "No banner found!"
 msgstr "Nenhum banner encontrado!"
 
-#: templates/main/default.html:95
+#: templates/main/default.html:97
 msgid "No home page found!"
 msgstr "Nenhuma home page encontrada!"
-
-#: templates/main/menu.html:27
-msgid "Survey"
-msgstr "Formulário"
 
 #: templates/main/menu.html:35
 msgid "Logout"
