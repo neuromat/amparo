@@ -9,7 +9,8 @@ from pages.models import Page
 def index(request):
     # Search banner
     try:
-        current_banner = Blog.objects.filter(banner=True, publish=True)
+        current_banner = Blog.objects.active_translations()
+        current_banner = current_banner.filter(banner=True, publish=True)
     except Blog.DoesNotExist:
         current_banner = False
 
