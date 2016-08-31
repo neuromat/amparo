@@ -44,19 +44,19 @@
                             <div class="col-lg-4">
                                 <blockquote class="quote-box">
                                     {% if user.is_authenticated %}
-                                        <h4 class="text-center">Formulário</h4>
+                                        <h4 class="text-center">{% trans "Survey" %}</h4>
                                         <p class="quote-text text-justify">
                                             <a href="#">Caso não tenha preenchido seu formulário de usuário da rede Amparo, clique em Formulário no menu acima.</a>
                                         </p>
                                     {% else %}
-                                        <h4 class="text-center">Participe</h4>
+                                        <h4 class="text-center">{% trans "Join us!" %}</h4>
                                         <p class="quote-text text-justify">
                                             <a href="/accounts/signup/">Faça seu cadastro para participar desta rede, seja você paciente, familiar, cuidador, profissional ou estudante.</a>
                                         </p>
                                     {% endif %}
                                 </blockquote>
                                 <blockquote class="quote-box">
-                                    <h4 class="text-center">Agenda</h4>
+                                    <h4 class="text-center">{% trans "Schedule" %}</h4>
                                     <p class="quote-text text-justify">
                                         <a href="/blog">Acompanhe a agenda de palestras com especialistas e participe ao vivo com perguntas, discussões de casos e sugestões.</a>
                                     </p>
