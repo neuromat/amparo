@@ -7,6 +7,7 @@ from models import CustomUser, Type
 
 admin.site.register(Type)
 
+
 class UserAdmin(BaseUserAdmin):
     # The forms to add and change user instances
     form = UserChangeForm
