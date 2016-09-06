@@ -26,11 +26,11 @@
         <li class="page-scroll"><a href="{% url 'contact_form' %}"><span style="font-size: 0.85em;" class="glyphicon glyphicon-phone"></span>&nbsp;{% trans "Contact" %}</a></li>
 
         <!-- Login or logout link  -->
-        {% if user.is_authenticated %}
-            <li class="page-scroll"><a href="/accounts/logout/"><span style="font-size: 0.85em;" class="glyphicon glyphicon-user"></span>&nbsp;{% trans "Logout" %}</a></li>
-        {% else %}
-            <li class="page-scroll"><a href="/accounts/login/"><span style="font-size: 0.85em;" class="glyphicon glyphicon-user"></span>&nbsp;{% trans "Login" %}</a></li>
-        {% endif %}
+{#        {% if user.is_authenticated %}#}
+{#            <li class="page-scroll"><a href="/accounts/logout/"><span style="font-size: 0.85em;" class="glyphicon glyphicon-user"></span>&nbsp;{% trans "Logout" %}</a></li>#}
+{#        {% else %}#}
+{#            <li class="page-scroll"><a href="/accounts/login/"><span style="font-size: 0.85em;" class="glyphicon glyphicon-user"></span>&nbsp;{% trans "Login" %}</a></li>#}
+{#        {% endif %}#}
 
         <!-- Link to language switcher -->
 {#        <li>#}
