@@ -156,7 +156,7 @@ LANGUAGE_CODE = 'pt-br'
 # list of activated languages
 LANGUAGES = (
     ('pt-br', u'Português'),
-    ('en', u'English'),
+    # ('en', u'English'),
 )
 
 # specify path for translation files
@@ -173,7 +173,7 @@ USE_TZ = True
 PARLER_LANGUAGES = {
     1: (
         {'code': 'pt-br', },
-        {'code': 'en', },
+        # {'code': 'en', },
     ),
     'default': {
         'fallback': 'pt_br',          # defaults to PARLER_DEFAULT_LANGUAGE_CODE
