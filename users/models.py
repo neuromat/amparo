@@ -22,6 +22,9 @@ class Type(models.Model):
 
 class CustomUser(AbstractUser):
     type_of_person = models.ForeignKey(Type, verbose_name=_('I am'), null=True)
+    token_id = models.CharField(max_length=10, blank=True)
+    token = models.CharField(max_length=15, blank=True)
+    survey_completed = models.BooleanField(default=False)
 
     # to enforce that you require email field to be associated with every user at registration
     REQUIRED_FIELDS = ["email"]

@@ -42,19 +42,30 @@
                                 </div>
                             </div>
                             <div class="col-lg-4">
-                                <blockquote class="quote-box">
-                                    {% if user.is_authenticated %}
+                                {% if user.is_authenticated %}
+                                    {% if survey_url %}
+                                        <blockquote class="quote-box-warning">
                                         <h4 class="text-center">{% trans "Survey" %}</h4>
-                                        <p class="quote-text text-justify">
-                                            <a href="#">Caso não tenha preenchido seu formulário de usuário da rede Amparo, clique em Formulário no menu acima.</a>
+                                        <p class="quote-text-warning text-justify">
+                                            <a href="{{ survey_url }}" target="_blank">Por favor, clique aqui e preencha seu formulário de usuário da rede Amparo. Seus dados não serão compartilhados.</a>
                                         </p>
+                                        </blockquote>
                                     {% else %}
-                                        <h4 class="text-center">{% trans "Join us!" %}</h4>
+                                        <blockquote class="quote-box">
+                                        <h4 class="text-center">{% trans "Rede AMPARO" %}</h4>
                                         <p class="quote-text text-justify">
-                                            <a href="/accounts/signup/">Faça seu cadastro para participar desta rede, seja você paciente, familiar, cuidador, profissional ou estudante.</a>
+                                            Obrigado por participar da nossa rede. Juntos podemos identificar os principais desafios para a doença de Parkinson no Brasil.
                                         </p>
+                                        </blockquote>
                                     {% endif %}
-                                </blockquote>
+                                {% else %}
+                                    <blockquote class="quote-box">
+                                    <h4 class="text-center">{% trans "Join us!" %}</h4>
+                                    <p class="quote-text text-justify">
+                                        <a href="/accounts/signup/">Faça seu cadastro para participar desta rede, seja você profissional, estudante, familiar, cuidador ou pessoa com doença de Parkinson.</a>
+                                    </p>
+                                    </blockquote>
+                                {% endif %}
                                 <blockquote class="quote-box">
                                     <h4 class="text-center">{% trans "Schedule" %}</h4>
                                     <p class="quote-text text-justify">

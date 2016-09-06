@@ -535,6 +535,20 @@ blockquote{
 .quote-text a{
   color: white;
 }
+.quote-box-warning{
+  overflow: hidden;
+  border-radius: 17px;
+  background-color: #faebcc;
+  color:#8a6d3b;
+  width: 325px;
+  box-shadow: 2px 2px 2px 2px #E0E0E0;
+}
+.quote-text-warning{
+  font-size: 19px;
+}
+.quote-text-warning a{
+  color: #8a6d3b;
+}
 .my-banner{
   color: black;
 }
