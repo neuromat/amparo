@@ -18,7 +18,7 @@ class UserAdmin(BaseUserAdmin):
     # that reference specific fields on auth.User.
     list_display = ('username', 'email', 'type_of_person')
     fieldsets = (
-        (None, {'fields': ('email', 'password', 'type_of_person')}),
+        (None, {'fields': ('email', 'password', 'type_of_person', 'token_id', 'token', 'survey_completed')}),
         (_('Permissions'), {'fields': ('is_staff', 'is_active', 'is_superuser', 'user_permissions', 'groups')}),
     )
 

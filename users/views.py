@@ -28,6 +28,8 @@ class ABCSearchEngine:
     @abstractmethod
     def user_survey(self, sid, email):
         """
+        This method creates the token
+
         :param sid: Survey ID
         :return: dictionary with token and token_id; None if error.
         """
@@ -53,6 +55,8 @@ class ABCSearchEngine:
     @abstractmethod
     def get_participant_properties(self, survey_id, token_id, prop):
         """
+        This method checks if the questionnaire has been answered
+
         :param survey_id: survey ID
         :param token_id: token ID
         :param prop: property name

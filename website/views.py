@@ -9,6 +9,15 @@ from pages.models import Page
 from users.views import Questionnaires
 
 
+def is_limesurvey_available(questionnaire):
+    limesurvey_available = True
+
+    if not questionnaire.session_key:
+        limesurvey_available = False
+
+    return limesurvey_available
+
+
 def index(request):
     # Search banner
     try:
@@ -44,7 +53,10 @@ def index(request):
         elif type_of_person == 'Portador da doença de Parkinson':
             survey_id = settings.LIMESURVEY['PACIENTE']
 
-        if survey_id and request.user.token_id == '':
+        limesurvey_available = is_limesurvey_available(questionnaire)
+
+        # Create the token and the URL to the questionnaire
+        if survey_id and limesurvey_available and request.user.token_id == '':
             survey = questionnaire.user_survey(survey_id, email)
 
             if survey:
@@ -62,7 +74,8 @@ def index(request):
                 request.user.token = token
                 request.user.save()
 
-        elif survey_id and request.user.token_id != '':
+        # Create the URL to the questionnaire
+        elif survey_id and limesurvey_available and request.user.token_id != '':
             survey_info = (questionnaire.get_participant_properties(survey_id,
                                                                     request.user.token_id,
                                                                     "completed") != 'N')
