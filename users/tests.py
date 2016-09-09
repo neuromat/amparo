@@ -1,7 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.test import TestCase
 
-# from models import CustomUser, Type
+from models import CustomUser, Type
 
 # Create your tests here.
 USER_USERNAME = 'myadmin'
@@ -35,10 +35,10 @@ class UserManagerTest(TestCase):
 
     def test_create_superuser(self):
         username = 'superuser'
-        email_lowercase = 'superuser@localhost.local'
+        email = 'superuser@localhost.local'
         password = 'abc!@#'
-        user = get_user_model().objects.create_superuser(username, email_lowercase, password)
-        self.assertEqual(user.email, email_lowercase)
+        user = get_user_model().objects.create_superuser(username, email, password)
+        self.assertEqual(user.email, email)
         self.assertTrue(user.check_password, password)
         self.assertTrue(user.is_active)
         self.assertTrue(user.is_staff)
@@ -57,18 +57,29 @@ class UserManagerTest(TestCase):
         self.assertEqual(returned, 'normal@domain.com')
 
 
-# class CustomUserTest(TestCase):
-#
-#     def create_type_of_person(self):
-#         Type.objects.create(name='Profissional')
-#         self.assertEqual(Type.objects.all().count(), 1)
-#
-#     def create_common_user(self):
-#         username = 'teste'
-#         email = 'teste@dominio.com'
-#         password = '123456'
-#         type_of_person = Type.objects.create(name='Estudante')
-#         user = CustomUser.objects.create_user(username, email, password, type_of_person)
-#         self.assertTrue(user.is_active)
-#         self.assertFalse(user.is_staff)
-#         self.assertFalse(user.is_superuser)
+class CustomUserTest(TestCase):
+
+    def test_create_type_of_person(self):
+        Type.objects.create(name='Profissional')
+        self.assertEqual(Type.objects.all().count(), 1)
+
+    def test_create_common_user(self):
+        username = 'teste'
+        email = 'teste@dominio.com'
+        password = '123456'
+        type_of_person = Type.objects.create(name='Estudante')
+        user = CustomUser.objects.create_user(username=username, email=email, password=password,
+                                              type_of_person=type_of_person)
+
+        # Check flags
+        self.assertTrue(user.is_active)
+        self.assertFalse(user.is_staff)
+        self.assertFalse(user.is_superuser)
+
+        # Check email and type of person
+        self.assertEqual(CustomUser.objects.get(email=email).email, email)
+        self.assertEqual(CustomUser.objects.get(email=email).type_of_person, type_of_person)
+
+        # Check type of person (wrong type)
+        worng_type_of_person = Type.objects.create(name='Cuidador')
+        self.assertNotEqual(CustomUser.objects.get(email=email).type_of_person, worng_type_of_person)
