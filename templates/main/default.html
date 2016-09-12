@@ -20,7 +20,7 @@
                                         {% if banner.image %}
                                             <img src="{{ banner.image.url }}" class="img-responsive" alt="Imagem do(a) palestrante {{ banner.speaker }}"/>
                                         {% else %}
-                                            <img src="{% static "images/person.png" %}" class="img-responsive" alt="Imagem do(a) palestrante"/>
+                                            <img src="{% static "images/person.png" %}" class="img-responsive" alt="Palestrante sem foto. Imagem de exemplo sendo exibido."/>
                                         {% endif %}
                                     </div>
                                     <div class="intro-text">
@@ -44,14 +44,14 @@
                             <div class="col-lg-4">
                                 {% if user.is_authenticated %}
                                     {% if survey_url %}
-                                        <blockquote class="quote-box-warning">
+                                        <blockquote class="quote-box-warning center-block">
                                         <h4 class="text-center">{% trans "Survey" %}</h4>
                                         <p class="quote-text-warning text-justify">
                                             <a href="{{ survey_url }}" target="_blank">Por favor, clique aqui e preencha seu formulário de usuário da rede Amparo. Seus dados não serão compartilhados.</a>
                                         </p>
                                         </blockquote>
                                     {% else %}
-                                        <blockquote class="quote-box">
+                                        <blockquote class="quote-box center-block">
                                         <h4 class="text-center">{% trans "Rede AMPARO" %}</h4>
                                         <p class="quote-text text-justify">
                                             Obrigado por participar da nossa rede. Juntos podemos identificar os principais desafios para a doença de Parkinson no Brasil.
@@ -59,14 +59,14 @@
                                         </blockquote>
                                     {% endif %}
                                 {% else %}
-                                    <blockquote class="quote-box">
+                                    <blockquote class="quote-box center-block">
                                     <h4 class="text-center">{% trans "Join us!" %}</h4>
                                     <p class="quote-text text-justify">
                                         <a href="/accounts/signup/">Faça seu cadastro para participar desta rede, seja você profissional, estudante, familiar, cuidador ou pessoa com doença de Parkinson.</a>
                                     </p>
                                     </blockquote>
                                 {% endif %}
-                                <blockquote class="quote-box">
+                                <blockquote class="quote-box center-block">
                                     <h4 class="text-center">{% trans "Schedule" %}</h4>
                                     <p class="quote-text text-justify">
                                         <a href="/blog">Acompanhe a agenda de palestras com especialistas e participe ao vivo com perguntas, discussões de casos e sugestões.</a>
