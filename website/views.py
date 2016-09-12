@@ -101,3 +101,13 @@ def language_change(request, language_code):
     request.session[LANGUAGE_SESSION_KEY] = language_code
 
     return HttpResponseRedirect(request.GET['next'])
+
+
+def google_analytics(request):
+    """
+    Using the variable returned in this function to render the Google Analytics tracking code.
+    """
+    ga_prop_id = getattr(settings, 'GOOGLE_ANALYTICS_PROPERTY_ID', False)
+    if ga_prop_id:
+        return {'GOOGLE_ANALYTICS_PROPERTY_ID': ga_prop_id}
+    return {}
