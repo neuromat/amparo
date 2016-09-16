@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-31 12:40-0300\n"
+"POT-Creation-Date: 2016-09-16 16:49-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,12 +46,14 @@ msgstr "Data/Hora"
 msgid "Resume of speaker"
 msgstr "Currículo do palestrante"
 
-#: blog/models.py:48
-msgid "Summary of the resume"
-msgstr "Resumo do currículo"
+#: blog/models.py:48 templates/main/default.html:79
+#: templates/main/default.html:111
+msgid "Institutional affiliation"
+msgstr "Vínculo institucional"
 
-#: blog/models.py:51 blog/templates/blog/blog.html:32
-#: blog/templates/blog/view_post.html:20 templates/main/default.html:33
+#: blog/models.py:51 blog/templates/blog/blog.html:34
+#: blog/templates/blog/view_post.html:20 templates/main/default.html:78
+#: templates/main/default.html:110
 msgid "Speaker"
 msgstr "Convidado(a)"
 
@@ -79,65 +81,77 @@ msgstr "Banner"
 msgid "Posted"
 msgstr "Publicado"
 
-#: blog/models.py:89 blog/models.py:92 blog/templates/blog/view_post.html:26
+#: blog/models.py:100 blog/models.py:103 blog/templates/blog/view_post.html:26
 msgid "Video"
 msgstr "Vídeo"
 
-#: blog/models.py:93 blog/templates/blog/view_post.html:28
+#: blog/models.py:104 blog/templates/blog/view_post.html:28
 msgid "Videos"
 msgstr "Vídeos"
 
-#: blog/templates/blog/blog.html:16 templates/main/default.html:59
+#: blog/templates/blog/blog.html:16 templates/main/default.html:151
 #: templates/main/menu.html:22
 msgid "Schedule"
 msgstr "Programação"
 
-#: blog/templates/blog/blog.html:29
+#: blog/templates/blog/blog.html:29 blog/templates/blog/blog.html:31
 msgid "Target audience"
 msgstr "Público-alvo"
 
 #: blog/templates/blog/blog.html:29
+msgid ""
+"People with Parkinson's disease, family members, caregivers, students and "
+"professionals."
+msgstr ""
+"Pessoas com doença de Parkinson, familiares, cuidadores, estudantes e "
+"profissionais"
+
+#: blog/templates/blog/blog.html:31
 msgid "Professionals"
 msgstr "Profissionais"
 
-#: blog/templates/blog/blog.html:31 blog/templates/blog/view_post.html:19
-#: templates/main/default.html:34
+#: blog/templates/blog/blog.html:33 blog/templates/blog/view_post.html:19
+#: templates/main/default.html:80 templates/main/default.html:112
 msgid "Date / Time"
 msgstr "Data / Hora"
 
-#: blog/templates/blog/blog.html:33 blog/templates/blog/view_post.html:21
-#: templates/main/default.html:37
-msgid "Curriculum"
-msgstr "Currículo"
+#: blog/templates/blog/blog.html:36
+msgid "Institutional affiliation of the speaker"
+msgstr "Vínculo institucional do(a) convidado(a)"
 
-#: blog/templates/blog/blog.html:34 blog/templates/blog/search.html:27
-#: blog/templates/blog/search.html:32 templates/main/default.html:39
+#: blog/templates/blog/blog.html:38 blog/templates/blog/search.html:27
+#: blog/templates/blog/search.html:32 templates/main/default.html:81
+#: templates/main/default.html:113
 msgid "Read more"
 msgstr "Leia mais"
 
-#: blog/templates/blog/blog.html:52
+#: blog/templates/blog/blog.html:56
 msgid "No schedule found!"
 msgstr "Nenhuma programação encontrada!"
 
-#: blog/templates/blog/blog.html:64
+#: blog/templates/blog/blog.html:68
 msgid "page"
 msgstr "página"
 
-#: blog/templates/blog/blog.html:64
+#: blog/templates/blog/blog.html:68
 msgid "of"
 msgstr "de"
 
-#: blog/templates/blog/blog.html:76
+#: blog/templates/blog/blog.html:80
 msgid "previous"
 msgstr "anterior"
 
-#: blog/templates/blog/blog.html:80
+#: blog/templates/blog/blog.html:84
 msgid "next"
 msgstr "próximo"
 
 #: blog/templates/blog/search.html:54
 msgid "Sorry, but nothing matched your search terms."
 msgstr "Desculpe, mas nada foi encontrado com o termo utilizado."
+
+#: blog/templates/blog/view_post.html:21
+msgid "Curriculum"
+msgstr "Currículo"
 
 #: blog/templates/blog/view_post.html:36
 #: templates/contact_form/contact_form_sent.html:28
@@ -510,7 +524,7 @@ msgstr ""
 "Você já se cadastrou? Então clique <a href=\"%(login_url)s\">aqui</a> e faça "
 "login."
 
-#: templates/account/signup.html:26
+#: templates/account/signup.html:26                      "
 msgid ""
 "\n"
 "                        Fill the fields below according to your profile. "
@@ -584,7 +598,7 @@ msgid ""
 msgstr ""
 
 #: templates/contact_form/contact_form.html:16
-#: templates/contact_form/contact_form_sent.html:16 templates/main/menu.html:31
+#: templates/contact_form/contact_form_sent.html:16 templates/main/menu.html:26
 msgid "Contact"
 msgstr "Contato"
 
@@ -620,51 +634,55 @@ msgstr "Enviar"
 msgid "Your message was sent successfully!"
 msgstr "Email enviado com sucesso!"
 
-#: templates/main/base.html:69
+#: templates/main/base.html:81
 msgid "Support"
 msgstr "Apoio"
 
-#: templates/main/base.html:75
-msgid "Development"
-msgstr "Desenvolvimento"
+#: templates/main/base.html:87
+msgid "Project / Promotion"
+msgstr "Projeto / Realização"
 
-#: templates/main/base.html:81
+#: templates/main/base.html:93
 msgid "NeuroMat on the Web"
 msgstr "NeuroMat na Web"
 
-#: templates/main/base.html:101
+#: templates/main/base.html:113
 msgid "This page is licensed under the"
 msgstr "Este projeto está licenciado sob os termos da"
 
-#: templates/main/default.html:14
-msgid "Next lecture:"
-msgstr "Próxima palestra:"
+#: templates/main/default.html:61
+msgid "Next public lecture:"
+msgstr "Próxima palestra pública:"
 
-#: templates/main/default.html:47 templates/main/menu.html:27
+#: templates/main/default.html:93
+msgid "Next lecture to professionals:"
+msgstr "Próxima palestra para profissionais:"
+
+#: templates/main/default.html:129
 msgid "Survey"
 msgstr "Formulário"
 
-#: templates/main/default.html:52
+#: templates/main/default.html:136
+msgid "Rede AMPARO"
+msgstr ""
+
+#: templates/main/default.html:144
 msgid "Join us!"
 msgstr "Participe!"
 
-#: templates/main/default.html:70
-msgid "No banner found!"
-msgstr "Nenhum banner encontrado!"
-
-#: templates/main/default.html:97
+#: templates/main/default.html:181
 msgid "No home page found!"
 msgstr "Nenhuma home page encontrada!"
 
-#: templates/main/menu.html:35
+#: templates/main/menu.html:30
 msgid "Logout"
 msgstr ""
 
-#: templates/main/menu.html:37
+#: templates/main/menu.html:32
 msgid "Login"
 msgstr ""
 
-#: users/admin.py:21
+#: users/admin.py:22
 msgid "Permissions"
 msgstr ""
 
@@ -701,6 +719,6 @@ msgstr "Tipos"
 msgid "I am"
 msgstr "Eu sou"
 
-#: website/settings.py:196
+#: website/settings.py:200
 msgid "The name of your project"
 msgstr "O nome do seu projeto"
