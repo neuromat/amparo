@@ -57,7 +57,8 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="/">{% settings_value "PROJECT_NAME" %}</a>
+{#                    <a class="navbar-brand" href="/">{% settings_value "PROJECT_NAME" %}</a>#}
+                    <a href="/"><img src="{% static "images/logo_amparo.png" %}" alt="Logo da Rede Amparo"/></a>
                 </div>
                 {% include "main/menu.html" %}
             </div>
@@ -83,7 +84,7 @@
                         </a>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>{% trans "Development" %}</h3>
+                        <h3>{% trans "Project / Promotion" %}</h3>
                         <a href="http://neuromat.numec.prp.usp.br/" target="_blank">
                             <img src="{% static "images/neuromat-logo.png" %}" style="margin-top: 40px" width="50%" height="50%" class="img-responsive center-block" alt="Logo do NeuroMat"/>
                         </a>
