@@ -7,19 +7,13 @@ from models import Blog, Category
 
 def index(request):
     """
-    Função que gera a lista de posts do blog, verificando se o usuário tem permissão para ver posts privados e fazendo
-    a paginação de acordo com o número definido na variável "number_of_posts".
+    Função que gera a lista de posts do blog.
+    Gerar a paginação de acordo com o número definido na variável "number_of_posts".
 
     :return:        Retorna os posts do blog
     """
-    current_language = str(request.LANGUAGE_CODE)
-
-    if request.user.is_authenticated() and request.user.type_of_person.name == 'Profissional':
-        blog_list = Blog.objects.active_translations()
-    else:
-        blog_list = Blog.objects.filter(publish=True)
-
-    number_of_posts = 3
+    blog_list = Blog.objects.active_translations()
+    number_of_posts = 4
     paginator = Paginator(blog_list, number_of_posts)
     page = request.GET.get('page')
 

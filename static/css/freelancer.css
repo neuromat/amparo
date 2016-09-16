@@ -100,14 +100,14 @@ header .intro-text .skills {
 }
 @media (min-width: 768px) {
   header .container {
-    padding-top: 100px;
-    padding-bottom: 30px;
+    padding-top: 130px;
+    padding-bottom: 20px;
   }
   header .intro-text .name {
-    font-size: 1.75em;
+    font-size: 1.6em;
   }
   header .intro-text .skills {
-    font-size: 1.5em;
+    font-size: 1.35em;
   }
 }
 .navbar-custom {
@@ -167,7 +167,7 @@ header .intro-text .skills {
 }
 @media (min-width: 768px) {
   .navbar-custom {
-    padding: 25px 0;
+    padding: 10px 0;
     -webkit-transition: padding 0.3s;
     -moz-transition: padding 0.3s;
     transition: padding 0.3s;
@@ -179,7 +179,7 @@ header .intro-text .skills {
     transition: all 0.3s;
   }
   .navbar-custom.affix {
-    padding: 10px 0;
+    padding: 5px 0;
   }
   .navbar-custom.affix .navbar-brand {
     font-size: 1.5em;
@@ -549,6 +549,24 @@ blockquote{
 .quote-text-warning a{
   color: #8a6d3b;
 }
-.my-banner{
-  color: black;
+.carousel{
+  margin-bottom: 20px;
+}
+.carousel-indicators{
+  bottom: -20px;
+}
+.carousel-inner {
+  margin-bottom:20px;
+}
+.carousel-indicators li {
+  background-color: #999;
+  background-color: rgba(70,70,70,.25);
+}
+.carousel-indicators .active {
+  background-color: #444;
+}
+@media (max-width: 768px) {
+ .carousel-indicators li, .carousel-indicators li.active{
+   margin-left: 30px;
+ }
 }

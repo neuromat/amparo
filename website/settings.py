@@ -149,6 +149,9 @@ LOGIN_REDIRECT_URL='/'
 # Custom form to sign up
 ACCOUNT_SIGNUP_FORM_CLASS = 'users.forms.SignupForm'
 
+# Hide the "Remember me?"
+ACCOUNT_SESSION_REMEMBER = False
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 

@@ -20,11 +20,18 @@ def is_limesurvey_available(questionnaire):
 
 def index(request):
     # Search banner
+    banner = Blog.objects.active_translations()
+    banner = banner.filter(banner=True)
+
     try:
-        current_banner = Blog.objects.active_translations()
-        current_banner = current_banner.filter(banner=True, publish=True)
+        open_lecture = banner.get(publish=True)
     except Blog.DoesNotExist:
-        current_banner = False
+        open_lecture = False
+
+    try:
+        private_lecture = banner.get(publish=False)
+    except Blog.DoesNotExist:
+        private_lecture = False
 
     # Search home page
     try:
@@ -92,7 +99,8 @@ def index(request):
                         request.user.token,
                     )
 
-    context = {'current_banner': current_banner, 'home_page': home_page, 'survey_url': survey_url}
+    context = {'open_lecture': open_lecture, 'private_lecture': private_lecture, 'home_page': home_page,
+               'survey_url': survey_url}
     return render(request, 'main/default.html', context)
 
 

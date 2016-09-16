@@ -25,12 +25,16 @@
                         <div class="col-lg-12">
                             <ul>
                                 <h3 class="text-center">{{ post.title }}</h3><br>
-                                {% if post.publish == False %}
+                                {% if post.publish %}
+                                    <p><strong>{% trans "Target audience" %}:</strong>  {% trans "People with Parkinson's disease, family members, caregivers, students and professionals." %} </p>
+                                {% else %}
                                     <p><strong>{% trans "Target audience" %}:</strong>  {% trans "Professionals" %} </p>
                                 {% endif %}
                                 <p><strong>{% trans "Date / Time" %}:</strong> {{ post.date_time }}</p>
                                 <p><strong>{% trans "Speaker" %}:</strong> {{ post.speaker }}</p>
-                                <p class="text-justify"><strong>{% trans "Curriculum" %}:</strong> {{ post.resume_summary }}..</p>
+                                {% if post.affiliation %}
+                                    <p class="text-justify"><strong>{% trans "Institutional affiliation of the speaker" %}:</strong> {{ post.affiliation }}</p>
+                                {% endif %}
                                 <p><i class="glyphicon glyphicon-plus-sign"></i><a href="{{ post.get_absolute_url }}"> {% trans "Read more" %}</a></p>
                             </ul>
                         </div>
