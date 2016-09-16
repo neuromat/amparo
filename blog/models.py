@@ -45,7 +45,7 @@ class Blog(TranslatableModel):
         body=models.TextField(_('Body'), blank=True),
         date_time=models.DateTimeField(_('Date/Time'), blank=True, null=True),
         resume_speaker=models.TextField(_('Resume of speaker'), blank=True),
-        resume_summary=models.TextField(_('Summary of the resume'), blank=True),
+        affiliation=models.CharField(_('Institutional affiliation'), max_length=255, blank=True),
     )
     # Regular fields
     speaker = models.CharField(_('Speaker'), max_length=255)
@@ -66,10 +66,21 @@ class Blog(TranslatableModel):
         return 'view_blog_post', None, {'slug': self.slug}
 
     def save(self, *args, **kwargs):
-        if self.banner:
+        if self.banner and self.publish:
             try:
                 posts = Blog.objects.all()
-                latest_banner = posts.get(banner=True)
+                latest_banner = posts.get(banner=True, publish=True)
+                if latest_banner:
+                    latest_banner.banner = False
+                    latest_banner.save()
+                    latest_banner.publish = False
+                    latest_banner.save()
+            except Blog.DoesNotExist:
+                pass
+        elif self.banner and not self.publish:
+            try:
+                posts = Blog.objects.all()
+                latest_banner = posts.get(banner=True, publish=False)
                 if latest_banner:
                     latest_banner.banner = False
                     latest_banner.save()

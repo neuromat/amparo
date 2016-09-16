@@ -12,7 +12,7 @@ class LectureVideoInline(admin.TabularInline):
 class BlogAdmin(TranslatableAdmin):
     fieldsets = (
         (None, {
-            'fields': ['category', 'title', 'slug', 'body', 'speaker', 'image', 'resume_speaker', 'resume_summary',
+            'fields': ['category', 'title', 'slug', 'body', 'speaker', 'image', 'resume_speaker', 'affiliation',
                        'moderator', 'date_time', 'link_to_iptv', 'publish', 'banner']
         }),
     )
