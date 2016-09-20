@@ -44,10 +44,12 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'solo',
 ]
 
 PROJECT_APPS = (
     'blog',
+    'configurations',
     'pages',
     'users',
 )

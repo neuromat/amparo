@@ -1,4 +1,4 @@
-{% load i18n staticfiles project_tags %}
+{% load i18n staticfiles project_tags solo_tags %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,8 +57,13 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                     </button>
-{#                    <a class="navbar-brand" href="/">{% settings_value "PROJECT_NAME" %}</a>#}
-                    <a href="/"><img src="{% static "images/logo_amparo.png" %}" alt="Logo da Rede Amparo"/></a>
+                    {% get_solo 'configurations.ProjectLogo' as image %}
+                    {% get_solo 'configurations.ProjectName' as item %}
+                    {% if image.logo %}
+                        <a href="/"><img src="/media/{{ image.logo }}" alt="Imagem do logo do projeto"/></a>
+                    {% else %}
+                        <a class="navbar-brand" href="/">{{ item.name }}</a>
+                    {% endif %}
                 </div>
                 {% include "main/menu.html" %}
             </div>
