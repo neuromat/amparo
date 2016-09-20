@@ -229,7 +229,7 @@ msgstr ""
 
 #: templates/account/email.html:10
 msgid "The following e-mail addresses are associated with your account:"
-msgstr ""
+msgstr "Os seguintes endereços de email estão associados com a sua conta:"
 
 #: templates/account/email.html:24
 msgid "Verified"
@@ -264,6 +264,8 @@ msgid ""
 "You currently do not have any e-mail address set up. You should really add "
 "an e-mail address so you can receive notifications, reset your password, etc."
 msgstr ""
+"Você não tem nenhum endereço de e-mail configurado. Você deve adicionar "
+"um endereço de e-mail para que possa receber notificações, redefinir sua senha, etc."
 
 #: templates/account/email.html:48
 msgid "Add E-mail Address"
@@ -500,6 +502,9 @@ msgid ""
 "used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
 "a>."
 msgstr ""
+"O link de redefinição de senha está inválido, pois provavelmente ele já foi "
+"utilizado. Solicite uma <a href=\"%(passwd_reset_url)s\">nova redefinição de senha</"
+"a>."
 
 #: templates/account/password_reset_from_key.html:32
 msgid "Change password"
