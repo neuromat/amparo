@@ -198,9 +198,6 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-# Project name
-PROJECT_NAME = _('The name of your project')
-
 # Set your website property ID
 GOOGLE_ANALYTICS_PROPERTY_ID = 'UA-XXXXXX-X'
 
