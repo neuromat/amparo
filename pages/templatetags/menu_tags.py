@@ -15,3 +15,17 @@ def get_pages():
     links = Page.objects.active_translations()
     links = links.filter(enabled=True).order_by('link_order')
     return links
+
+
+@register.assignment_tag
+def get_submenu():
+    """
+    Check if submenu is used.
+
+    :return:    True or false
+    """
+    links = Page.objects.active_translations()
+    if links.filter(submenu=True).count() > 0:
+        return True
+    else:
+        return False

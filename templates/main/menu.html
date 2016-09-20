@@ -5,15 +5,35 @@
     <ul class="nav navbar-nav navbar-right" style="padding-top: 25px">
 
         <!-- Links from pages  -->
-        {% get_pages as pages %}
-        {% if pages %}
-            {% for page in pages %}
-                {% if page.home_page %}
-                    <li class="page-scroll"><a href="/"><span style="font-size: 0.85em;" class="{{ page.glyphicon }}"></span>&nbsp;{{ page.title }}</a></li>
-                {% else %}
-                    <li class="page-scroll"><a href="/pages/{{ page.slug }}"><span style="font-size: 0.85em;" class="{{ page.glyphicon }}"></span>&nbsp;{{ page.title }}</a></li>
-                {% endif %}
-            {% endfor %}
+        {% get_submenu as submenu %}
+        {% if submenu %}
+            {% get_pages as pages %}
+                <li>
+                    <a data-toggle="dropdown" href="/"><span style="font-size: 0.85em;" class="glyphicon glyphicon-star"></span>&nbsp;{% trans "The project" %} <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                    {% for page in pages %}
+                        {% if page.submenu %}
+                            <li><a href="/pages/{{ page.slug }}">{% if page.link_title %}{{ page.link_title }}{% else %}{{ page.title }}{% endif %}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                    </ul>
+                </li>
+                {% for page in pages %}
+                    {% if not page.submenu and not page.home_page %}
+                        <li class="page-scroll"><a href="/pages/{{ page.slug }}"><span style="font-size: 0.85em;" class="{{ page.glyphicon }}"></span>&nbsp;{% if page.link_title %}{{ page.link_title }}{% else %}{{ page.title }}{% endif %}</a></li>
+                    {% endif %}
+                {% endfor %}
+        {% else %}
+            {% get_pages as pages %}
+            {% if pages %}
+                {% for page in pages %}
+                    {% if page.home_page %}
+                        <li class="page-scroll"><a href="/"><span style="font-size: 0.85em;" class="{{ page.glyphicon }}"></span>&nbsp;{% if page.link_title %}{{ page.link_title }}{% else %}{{ page.title }}{% endif %}</a></li>
+                    {% else %}
+                        <li class="page-scroll"><a href="/pages/{{ page.slug }}"><span style="font-size: 0.85em;" class="{{ page.glyphicon }}"></span>&nbsp;{% if page.link_title %}{{ page.link_title }}{% else %}{{ page.title }}{% endif %}</a></li>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
         {% endif %}
 
         <!-- Link to blog, if it is used  -->

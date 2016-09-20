@@ -25,6 +25,9 @@ class Page(TranslatableModel):
                                      help_text=_('Enable this field if this is the home page'))
     enabled = models.BooleanField(_('Enabled?'), default=False,
                                   help_text=_('Pages that are not enabled will not be listed in menu.'))
+    link_title = models.CharField(_('Link title'), max_length=100, blank=True)
+    submenu = models.BooleanField(_('Submenu'), default=False, help_text=_('Enable this field if you want this link as '
+                                                                           'a submenu of the main page link'))
     link_order = models.IntegerField(_('Position on the menu'), blank=True, null=True)
     glyphicon = models.CharField(max_length=100, blank=True,
                                  help_text=_('Put here the icon you want to use, e.g. glyphicon glyphicon-search'))

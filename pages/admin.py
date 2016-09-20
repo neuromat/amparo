@@ -8,14 +8,15 @@ from models import Page
 class PageAdmin(TranslatableAdmin):
     fieldsets = (
         (None, {
-            'fields': ['title', 'slug', 'body', 'home_page', 'enabled', 'link_order', 'glyphicon']
+            'fields': ['title', 'slug', 'body', 'home_page', 'enabled', 'link_title', 'submenu', 'link_order',
+                       'glyphicon']
         }),
         (_('Edit summary'), {
             'classes': ('collapse',),
             'fields': ('summary',),
         }),
     )
-    list_display = ('title', 'enabled', 'home_page', 'link_order')
+    list_display = ('title', 'home_page', 'enabled', 'link_order', 'submenu')
     exclude = ['posted']
 
     def get_prepopulated_fields(self, request, obj=None):
