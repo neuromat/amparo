@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 from django.conf import settings
 from django.http import HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
+from django.template import RequestContext
 from django.utils.translation import activate, LANGUAGE_SESSION_KEY
 
 from blog.models import Blog
@@ -119,3 +120,9 @@ def google_analytics(request):
     if ga_prop_id:
         return {'GOOGLE_ANALYTICS_PROPERTY_ID': ga_prop_id}
     return {}
+
+
+def handler404(request):
+    response = render_to_response('404.html', {}, context_instance=RequestContext(request))
+    response.status_code = 404
+    return response

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-20 11:10-0300\n"
+"POT-Creation-Date: 2016-09-21 15:59-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,14 +46,14 @@ msgstr "Data/Hora"
 msgid "Resume of speaker"
 msgstr "Currículo do palestrante"
 
-#: blog/models.py:48 templates/main/default.html:79
-#: templates/main/default.html:111
+#: blog/models.py:48 templates/main/default.html:80
+#: templates/main/default.html:112
 msgid "Institutional affiliation"
 msgstr "Vínculo institucional"
 
 #: blog/models.py:51 blog/templates/blog/blog.html:34
-#: blog/templates/blog/view_post.html:20 templates/main/default.html:78
-#: templates/main/default.html:110
+#: blog/templates/blog/view_post.html:20 templates/main/default.html:79
+#: templates/main/default.html:111
 msgid "Speaker"
 msgstr "Convidado(a)"
 
@@ -89,8 +89,8 @@ msgstr "Vídeo"
 msgid "Videos"
 msgstr "Vídeos"
 
-#: blog/templates/blog/blog.html:16 templates/main/default.html:151
-#: templates/main/menu.html:42
+#: blog/templates/blog/blog.html:16 templates/main/default.html:152
+#: templates/main/menu.html:43
 msgid "Schedule"
 msgstr "Programação"
 
@@ -111,7 +111,7 @@ msgid "Professionals"
 msgstr "Profissionais"
 
 #: blog/templates/blog/blog.html:33 blog/templates/blog/view_post.html:19
-#: templates/main/default.html:80 templates/main/default.html:112
+#: templates/main/default.html:81 templates/main/default.html:113
 msgid "Date / Time"
 msgstr "Data / Hora"
 
@@ -120,8 +120,8 @@ msgid "Institutional affiliation of the speaker"
 msgstr "Vínculo institucional do(a) convidado(a)"
 
 #: blog/templates/blog/blog.html:38 blog/templates/blog/search.html:27
-#: blog/templates/blog/search.html:32 templates/main/default.html:81
-#: templates/main/default.html:113
+#: blog/templates/blog/search.html:32 templates/main/default.html:82
+#: templates/main/default.html:114
 msgid "Read more"
 msgstr "Leia mais"
 
@@ -158,6 +158,29 @@ msgstr "Currículo"
 #: templates/contact_form/contact_form_sent.html:28
 msgid "Back"
 msgstr "Voltar"
+
+#: configurations/models.py:8 templates/contact_form/contact_form.html:25
+#: users/models.py:12
+msgid "Name"
+msgstr "Nome"
+
+#: configurations/models.py:8 configurations/models.py:11
+msgid "Project name"
+msgstr ""
+
+#: configurations/models.py:12
+msgid "Can change the project name."
+msgstr ""
+
+#: configurations/models.py:17 configurations/models.py:20
+#, fuzzy
+#| msgid "Project / Promotion"
+msgid "Project logo"
+msgstr "Projeto / Realização"
+
+#: configurations/models.py:21
+msgid "Can change the project logo."
+msgstr ""
 
 #: pages/admin.py:14
 msgid "Edit summary"
@@ -210,12 +233,32 @@ msgstr ""
 "Coloque aqui o ícone que deseja utilizar, por exemplo, glyphicon glyphicon-"
 "search"
 
+#: templates/404.html:15
+msgid "OPS! Error 404"
+msgstr "OPS! Erro 404"
+
+#: templates/404.html:23
+msgid ""
+"Sorry, but the page you are looking for was either not found or does not "
+"exist. <br/>\n"
+"                        Try refreshing the page or click the button below to "
+"go back to the Homepage. "
+msgstr ""
+"Desculpe, mas a página que você está procurando não foi encontrada ou não "
+"existe. <br/>\n"
+"                        Tente atualizar a página ou clique no botão abaixo para "
+"voltar à página inicial. "
+
+#: templates/404.html:27
+msgid "Take me home"
+msgstr "Página inicial"
+
 #: templates/account/account_inactive.html:5
-#: templates/account/account_inactive.html:8
+#: templates/account/account_inactive.html:18
 msgid "Account Inactive"
 msgstr ""
 
-#: templates/account/account_inactive.html:10
+#: templates/account/account_inactive.html:24
 msgid "This account is inactive."
 msgstr ""
 
@@ -223,59 +266,60 @@ msgstr ""
 msgid "Account"
 msgstr ""
 
-#: templates/account/email.html:8
+#: templates/account/email.html:18
 msgid "E-mail Addresses"
 msgstr ""
 
-#: templates/account/email.html:10
+#: templates/account/email.html:23
 msgid "The following e-mail addresses are associated with your account:"
 msgstr "Os seguintes endereços de email estão associados com a sua conta:"
 
-#: templates/account/email.html:24
+#: templates/account/email.html:35
 msgid "Verified"
 msgstr ""
 
-#: templates/account/email.html:26
+#: templates/account/email.html:37
 msgid "Unverified"
 msgstr ""
 
-#: templates/account/email.html:28
+#: templates/account/email.html:39
 msgid "Primary"
 msgstr ""
 
-#: templates/account/email.html:34
+#: templates/account/email.html:45
 msgid "Make Primary"
 msgstr ""
 
-#: templates/account/email.html:35
+#: templates/account/email.html:46
 msgid "Re-send Verification"
 msgstr ""
 
-#: templates/account/email.html:36
+#: templates/account/email.html:47
 msgid "Remove"
 msgstr ""
 
-#: templates/account/email.html:43
+#: templates/account/email.html:53
 msgid "Warning:"
 msgstr ""
 
-#: templates/account/email.html:43
+#: templates/account/email.html:53
 msgid ""
 "You currently do not have any e-mail address set up. You should really add "
 "an e-mail address so you can receive notifications, reset your password, etc."
 msgstr ""
-"Você não tem nenhum endereço de e-mail configurado. Você deve adicionar "
-"um endereço de e-mail para que possa receber notificações, redefinir sua senha, etc."
+"Você não tem nenhum endereço de e-mail configurado. Você deve adicionar um "
+"endereço de e-mail para que possa receber notificações, redefinir sua senha, "
+"etc."
 
-#: templates/account/email.html:48
+#: templates/account/email.html:57
 msgid "Add E-mail Address"
 msgstr ""
 
-#: templates/account/email.html:53
+#: templates/account/email.html:62
 msgid "Add E-mail"
 msgstr "Adicionar E-mail"
 
-#: templates/account/email.html:62
+#: templates/account/email.html:72
 msgid "Do you really want to remove the selected e-mail address?"
 msgstr ""
 
@@ -449,8 +493,8 @@ msgid "Your primary e-mail address must be verified."
 msgstr ""
 
 #: templates/account/password_change.html:5
-#: templates/account/password_change.html:8
-#: templates/account/password_change.html:13
+#: templates/account/password_change.html:18
+#: templates/account/password_change.html:27
 #: templates/account/password_reset_from_key.html:4
 #: templates/account/password_reset_from_key.html:17
 #: templates/account/password_reset_from_key_done.html:4
@@ -503,8 +547,8 @@ msgid ""
 "a>."
 msgstr ""
 "O link de redefinição de senha está inválido, pois provavelmente ele já foi "
-"utilizado. Solicite uma <a href=\"%(passwd_reset_url)s\">nova redefinição de senha</"
-"a>."
+"utilizado. Solicite uma <a href=\"%(passwd_reset_url)s\">nova redefinição de "
+"senha</a>."
 
 #: templates/account/password_reset_from_key.html:32
 msgid "Change password"
@@ -526,8 +570,8 @@ msgstr "aqui"
 msgid "to sign in"
 msgstr "para acessar a rede AMPARO"
 
-#: templates/account/password_set.html:5 templates/account/password_set.html:8
-#: templates/account/password_set.html:13
+#: templates/account/password_set.html:5 templates/account/password_set.html:18
+#: templates/account/password_set.html:27
 msgid "Set Password"
 msgstr ""
 
@@ -564,11 +608,11 @@ msgstr ""
 "                        "
 
 #: templates/account/signup_closed.html:5
-#: templates/account/signup_closed.html:8
+#: templates/account/signup_closed.html:18
 msgid "Sign Up Closed"
 msgstr ""
 
-#: templates/account/signup_closed.html:10
+#: templates/account/signup_closed.html:24
 msgid "We are sorry, but the sign up is currently closed."
 msgstr ""
 
@@ -584,7 +628,7 @@ msgstr ""
 #: templates/account/verification_sent.html:5
 #: templates/account/verification_sent.html:18
 #: templates/account/verified_email_required.html:5
-#: templates/account/verified_email_required.html:8
+#: templates/account/verified_email_required.html:18
 msgid "Verify Your E-mail Address"
 msgstr ""
 
@@ -599,21 +643,32 @@ msgstr ""
 "de criação da sua conta.\n"
 "Caso não receba o email dentro de alguns minutos, entre em contato conosco."
 
-#: templates/account/verified_email_required.html:12
+#: templates/account/verified_email_required.html:26
 msgid ""
 "This part of the site requires us to verify that\n"
-"you are who you claim to be. For this purpose, we require that you\n"
-"verify ownership of your e-mail address. "
+"                    you are who you claim to be. For this purpose, we "
+"require that you\n"
+"                    verify ownership of your e-mail address. "
 msgstr ""
 
-#: templates/account/verified_email_required.html:16
+#: templates/account/verified_email_required.html:30
+#, fuzzy
+#| msgid ""
+#| "We have sent an e-mail to you for verification. Follow the link provided "
+#| "to finalize the signup process. Please contact us if you do not receive "
+#| "it within a few minutes."
 msgid ""
 "We have sent an e-mail to you for\n"
-"verification. Please click on the link inside this e-mail. Please\n"
-"contact us if you do not receive it within a few minutes."
+"                    verification. Please click on the link inside this e-"
+"mail. Please\n"
+"                    contact us if you do not receive it within a few minutes."
 msgstr ""
+"Enviamos um e-mail para você.\n"
+"Por favor, clique no link enviado para o seu email para finalizar o processo "
+"de criação da sua conta.\n"
+"Caso não receba o email dentro de alguns minutos, entre em contato conosco."
 
-#: templates/account/verified_email_required.html:20
+#: templates/account/verified_email_required.html:34
 #, python-format
 msgid ""
 "<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your e-"
@@ -621,13 +676,9 @@ msgid ""
 msgstr ""
 
 #: templates/contact_form/contact_form.html:16
-#: templates/contact_form/contact_form_sent.html:16 templates/main/menu.html:46
+#: templates/contact_form/contact_form_sent.html:16 templates/main/menu.html:47
 msgid "Contact"
 msgstr "Contato"
-
-#: templates/contact_form/contact_form.html:25 users/models.py:12
-msgid "Name"
-msgstr "Nome"
 
 #: templates/contact_form/contact_form.html:26
 msgid "Your name"
@@ -657,55 +708,55 @@ msgstr "Enviar"
 msgid "Your message was sent successfully!"
 msgstr "Email enviado com sucesso!"
 
-#: templates/main/base.html:81
-msgid "Support"
-msgstr "Apoio"
-
-#: templates/main/base.html:87
+#: templates/main/base.html:86
 msgid "Project / Promotion"
 msgstr "Projeto / Realização"
 
-#: templates/main/base.html:93
+#: templates/main/base.html:92
+msgid "Support"
+msgstr "Apoio"
+
+#: templates/main/base.html:98
 msgid "NeuroMat on the Web"
 msgstr "NeuroMat na Web"
 
-#: templates/main/base.html:113
+#: templates/main/base.html:118
 msgid "This page is licensed under the"
 msgstr "Este projeto está licenciado sob os termos da"
 
-#: templates/main/default.html:61
+#: templates/main/default.html:62
 msgid "Next public lecture:"
 msgstr "Próxima palestra pública:"
 
-#: templates/main/default.html:93
+#: templates/main/default.html:94
 msgid "Next lecture to professionals:"
 msgstr "Próxima palestra para profissionais:"
 
-#: templates/main/default.html:129
+#: templates/main/default.html:130
 msgid "Survey"
 msgstr "Formulário"
 
-#: templates/main/default.html:136
+#: templates/main/default.html:137
 msgid "Rede AMPARO"
 msgstr ""
 
-#: templates/main/default.html:144
+#: templates/main/default.html:145
 msgid "Join us!"
 msgstr "Participe!"
 
-#: templates/main/default.html:181
+#: templates/main/default.html:182
 msgid "No home page found!"
 msgstr "Nenhuma home page encontrada!"
 
-#: templates/main/menu.html:12
+#: templates/main/menu.html:13
 msgid "The project"
 msgstr "O projeto"
 
-#: templates/main/menu.html:50
+#: templates/main/menu.html:51
 msgid "Logout"
 msgstr ""
 
-#: templates/main/menu.html:52
+#: templates/main/menu.html:53
 msgid "Login"
 msgstr ""
 
@@ -745,7 +796,3 @@ msgstr "Tipos"
 #: users/models.py:24
 msgid "I am"
 msgstr "Eu sou"
-
-#: website/settings.py:200
-msgid "The name of your project"
-msgstr "O nome do seu projeto"
