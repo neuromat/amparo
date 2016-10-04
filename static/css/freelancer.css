@@ -575,9 +575,9 @@ blockquote{
 }
 @media (min-width: 1200px) {
   .text-right-lg {
-      text-align: right;
+    text-align: right;
   }
   .text-left-lg {
-      text-align: left;
+    text-align: left;
   }
 }
