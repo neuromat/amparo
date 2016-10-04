@@ -35,10 +35,9 @@
                         {% if redirect_field_value %}
                         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                         {% endif %}
+                        <p class="text-justify">{% blocktrans %}By clicking Sign Up, you agree to the <a href="/pages/termos-de-uso">Terms of Use</a> and <a href="/pages/politica-de-privacidade">Privacy Policy</a>.{% endblocktrans %}</p>
                         <button type="submit" class="btn btn-success btn-lg">{% trans "Sign Up" %} &raquo;</button>
                     </form>
-                    <br>
-                    <p class="text-justify">{% blocktrans %}By signing up, you agree to the <a href="/pages/termos-de-uso">Terms of Use</a> and <a href="/pages/politica-de-privacidade">Privacy Policy</a>.{% endblocktrans %}</p>
                 </div>
             </div>
         </div>

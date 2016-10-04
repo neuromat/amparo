@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-03 17:12-0300\n"
+"POT-Creation-Date: 2016-10-04 18:19-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,7 +59,7 @@ msgstr "Convidado(a)"
 
 #: blog/models.py:52 blog/templates/blog/view_post.html:22
 msgid "Moderator"
-msgstr "Moderador"
+msgstr "Moderador(a)"
 
 #: blog/models.py:55
 msgid "Image"
@@ -173,14 +173,12 @@ msgid "Can change the project name."
 msgstr ""
 
 #: configurations/models.py:17 configurations/models.py:20
-#, fuzzy
-#| msgid "Project / Promotion"
 msgid "Project logo"
-msgstr "Projeto / Realização"
+msgstr "Logo do projeto"
 
 #: configurations/models.py:21
 msgid "Can change the project logo."
-msgstr ""
+msgstr "Pode alterar o logo do projeto."
 
 #: pages/admin.py:14
 msgid "Edit summary"
@@ -208,20 +206,16 @@ msgstr "Páginas que não estão habilitadas não serão listadas no menu."
 
 #: pages/models.py:28
 msgid "Link title"
-msgstr ""
+msgstr "Título do link"
 
 #: pages/models.py:29
-#, fuzzy
-#| msgid "Submit"
 msgid "Submenu"
-msgstr "Enviar"
+msgstr "Submenu"
 
 #: pages/models.py:29
-#, fuzzy
-#| msgid "Enable this field if this is the home page"
 msgid ""
 "Enable this field if you want this link as a submenu of the main page link"
-msgstr "Ative este campo se esta página for a home page"
+msgstr "Ative este campo se você quiser que este link seja um submenu do link principal"
 
 #: pages/models.py:31
 msgid "Position on the menu"
@@ -579,9 +573,9 @@ msgstr ""
 msgid "Signup"
 msgstr ""
 
-#: templates/account/signup.html:18 templates/account/signup.html:38
+#: templates/account/signup.html:18 templates/account/signup.html:39
 msgid "Sign Up"
-msgstr ""
+msgstr "Cadastre-se"
 
 #: templates/account/signup.html:24
 #, python-format
@@ -607,13 +601,14 @@ msgstr ""
 "são pessoais e intransferíveis. Nunca divulgue a sua senha.\n"
 "                        "
 
-#: templates/account/signup.html:41
+#: templates/account/signup.html:38
 msgid ""
-"By signing up, you agree to the <a href=\"/pages/termos-de-uso\">Terms of "
-"Use</a> and <a href=\"/pages/politica-de-privacidade\">Privacy Policy</a>."
+"By clicking Sign Up, you agree to the <a href=\"/pages/termos-de-uso\">Terms "
+"of Use</a> and <a href=\"/pages/politica-de-privacidade\">Privacy Policy</a>."
 msgstr ""
-"Ao se cadastrar, você concorda com os <a href=\"/pages/termos-de-uso\">Termos de "
-"uso</a> e com a <a href=\"/pages/politica-de-privacidade\">Política de privacidade</a>."
+"Ao clicar em Cadastre-se, você concorda com os <a href=\"/pages/termos-de-uso"
+"\">Termos de uso</a> e com a <a href=\"/pages/politica-de-privacidade"
+"\">Política de privacidade</a>."
 
 #: templates/account/signup_closed.html:5
 #: templates/account/signup_closed.html:18
@@ -660,11 +655,6 @@ msgid ""
 msgstr ""
 
 #: templates/account/verified_email_required.html:30
-#, fuzzy
-#| msgid ""
-#| "We have sent an e-mail to you for verification. Follow the link provided "
-#| "to finalize the signup process. Please contact us if you do not receive "
-#| "it within a few minutes."
 msgid ""
 "We have sent an e-mail to you for\n"
 "                    verification. Please click on the link inside this e-"
@@ -736,7 +726,7 @@ msgstr "Termos de uso"
 msgid "Privacy policy"
 msgstr "Política de privacidade"
 
-#: templates/main/base.html:118
+#: templates/main/base.html:121
 msgid "This page is licensed under the"
 msgstr "Este projeto está licenciado sob os termos da"
 
