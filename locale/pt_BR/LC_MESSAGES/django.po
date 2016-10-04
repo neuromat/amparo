@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-21 15:59-0300\n"
+"POT-Creation-Date: 2016-10-03 17:12-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -246,8 +246,8 @@ msgid ""
 msgstr ""
 "Desculpe, mas a página que você está procurando não foi encontrada ou não "
 "existe. <br/>\n"
-"                        Tente atualizar a página ou clique no botão abaixo para "
-"voltar à página inicial. "
+"                        Tente atualizar a página ou clique no botão abaixo "
+"para voltar à página inicial. "
 
 #: templates/404.html:27
 msgid "Take me home"
@@ -607,6 +607,14 @@ msgstr ""
 "são pessoais e intransferíveis. Nunca divulgue a sua senha.\n"
 "                        "
 
+#: templates/account/signup.html:41
+msgid ""
+"By signing up, you agree to the <a href=\"/pages/termos-de-uso\">Terms of "
+"Use</a> and <a href=\"/pages/politica-de-privacidade\">Privacy Policy</a>."
+msgstr ""
+"Ao se cadastrar, você concorda com os <a href=\"/pages/termos-de-uso\">Termos de "
+"uso</a> e com a <a href=\"/pages/politica-de-privacidade\">Política de privacidade</a>."
+
 #: templates/account/signup_closed.html:5
 #: templates/account/signup_closed.html:18
 msgid "Sign Up Closed"
@@ -719,6 +727,14 @@ msgstr "Apoio"
 #: templates/main/base.html:98
 msgid "NeuroMat on the Web"
 msgstr "NeuroMat na Web"
+
+#: templates/main/base.html:118
+msgid "Terms of use"
+msgstr "Termos de uso"
+
+#: templates/main/base.html:118
+msgid "Privacy policy"
+msgstr "Política de privacidade"
 
 #: templates/main/base.html:118
 msgid "This page is licensed under the"

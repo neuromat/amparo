@@ -573,3 +573,11 @@ blockquote{
 .navbar-nav > li > .dropdown-menu a{
   color: black;
 }
+@media (min-width: 1200px) {
+  .text-right-lg {
+      text-align: right;
+  }
+  .text-left-lg {
+      text-align: left;
+  }
+}
