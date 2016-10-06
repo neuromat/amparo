@@ -20,6 +20,15 @@
                     <p><strong>{% trans "Speaker" %}:</strong> {{ post.speaker }}</p>
                     <p class="text-justify"><strong>{% trans "Curriculum" %}:</strong> {{ post.resume_speaker }}</p>
                     <p><strong>{% trans "Moderator" %}:</strong> {{ post.moderator }}</p>
+                    {% if post.link_to_iptv %}
+                        {% if not post.publish %}
+                            {% if request.user.is_authenticated and request.user.type_of_person.name == 'Profissional' %}
+                                <p><strong>{% trans "Live streaming" %}:</strong> <a href="{{ post.link_to_iptv }}" target="_blank">{{ post.link_to_iptv }}</a></p>
+                            {% endif %}
+                        {% else %}
+                            <p><strong>{% trans "Live streaming" %}:</strong> <a href="{{ post.link_to_iptv }}" target="_blank">{{ post.link_to_iptv }}</a></p>
+                        {% endif %}
+                    {% endif %}
 
                     {% if post.videos.all %}
                         {% if post.videos.all|length == 1 %}
