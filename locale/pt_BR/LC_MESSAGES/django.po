@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-04 18:19-0300\n"
+"POT-Creation-Date: 2016-10-06 11:49-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -81,11 +81,11 @@ msgstr "Banner"
 msgid "Posted"
 msgstr "Publicado"
 
-#: blog/models.py:100 blog/models.py:103 blog/templates/blog/view_post.html:26
+#: blog/models.py:100 blog/models.py:103 blog/templates/blog/view_post.html:35
 msgid "Video"
 msgstr "Vídeo"
 
-#: blog/models.py:104 blog/templates/blog/view_post.html:28
+#: blog/models.py:104 blog/templates/blog/view_post.html:37
 msgid "Videos"
 msgstr "Vídeos"
 
@@ -153,7 +153,11 @@ msgstr "Desculpe, mas nada foi encontrado com o termo utilizado."
 msgid "Curriculum"
 msgstr "Currículo"
 
-#: blog/templates/blog/view_post.html:36
+#: blog/templates/blog/view_post.html:26 blog/templates/blog/view_post.html:29
+msgid "Live streaming"
+msgstr "Link para a transmissão da palestra"
+
+#: blog/templates/blog/view_post.html:45
 #: pages/templates/pages/view_page.html:28
 #: templates/contact_form/contact_form_sent.html:28
 msgid "Back"
@@ -215,7 +219,9 @@ msgstr "Submenu"
 #: pages/models.py:29
 msgid ""
 "Enable this field if you want this link as a submenu of the main page link"
-msgstr "Ative este campo se você quiser que este link seja um submenu do link principal"
+msgstr ""
+"Ative este campo se você quiser que este link seja um submenu do link "
+"principal"
 
 #: pages/models.py:31
 msgid "Position on the menu"
