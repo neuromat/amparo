@@ -29,4 +29,5 @@ urlpatterns = [
     url(r'^contact/', include('contact_form.urls')),
     url(r'^language/(?P<language_code>(?:(?:\w{2})|(?:\w{2}\-\w{2})))$', language_change, name='language_change'),
     url(r'^pages/', include('pages.urls')),
+    url(r'^users/', include('users.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

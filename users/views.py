@@ -1,6 +1,10 @@
 from abc import ABCMeta, abstractmethod
 from django.conf import settings
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render
 from jsonrpc_requests import Server, TransportError
+
+from models import CustomUser
 
 
 class ABCSearchEngine:
@@ -79,3 +83,16 @@ class Questionnaires(ABCSearchEngine):
 
     def get_participant_properties(self, survey_id, token_id, prop):
         return super(Questionnaires, self).get_participant_properties(survey_id, token_id, prop)
+
+
+@login_required
+def list_of_users(request):
+    if request.user.has_perm('users.view_list_of_users'):
+        users = CustomUser.objects.all()
+        total = users.count()
+        professionals = users.filter(type_of_person__name='Profissional')
+        others = users.exclude(type_of_person__name='Profissional')
+        context = {'total': total, 'professionals': professionals, 'others': others}
+        return render(request, 'users/list_of_users.html', context)
+    else:
+        return render(request, '404.html')

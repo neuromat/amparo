@@ -28,3 +28,8 @@ class CustomUser(AbstractUser):
 
     # to enforce that you require email field to be associated with every user at registration
     REQUIRED_FIELDS = ["email"]
+
+    class Meta:
+        permissions = (
+            ("view_list_of_users", _("Can see the list of users")),
+        )

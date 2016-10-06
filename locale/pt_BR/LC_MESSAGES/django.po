@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-06 11:49-0300\n"
+"POT-Creation-Date: 2016-10-06 18:42-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -244,8 +244,7 @@ msgid ""
 "                        Try refreshing the page or click the button below to "
 "go back to the Homepage. "
 msgstr ""
-"Desculpe, mas a página que você está procurando não foi encontrada ou não "
-"existe. <br/>\n"
+"Desculpe, mas a página que você está procurando não foi encontrada. <br/>\n"
 "                        Tente atualizar a página ou clique no botão abaixo "
 "para voltar à página inicial. "
 
@@ -808,3 +807,33 @@ msgstr "Tipos"
 #: users/models.py:24
 msgid "I am"
 msgstr "Eu sou"
+
+#: users/models.py:34
+msgid "Can see the list of users"
+msgstr "Pode ver a lista de usuários"
+
+#: users/templates/users/list_of_users.html:16
+msgid "List of users"
+msgstr "Lista de usuários"
+
+#: users/templates/users/list_of_users.html:24
+msgid "Total number of users"
+msgstr "Total de usuários"
+
+#: users/templates/users/list_of_users.html:25
+msgid "Number of professionals"
+msgstr "Número de profissionais"
+
+#: users/templates/users/list_of_users.html:26
+msgid "Number of users (without professionals)"
+msgstr "Número de usuários (sem contar profissionais)"
+
+#: users/templates/users/list_of_users.html:28
+msgid "List of emails from professionals"
+msgstr "Lista de emails dos profissionais"
+
+#: users/templates/users/list_of_users.html:34
+msgid ""
+"List of emails from caregivers, students and people with Parkinson's disease"
+msgstr ""
+"Lista de emails dos cuidadores, estudantes e pessoas com doença de Parkinson"
