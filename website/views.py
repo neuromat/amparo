@@ -58,7 +58,7 @@ def index(request):
         elif type_of_person == 'Familiar ou cuidador':
             survey_id = settings.LIMESURVEY['CUIDADOR']
 
-        elif type_of_person == 'Portador da doença de Parkinson':
+        elif type_of_person == 'Pessoa com doença de Parkinson':
             survey_id = settings.LIMESURVEY['PACIENTE']
 
         limesurvey_available = is_limesurvey_available(questionnaire)
