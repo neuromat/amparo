@@ -24,18 +24,18 @@
                     <p><strong>{% trans "Total number of users" %}:</strong> {{ total }}</p>
                     <p><strong>{% trans "Number of professionals" %}:</strong> {{ professionals|length }}</p>
                     <p><strong>{% trans "Number of users (without professionals)" %}:</strong> {{ others|length }}</p>
-                    <p>
-                        <strong>{% trans "List of emails from professionals" %}:</strong><br>
-                        {% for person in professionals %}
-                            {% if person.email %}{{ person.email }},&nbsp;{% endif %}
-                        {% endfor %}
-                    </p>
-                    <p>
-                        <strong>{% trans "List of emails from caregivers, students and people with Parkinson's disease" %}:</strong><br>
-                        {% for person in others %}
-                            {% if person.email %}{{ person.email }},&nbsp;{% endif %}
-                        {% endfor %}
-                    </p>
+{#                    <p>#}
+{#                        <strong>{% trans "List of emails from professionals" %}:</strong><br>#}
+{#                        {% for person in professionals %}#}
+{#                            {% if person.email %}{{ person.email }},&nbsp;{% endif %}#}
+{#                        {% endfor %}#}
+{#                    </p>#}
+{#                    <p>#}
+{#                        <strong>{% trans "List of emails from caregivers, students and people with Parkinson's disease" %}:</strong><br>#}
+{#                        {% for person in others %}#}
+{#                            {% if person.email %}{{ person.email }},&nbsp;{% endif %}#}
+{#                        {% endfor %}#}
+{#                    </p>#}
                 </div>
             </div>
         </div>
