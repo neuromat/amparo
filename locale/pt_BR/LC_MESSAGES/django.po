@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-06 18:42-0300\n"
+"POT-Creation-Date: 2016-10-10 10:18-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -69,7 +69,7 @@ msgstr "Imagem"
 msgid "URL"
 msgstr ""
 
-#: blog/models.py:57
+#: blog/models.py:57 users/templates/users/send_email.html:30
 msgid "Publish"
 msgstr "Público"
 
@@ -696,6 +696,7 @@ msgid "Your email"
 msgstr "Seu email"
 
 #: templates/contact_form/contact_form.html:36
+#: users/templates/users/send_email.html:42
 msgid "Message"
 msgstr "Mensagem"
 
@@ -712,8 +713,8 @@ msgid "Your message was sent successfully!"
 msgstr "Email enviado com sucesso!"
 
 #: templates/main/base.html:86
-msgid "Project / Promotion"
-msgstr "Projeto / Realização"
+msgid "This is an initiative by"
+msgstr "Esta é uma iniciativa"
 
 #: templates/main/base.html:92
 msgid "Support"
@@ -828,12 +829,46 @@ msgstr "Número de profissionais"
 msgid "Number of users (without professionals)"
 msgstr "Número de usuários (sem contar profissionais)"
 
-#: users/templates/users/list_of_users.html:28
-msgid "List of emails from professionals"
-msgstr "Lista de emails dos profissionais"
+#: users/templates/users/send_email.html:16
+msgid "Send email"
+msgstr "Enviar email"
 
-#: users/templates/users/list_of_users.html:34
-msgid ""
-"List of emails from caregivers, students and people with Parkinson's disease"
+#: users/templates/users/send_email.html:26
+msgid "Lectures"
+msgstr "Palestras"
+
+#: users/templates/users/send_email.html:32
+msgid "Private"
+msgstr "Privada"
+
+#: users/templates/users/send_email.html:38
+msgid "Subject"
+msgstr "Assunto"
+
+#: users/templates/users/send_email.html:46
+msgid "Send"
+msgstr "Enviar"
+
+#: users/views.py:123
+msgid "Lecture from Rede AMPARO"
 msgstr ""
-"Lista de emails dos cuidadores, estudantes e pessoas com doença de Parkinson"
+
+#: users/views.py:126
+#, python-format
+msgid "The lecture %s will start soon"
+msgstr "A palestra %s começará em breve"
+
+#: users/views.py:127
+#, python-format
+msgid "<p>The lecture %s will start soon.</p>"
+msgstr "<p>A palestra %s começará em breve.</p>"
+
+#~ msgid "List of emails from professionals"
+#~ msgstr "Lista de emails dos profissionais"
+
+#~ msgid ""
+#~ "List of emails from caregivers, students and people with Parkinson's "
+#~ "disease"
+#~ msgstr ""
+#~ "Lista de emails dos cuidadores, estudantes e pessoas com doença de "
+#~ "Parkinson"
