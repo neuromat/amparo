@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-10 10:18-0300\n"
+"POT-Creation-Date: 2016-10-10 11:03-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -106,7 +106,7 @@ msgstr ""
 "Pessoas com doença de Parkinson, familiares, cuidadores, estudantes e "
 "profissionais"
 
-#: blog/templates/blog/blog.html:31
+#: blog/templates/blog/blog.html:31 users/templates/users/list_of_users.html:25
 msgid "Professionals"
 msgstr "Profissionais"
 
@@ -814,20 +814,24 @@ msgid "Can see the list of users"
 msgstr "Pode ver a lista de usuários"
 
 #: users/templates/users/list_of_users.html:16
-msgid "List of users"
-msgstr "Lista de usuários"
+msgid "Number of users"
+msgstr "Número de usuários"
 
 #: users/templates/users/list_of_users.html:24
 msgid "Total number of users"
 msgstr "Total de usuários"
 
-#: users/templates/users/list_of_users.html:25
-msgid "Number of professionals"
-msgstr "Número de profissionais"
-
 #: users/templates/users/list_of_users.html:26
-msgid "Number of users (without professionals)"
-msgstr "Número de usuários (sem contar profissionais)"
+msgid "Students"
+msgstr "Estudantes"
+
+#: users/templates/users/list_of_users.html:27
+msgid "Family members or caregivers"
+msgstr "Familiares ou cuidadores"
+
+#: users/templates/users/list_of_users.html:28
+msgid "People with Parkinson's disease"
+msgstr "Pessoas com doença de Parkinson"
 
 #: users/templates/users/send_email.html:16
 msgid "Send email"
@@ -849,26 +853,16 @@ msgstr "Assunto"
 msgid "Send"
 msgstr "Enviar"
 
-#: users/views.py:123
+#: users/views.py:127
 msgid "Lecture from Rede AMPARO"
 msgstr ""
 
-#: users/views.py:126
+#: users/views.py:130
 #, python-format
 msgid "The lecture %s will start soon"
 msgstr "A palestra %s começará em breve"
 
-#: users/views.py:127
+#: users/views.py:131
 #, python-format
 msgid "<p>The lecture %s will start soon.</p>"
 msgstr "<p>A palestra %s começará em breve.</p>"
-
-#~ msgid "List of emails from professionals"
-#~ msgstr "Lista de emails dos profissionais"
-
-#~ msgid ""
-#~ "List of emails from caregivers, students and people with Parkinson's "
-#~ "disease"
-#~ msgstr ""
-#~ "Lista de emails dos cuidadores, estudantes e pessoas com doença de "
-#~ "Parkinson"

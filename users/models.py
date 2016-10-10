@@ -32,4 +32,5 @@ class CustomUser(AbstractUser):
     class Meta:
         permissions = (
             ("view_list_of_users", _("Can see the list of users")),
+            ("send_email_to_users", _("Can send email to users")),
         )
