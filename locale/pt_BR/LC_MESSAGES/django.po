@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-10 11:03-0300\n"
+"POT-Creation-Date: 2016-10-12 16:49-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -69,7 +69,7 @@ msgstr "Imagem"
 msgid "URL"
 msgstr ""
 
-#: blog/models.py:57 users/templates/users/send_email.html:30
+#: blog/models.py:57 users/templates/users/send_email.html:52
 msgid "Publish"
 msgstr "Público"
 
@@ -696,7 +696,7 @@ msgid "Your email"
 msgstr "Seu email"
 
 #: templates/contact_form/contact_form.html:36
-#: users/templates/users/send_email.html:42
+#: users/templates/users/send_email.html:64
 msgid "Message"
 msgstr "Mensagem"
 
@@ -712,27 +712,27 @@ msgstr "Enviar"
 msgid "Your message was sent successfully!"
 msgstr "Email enviado com sucesso!"
 
-#: templates/main/base.html:86
+#: templates/main/base.html:94
 msgid "This is an initiative by"
 msgstr "Esta é uma iniciativa"
 
-#: templates/main/base.html:92
+#: templates/main/base.html:100
 msgid "Support"
 msgstr "Apoio"
 
-#: templates/main/base.html:98
+#: templates/main/base.html:106
 msgid "NeuroMat on the Web"
 msgstr "NeuroMat na Web"
 
-#: templates/main/base.html:118
+#: templates/main/base.html:126
 msgid "Terms of use"
 msgstr "Termos de uso"
 
-#: templates/main/base.html:118
+#: templates/main/base.html:126
 msgid "Privacy policy"
 msgstr "Política de privacidade"
 
-#: templates/main/base.html:121
+#: templates/main/base.html:129
 msgid "This page is licensed under the"
 msgstr "Este projeto está licenciado sob os termos da"
 
@@ -764,11 +764,19 @@ msgstr "Nenhuma home page encontrada!"
 msgid "The project"
 msgstr "O projeto"
 
-#: templates/main/menu.html:51
+#: templates/main/menu.html:55 users/templates/users/list_of_users.html:16
+msgid "Number of users"
+msgstr "Número de usuários"
+
+#: templates/main/menu.html:58 users/templates/users/send_email.html:38
+msgid "Send email"
+msgstr "Enviar email"
+
+#: templates/main/menu.html:66
 msgid "Logout"
 msgstr ""
 
-#: templates/main/menu.html:53
+#: templates/main/menu.html:68
 msgid "Login"
 msgstr ""
 
@@ -813,9 +821,9 @@ msgstr "Eu sou"
 msgid "Can see the list of users"
 msgstr "Pode ver a lista de usuários"
 
-#: users/templates/users/list_of_users.html:16
-msgid "Number of users"
-msgstr "Número de usuários"
+#: users/models.py:35
+msgid "Can send email to users"
+msgstr "Pode enviar email para usuários"
 
 #: users/templates/users/list_of_users.html:24
 msgid "Total number of users"
@@ -833,36 +841,36 @@ msgstr "Familiares ou cuidadores"
 msgid "People with Parkinson's disease"
 msgstr "Pessoas com doença de Parkinson"
 
-#: users/templates/users/send_email.html:16
-msgid "Send email"
-msgstr "Enviar email"
-
-#: users/templates/users/send_email.html:26
+#: users/templates/users/send_email.html:48
 msgid "Lectures"
 msgstr "Palestras"
 
-#: users/templates/users/send_email.html:32
+#: users/templates/users/send_email.html:54
 msgid "Private"
 msgstr "Privada"
 
-#: users/templates/users/send_email.html:38
+#: users/templates/users/send_email.html:60
 msgid "Subject"
 msgstr "Assunto"
 
-#: users/templates/users/send_email.html:46
+#: users/templates/users/send_email.html:68
 msgid "Send"
 msgstr "Enviar"
 
-#: users/views.py:127
+#: users/views.py:128
 msgid "Lecture from Rede AMPARO"
 msgstr ""
 
-#: users/views.py:130
+#: users/views.py:131
 #, python-format
 msgid "The lecture %s will start soon"
 msgstr "A palestra %s começará em breve"
 
-#: users/views.py:131
+#: users/views.py:132
 #, python-format
 msgid "<p>The lecture %s will start soon.</p>"
 msgstr "<p>A palestra %s começará em breve.</p>"
+
+#: users/views.py:160
+msgid "Email successfully sent!"
+msgstr "Email enviado com sucesso!"

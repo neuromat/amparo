@@ -157,11 +157,9 @@ def send_email_to_users(request):
                     return HttpResponse('Invalid header found.')
 
                 connection.close()
-
-            return redirect(reverse('main_page'))
+                messages.success(request, _('Email successfully sent!'))
 
         context = {'lectures': lectures}
-
         return render(request, 'users/send_email.html', context)
 
     else:

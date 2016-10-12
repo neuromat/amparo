@@ -2,6 +2,28 @@
 {% load i18n %}
 
 {% block content %}
+    {% if messages %}
+        {% for message in messages %}
+
+            {% if message.tags == "success" %}
+                <script>showSuccessMessage('{{ message }}')</script>
+            {% endif %}
+
+            {% if message.tags == "warning" %}
+                <script>showWarningMessage('{{ message }}')</script>
+            {% endif %}
+
+            {% if message.tags == "error" %}
+                <script>showErrorMessage('{{ message }}')</script>
+            {% endif %}
+
+            {% if message.tags == "info" %}
+                <script>showInfoMessage('{{ message }}')</script>
+            {% endif %}
+
+        {% endfor %}
+    {% endif %}
+
     <!-- Header -->
     <header>
         <div class="my-container">

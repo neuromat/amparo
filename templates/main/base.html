@@ -12,6 +12,9 @@
 
     <title>{% block head_title %}NeuroMat - {% settings_value "PROJECT_NAME" %}{% endblock %}</title>
 
+    <!-- Jquery -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+
     <!-- Bootstrap Core CSS -->
     <link href="{% static "vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
 
@@ -25,6 +28,11 @@
 
     <!-- BootstrapFormHelpers | Using its flags -->
     <link href="{% static 'bootstrapformhelpers/css/bootstrap-formhelpers.min.css' %}" rel="stylesheet">
+
+    <!-- Simple javascript notifications -->
+    <link href="{% static 'toastr/toastr.css' %}" rel="stylesheet"/>
+    <script src="{% static 'toastr/toastr.js' %}"></script>
+    <script src="{% static 'toastr/toastr_messages.js' %}"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
