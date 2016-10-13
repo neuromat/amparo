@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-12 16:49-0300\n"
+"POT-Creation-Date: 2016-10-13 10:13-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -499,7 +499,7 @@ msgstr ""
 #: templates/account/password_reset_from_key_done.html:4
 #: templates/account/password_reset_from_key_done.html:17
 msgid "Change Password"
-msgstr ""
+msgstr "Alterar senha"
 
 #: templates/account/password_reset.html:6
 #: templates/account/password_reset.html:20
@@ -550,8 +550,9 @@ msgstr ""
 "senha</a>."
 
 #: templates/account/password_reset_from_key.html:32
+#: templates/main/menu.html:76
 msgid "Change password"
-msgstr ""
+msgstr "Alterar senha"
 
 #: templates/account/password_reset_from_key.html:35
 msgid "Your password is now changed."
@@ -764,19 +765,19 @@ msgstr "Nenhuma home page encontrada!"
 msgid "The project"
 msgstr "O projeto"
 
-#: templates/main/menu.html:55 users/templates/users/list_of_users.html:16
+#: templates/main/menu.html:78 users/templates/users/list_of_users.html:16
 msgid "Number of users"
 msgstr "Número de usuários"
 
-#: templates/main/menu.html:58 users/templates/users/send_email.html:38
+#: templates/main/menu.html:81 users/templates/users/send_email.html:38
 msgid "Send email"
 msgstr "Enviar email"
 
-#: templates/main/menu.html:66
+#: templates/main/menu.html:83
 msgid "Logout"
-msgstr ""
+msgstr "Sair"
 
-#: templates/main/menu.html:68
+#: templates/main/menu.html:87
 msgid "Login"
 msgstr ""
 
@@ -786,15 +787,15 @@ msgstr ""
 
 #: users/forms.py:14 users/forms.py:43
 msgid "Password"
-msgstr ""
+msgstr "Senha"
 
 #: users/forms.py:15
 msgid "Password confirmation"
-msgstr ""
+msgstr "Repita a senha"
 
 #: users/forms.py:26
 msgid "Passwords don't match"
-msgstr ""
+msgstr "Senhas não coincidem"
 
 #: users/forms.py:44
 msgid ""

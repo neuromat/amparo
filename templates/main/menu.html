@@ -46,24 +46,21 @@
         <!-- Link to contact form  -->
         <li class="page-scroll"><a href="{% url 'contact_form' %}"><span style="font-size: 0.85em;" class="glyphicon glyphicon-phone"></span>&nbsp;{% trans "Contact" %}</a></li>
 
-        <!-- Link to admin -->
-        {% if perms.user.send_email_to_users or perms.user.view_list_of_users and user.is_authenticated %}
-            <li>
-                <a data-toggle="dropdown" href="/"><span style="font-size: 0.85em;" class="glyphicon glyphicon-cog"></span>&nbsp;Admin <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                {% if perms.user.view_list_of_users %}
-                    <li><a href="/users">{% trans "Number of users" %}</a></li>
-                {% endif %}
-                {% if perms.user.send_email_to_users %}
-                    <li><a href="/users/send_email">{% trans "Send email" %}</a></li>
-                {% endif %}
-                </ul>
-            </li>
-        {% endif %}
-
         <!-- Login or logout link  -->
         {% if user.is_authenticated %}
-            <li class="page-scroll"><a href="/accounts/logout/"><span style="font-size: 0.85em;" class="glyphicon glyphicon-user"></span>&nbsp;{% trans "Logout" %}</a></li>
+            <li>
+                <a data-toggle="dropdown" href="/"><span style="font-size: 0.85em;" class="glyphicon glyphicon-user"></span>&nbsp;{{ user.username }} <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li class="page-scroll"><a href="/accounts/password/change/">{% trans "Change password" %}</a></li>
+                    {% if perms.user.view_list_of_users %}
+                        <li><a href="/users">{% trans "Number of users" %}</a></li>
+                    {% endif %}
+                    {% if perms.user.send_email_to_users %}
+                        <li><a href="/users/send_email">{% trans "Send email" %}</a></li>
+                    {% endif %}
+                    <li class="page-scroll"><a href="/accounts/logout/">{% trans "Logout" %}</a></li>
+                </ul>
+            </li>
         {% else %}
             <li class="page-scroll"><a href="/accounts/login/"><span style="font-size: 0.85em;" class="glyphicon glyphicon-user"></span>&nbsp;{% trans "Login" %}</a></li>
         {% endif %}
