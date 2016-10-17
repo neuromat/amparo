@@ -13,7 +13,7 @@ class BlogAdmin(TranslatableAdmin):
     fieldsets = (
         (None, {
             'fields': ['category', 'title', 'slug', 'body', 'speaker', 'image', 'resume_speaker', 'affiliation',
-                       'moderator', 'date_time', 'link_to_iptv', 'publish', 'banner']
+                       'moderator', 'date_time', 'link_to_iptv', 'link_to_google', 'publish', 'banner']
         }),
     )
     exclude = ['posted']

@@ -23,10 +23,20 @@
                     {% if post.link_to_iptv %}
                         {% if not post.publish %}
                             {% if request.user.is_authenticated and request.user.type_of_person.name == 'Profissional' %}
-                                <p><strong>{% trans "Live streaming" %}:</strong> <a href="{{ post.link_to_iptv }}" target="_blank">{{ post.link_to_iptv }}</a></p>
+                                <p><strong>{% trans "Live streaming by IPTV" %}:</strong> <a href="{{ post.link_to_iptv }}" target="_blank">{{ post.link_to_iptv }}</a></p>
                             {% endif %}
                         {% else %}
-                            <p><strong>{% trans "Live streaming" %}:</strong> <a href="{{ post.link_to_iptv }}" target="_blank">{{ post.link_to_iptv }}</a></p>
+                            <p><strong>{% trans "Live streaming by IPTV" %}:</strong> <a href="{{ post.link_to_iptv }}" target="_blank">{{ post.link_to_iptv }}</a></p>
+                        {% endif %}
+                    {% endif %}
+
+                    {% if post.link_to_google %}
+                        {% if not post.publish %}
+                            {% if request.user.is_authenticated and request.user.type_of_person.name == 'Profissional' %}
+                                <p><strong>{% trans "Live streaming by Google" %}:</strong> <a href="{{ post.link_to_google }}" target="_blank">{{ post.link_to_google }}</a></p>
+                            {% endif %}
+                        {% else %}
+                            <p><strong>{% trans "Live streaming by Google" %}:</strong> <a href="{{ post.link_to_google }}" target="_blank">{{ post.link_to_google }}</a></p>
                         {% endif %}
                     {% endif %}
 

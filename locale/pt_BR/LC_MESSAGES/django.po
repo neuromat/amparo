@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-13 10:13-0300\n"
+"POT-Creation-Date: 2016-10-17 15:43-0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,26 +66,30 @@ msgid "Image"
 msgstr "Imagem"
 
 #: blog/models.py:56
-msgid "URL"
+msgid "IPTV"
 msgstr ""
 
-#: blog/models.py:57 users/templates/users/send_email.html:52
+#: blog/models.py:57
+msgid "Google"
+msgstr ""
+
+#: blog/models.py:58 users/templates/users/send_email.html:30
 msgid "Publish"
 msgstr "Público"
 
-#: blog/models.py:58
+#: blog/models.py:59
 msgid "Banner"
 msgstr "Banner"
 
-#: blog/models.py:59 pages/models.py:34
+#: blog/models.py:60 pages/models.py:34
 msgid "Posted"
 msgstr "Publicado"
 
-#: blog/models.py:100 blog/models.py:103 blog/templates/blog/view_post.html:35
+#: blog/models.py:101 blog/models.py:104 blog/templates/blog/view_post.html:45
 msgid "Video"
 msgstr "Vídeo"
 
-#: blog/models.py:104 blog/templates/blog/view_post.html:37
+#: blog/models.py:105 blog/templates/blog/view_post.html:47
 msgid "Videos"
 msgstr "Vídeos"
 
@@ -154,10 +158,14 @@ msgid "Curriculum"
 msgstr "Currículo"
 
 #: blog/templates/blog/view_post.html:26 blog/templates/blog/view_post.html:29
-msgid "Live streaming"
-msgstr "Link para a transmissão da palestra"
+msgid "Live streaming by IPTV"
+msgstr "Transmissão ao vivo pelo IPTV"
 
-#: blog/templates/blog/view_post.html:45
+#: blog/templates/blog/view_post.html:36 blog/templates/blog/view_post.html:39
+msgid "Live streaming by Google"
+msgstr "Transmissão ao vivo pelo Google"
+
+#: blog/templates/blog/view_post.html:55
 #: pages/templates/pages/view_page.html:28
 #: templates/contact_form/contact_form_sent.html:28
 msgid "Back"
@@ -550,7 +558,7 @@ msgstr ""
 "senha</a>."
 
 #: templates/account/password_reset_from_key.html:32
-#: templates/main/menu.html:76
+#: templates/main/menu.html:54
 msgid "Change password"
 msgstr "Alterar senha"
 
@@ -697,7 +705,7 @@ msgid "Your email"
 msgstr "Seu email"
 
 #: templates/contact_form/contact_form.html:36
-#: users/templates/users/send_email.html:64
+#: users/templates/users/send_email.html:42
 msgid "Message"
 msgstr "Mensagem"
 
@@ -713,27 +721,27 @@ msgstr "Enviar"
 msgid "Your message was sent successfully!"
 msgstr "Email enviado com sucesso!"
 
-#: templates/main/base.html:94
+#: templates/main/base.html:116
 msgid "This is an initiative by"
 msgstr "Esta é uma iniciativa"
 
-#: templates/main/base.html:100
+#: templates/main/base.html:122
 msgid "Support"
 msgstr "Apoio"
 
-#: templates/main/base.html:106
+#: templates/main/base.html:128
 msgid "NeuroMat on the Web"
 msgstr "NeuroMat na Web"
 
-#: templates/main/base.html:126
+#: templates/main/base.html:148
 msgid "Terms of use"
 msgstr "Termos de uso"
 
-#: templates/main/base.html:126
+#: templates/main/base.html:148
 msgid "Privacy policy"
 msgstr "Política de privacidade"
 
-#: templates/main/base.html:129
+#: templates/main/base.html:151
 msgid "This page is licensed under the"
 msgstr "Este projeto está licenciado sob os termos da"
 
@@ -765,19 +773,19 @@ msgstr "Nenhuma home page encontrada!"
 msgid "The project"
 msgstr "O projeto"
 
-#: templates/main/menu.html:78 users/templates/users/list_of_users.html:16
+#: templates/main/menu.html:56 users/templates/users/list_of_users.html:16
 msgid "Number of users"
 msgstr "Número de usuários"
 
-#: templates/main/menu.html:81 users/templates/users/send_email.html:38
+#: templates/main/menu.html:59 users/templates/users/send_email.html:16
 msgid "Send email"
 msgstr "Enviar email"
 
-#: templates/main/menu.html:83
+#: templates/main/menu.html:61
 msgid "Logout"
 msgstr "Sair"
 
-#: templates/main/menu.html:87
+#: templates/main/menu.html:65
 msgid "Login"
 msgstr ""
 
@@ -842,19 +850,19 @@ msgstr "Familiares ou cuidadores"
 msgid "People with Parkinson's disease"
 msgstr "Pessoas com doença de Parkinson"
 
-#: users/templates/users/send_email.html:48
+#: users/templates/users/send_email.html:26
 msgid "Lectures"
 msgstr "Palestras"
 
-#: users/templates/users/send_email.html:54
+#: users/templates/users/send_email.html:32
 msgid "Private"
 msgstr "Privada"
 
-#: users/templates/users/send_email.html:60
+#: users/templates/users/send_email.html:38
 msgid "Subject"
 msgstr "Assunto"
 
-#: users/templates/users/send_email.html:68
+#: users/templates/users/send_email.html:46
 msgid "Send"
 msgstr "Enviar"
 
