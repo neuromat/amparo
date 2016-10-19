@@ -4,14 +4,12 @@ from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.core import mail
-from django.core.mail import BadHeaderError, EmailMultiAlternatives, send_mail
-from django.core.urlresolvers import reverse
+from django.core.mail import BadHeaderError, EmailMultiAlternatives
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.utils.translation import ugettext_lazy as _
 from jsonrpc_requests import Server, TransportError
 
-from blog.models import Blog
 from models import CustomUser
 
 
