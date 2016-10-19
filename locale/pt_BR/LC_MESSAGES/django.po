@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-17 15:43-0200\n"
+"POT-Creation-Date: 2016-10-19 16:46-0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -73,7 +73,7 @@ msgstr ""
 msgid "Google"
 msgstr ""
 
-#: blog/models.py:58 users/templates/users/send_email.html:30
+#: blog/models.py:58
 msgid "Publish"
 msgstr "Público"
 
@@ -99,6 +99,7 @@ msgid "Schedule"
 msgstr "Programação"
 
 #: blog/templates/blog/blog.html:29 blog/templates/blog/blog.html:31
+#: users/templates/users/send_email.html:26
 msgid "Target audience"
 msgstr "Público-alvo"
 
@@ -705,7 +706,7 @@ msgid "Your email"
 msgstr "Seu email"
 
 #: templates/contact_form/contact_form.html:36
-#: users/templates/users/send_email.html:42
+#: users/templates/users/send_email.html:38
 msgid "Message"
 msgstr "Mensagem"
 
@@ -850,36 +851,33 @@ msgstr "Familiares ou cuidadores"
 msgid "People with Parkinson's disease"
 msgstr "Pessoas com doença de Parkinson"
 
-#: users/templates/users/send_email.html:26
-msgid "Lectures"
-msgstr "Palestras"
+#: users/templates/users/send_email.html:29
+msgid "Only professionals"
+msgstr "Somente profissionais"
 
-#: users/templates/users/send_email.html:32
-msgid "Private"
-msgstr "Privada"
+#: users/templates/users/send_email.html:30
+msgid "All"
+msgstr "Todas as pessoas"
 
-#: users/templates/users/send_email.html:38
+#: users/templates/users/send_email.html:34
 msgid "Subject"
 msgstr "Assunto"
+
+#: users/templates/users/send_email.html:42
+msgid "Attachment"
+msgstr "Anexo"
 
 #: users/templates/users/send_email.html:46
 msgid "Send"
 msgstr "Enviar"
 
-#: users/views.py:128
-msgid "Lecture from Rede AMPARO"
-msgstr ""
-
-#: users/views.py:131
-#, python-format
-msgid "The lecture %s will start soon"
-msgstr "A palestra %s começará em breve"
-
-#: users/views.py:132
-#, python-format
-msgid "<p>The lecture %s will start soon.</p>"
-msgstr "<p>A palestra %s começará em breve.</p>"
-
-#: users/views.py:160
+#: users/views.py:151
 msgid "Email successfully sent!"
 msgstr "Email enviado com sucesso!"
+
+#: users/views.py:153
+msgid ""
+"You must select the target audience and fill in the subject and message "
+"fields"
+msgstr ""
+"Você deve selecionar o público-alvo e preencher os campos assunto e mensagem"
