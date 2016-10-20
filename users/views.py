@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.core import mail
 from django.core.mail import BadHeaderError, EmailMultiAlternatives
+from django.db.models import Q
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.utils.translation import ugettext_lazy as _
@@ -124,7 +125,7 @@ def send_email_to_users(request):
                     if user.email:
                         list_of_emails.append(user.email)
             elif selected_target == '1':
-                for user in users.filter(type_of_person__name='Profissional'):
+                for user in users.filter(Q(type_of_person__name='Profissional') | Q(type_of_person__name='Estudante')):
                     if user.email:
                         list_of_emails.append(user.email)
 

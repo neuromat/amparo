@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-20 12:26-0200\n"
+"POT-Creation-Date: 2016-10-20 18:00-0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -119,6 +119,11 @@ msgstr "Profissionais"
 #: templates/main/default.html:81 templates/main/default.html:113
 msgid "Date / Time"
 msgstr "Data / Hora"
+
+#: blog/templates/blog/blog.html:33 blog/templates/blog/view_post.html:19
+#: templates/main/default.html:81 templates/main/default.html:113
+msgid "Brasília time zone"
+msgstr "horário de Brasília"
 
 #: blog/templates/blog/blog.html:36
 msgid "Institutional affiliation of the speaker"
@@ -750,10 +755,6 @@ msgstr "Este projeto está licenciado sob os termos da"
 msgid "Next public lecture:"
 msgstr "Próxima palestra pública:"
 
-#: templates/main/default.html:81 templates/main/default.html:113
-msgid "Brasília time zone"
-msgstr "horário de Brasília"
-
 #: templates/main/default.html:94
 msgid "Next lecture to professionals:"
 msgstr "Próxima palestra para profissionais:"
@@ -856,8 +857,8 @@ msgid "People with Parkinson's disease"
 msgstr "Pessoas com doença de Parkinson"
 
 #: users/templates/users/send_email.html:29
-msgid "Only professionals"
-msgstr "Somente profissionais"
+msgid "Professionals and students"
+msgstr "Profissionais e estudantes"
 
 #: users/templates/users/send_email.html:30
 msgid "All"
@@ -875,13 +876,14 @@ msgstr "Anexo"
 msgid "Send"
 msgstr "Enviar"
 
-#: users/views.py:149
+#: users/views.py:150
 msgid "Email successfully sent!"
 msgstr "Email enviado com sucesso!"
 
-#: users/views.py:151
+#: users/views.py:152
 msgid ""
 "You must select the target audience and fill in the subject and message "
 "fields"
 msgstr ""
 "Você deve selecionar o público-alvo e preencher os campos assunto e mensagem"
+
