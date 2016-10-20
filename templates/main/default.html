@@ -78,7 +78,7 @@
                                                         <span class="skills">
                                                             <strong>{% trans "Speaker" %}:</strong> {{ open_lecture.speaker }}<br>
                                                             <strong>{% trans "Institutional affiliation" %}:</strong> {{ open_lecture.affiliation }}<br>
-                                                            <strong>{% trans "Date / Time" %}:</strong> {{ open_lecture.date_time }}<br>
+                                                            <strong>{% trans "Date / Time" %}:</strong> {{ open_lecture.date_time }} ({% trans "Brasília time zone" %})<br>
                                                             <i class="glyphicon glyphicon-plus-sign" style="margin-top: 10px"></i> <a href="{{ open_lecture.get_absolute_url }}">{% trans "Read more" %}</a>
                                                         </span>
                                                     </div>
@@ -110,7 +110,7 @@
                                                         <span class="skills">
                                                             <strong>{% trans "Speaker" %}:</strong> {{ private_lecture.speaker }}<br>
                                                             <strong>{% trans "Institutional affiliation" %}:</strong> {{ private_lecture.affiliation }}<br>
-                                                            <strong>{% trans "Date / Time" %}:</strong> {{ private_lecture.date_time }}<br>
+                                                            <strong>{% trans "Date / Time" %}:</strong> {{ private_lecture.date_time }} ({% trans "Brasília time zone" %})<br>
                                                             <i class="glyphicon glyphicon-plus-sign" style="margin-top: 10px"></i> <a href="{{ private_lecture.get_absolute_url }}">{% trans "Read more" %}</a>
                                                         </span>
                                                     </div>

@@ -16,7 +16,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h3 class="text-center">{{ post.title }}</h3><br>
-                    <p><strong>{% trans "Date / Time" %}:</strong> {{ post.date_time }}</p>
+                    <p><strong>{% trans "Date / Time" %}:</strong> {{ post.date_time }} ({% trans "Brasília time zone" %})</p>
                     <p><strong>{% trans "Speaker" %}:</strong> {{ post.speaker }}</p>
                     <p class="text-justify"><strong>{% trans "Curriculum" %}:</strong> {{ post.resume_speaker }}</p>
                     <p><strong>{% trans "Moderator" %}:</strong> {{ post.moderator }}</p>

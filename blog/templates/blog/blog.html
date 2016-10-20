@@ -30,7 +30,7 @@
                                 {% else %}
                                     <p><strong>{% trans "Target audience" %}:</strong>  {% trans "Professionals" %} </p>
                                 {% endif %}
-                                <p><strong>{% trans "Date / Time" %}:</strong> {{ post.date_time }}</p>
+                                <p><strong>{% trans "Date / Time" %}:</strong> {{ post.date_time }} ({% trans "Brasília time zone" %})</p>
                                 <p><strong>{% trans "Speaker" %}:</strong> {{ post.speaker }}</p>
                                 {% if post.affiliation %}
                                     <p class="text-justify"><strong>{% trans "Institutional affiliation of the speaker" %}:</strong> {{ post.affiliation }}</p>

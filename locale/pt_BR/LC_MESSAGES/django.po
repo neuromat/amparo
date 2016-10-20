@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-19 16:46-0200\n"
+"POT-Creation-Date: 2016-10-20 12:26-0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -750,6 +750,10 @@ msgstr "Este projeto está licenciado sob os termos da"
 msgid "Next public lecture:"
 msgstr "Próxima palestra pública:"
 
+#: templates/main/default.html:81 templates/main/default.html:113
+msgid "Brasília time zone"
+msgstr "horário de Brasília"
+
 #: templates/main/default.html:94
 msgid "Next lecture to professionals:"
 msgstr "Próxima palestra para profissionais:"
@@ -871,11 +875,11 @@ msgstr "Anexo"
 msgid "Send"
 msgstr "Enviar"
 
-#: users/views.py:151
+#: users/views.py:149
 msgid "Email successfully sent!"
 msgstr "Email enviado com sucesso!"
 
-#: users/views.py:153
+#: users/views.py:151
 msgid ""
 "You must select the target audience and fill in the subject and message "
 "fields"
