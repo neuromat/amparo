@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-20 18:00-0200\n"
+"POT-Creation-Date: 2016-10-20 18:24-0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -111,9 +111,9 @@ msgstr ""
 "Pessoas com doença de Parkinson, familiares, cuidadores, estudantes e "
 "profissionais"
 
-#: blog/templates/blog/blog.html:31 users/templates/users/list_of_users.html:25
-msgid "Professionals"
-msgstr "Profissionais"
+#: blog/templates/blog/blog.html:31 users/templates/users/send_email.html:29
+msgid "Professionals and students"
+msgstr "Profissionais e estudantes"
 
 #: blog/templates/blog/blog.html:33 blog/templates/blog/view_post.html:19
 #: templates/main/default.html:81 templates/main/default.html:113
@@ -756,8 +756,8 @@ msgid "Next public lecture:"
 msgstr "Próxima palestra pública:"
 
 #: templates/main/default.html:94
-msgid "Next lecture to professionals:"
-msgstr "Próxima palestra para profissionais:"
+msgid "Next lecture to professionals and students:"
+msgstr "Próxima palestra para profissionais e estudantes:"
 
 #: templates/main/default.html:130
 msgid "Survey"
@@ -844,6 +844,10 @@ msgstr "Pode enviar email para usuários"
 msgid "Total number of users"
 msgstr "Total de usuários"
 
+#: users/templates/users/list_of_users.html:25
+msgid "Professionals"
+msgstr "Profissionais"
+
 #: users/templates/users/list_of_users.html:26
 msgid "Students"
 msgstr "Estudantes"
@@ -855,10 +859,6 @@ msgstr "Familiares ou cuidadores"
 #: users/templates/users/list_of_users.html:28
 msgid "People with Parkinson's disease"
 msgstr "Pessoas com doença de Parkinson"
-
-#: users/templates/users/send_email.html:29
-msgid "Professionals and students"
-msgstr "Profissionais e estudantes"
 
 #: users/templates/users/send_email.html:30
 msgid "All"
@@ -886,4 +886,3 @@ msgid ""
 "fields"
 msgstr ""
 "Você deve selecionar o público-alvo e preencher os campos assunto e mensagem"
-
