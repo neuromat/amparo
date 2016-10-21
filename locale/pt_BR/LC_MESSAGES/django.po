@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-20 18:24-0200\n"
+"POT-Creation-Date: 2016-10-21 09:55-0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -129,29 +129,39 @@ msgstr "horário de Brasília"
 msgid "Institutional affiliation of the speaker"
 msgstr "Vínculo institucional do(a) convidado(a)"
 
-#: blog/templates/blog/blog.html:38 blog/templates/blog/search.html:27
+#: blog/templates/blog/blog.html:41 blog/templates/blog/blog.html:44
+#: blog/templates/blog/view_post.html:26 blog/templates/blog/view_post.html:29
+msgid "Live streaming by IPTV"
+msgstr "Transmissão ao vivo pelo IPTV"
+
+#: blog/templates/blog/blog.html:50 blog/templates/blog/blog.html:53
+#: blog/templates/blog/view_post.html:36 blog/templates/blog/view_post.html:39
+msgid "Live streaming by Youtube"
+msgstr "Transmissão ao vivo pelo Youtube"
+
+#: blog/templates/blog/blog.html:56 blog/templates/blog/search.html:27
 #: blog/templates/blog/search.html:32 templates/main/default.html:82
 #: templates/main/default.html:114
 msgid "Read more"
 msgstr "Leia mais"
 
-#: blog/templates/blog/blog.html:56
+#: blog/templates/blog/blog.html:74
 msgid "No schedule found!"
 msgstr "Nenhuma programação encontrada!"
 
-#: blog/templates/blog/blog.html:68
+#: blog/templates/blog/blog.html:86
 msgid "page"
 msgstr "página"
 
-#: blog/templates/blog/blog.html:68
+#: blog/templates/blog/blog.html:86
 msgid "of"
 msgstr "de"
 
-#: blog/templates/blog/blog.html:80
+#: blog/templates/blog/blog.html:98
 msgid "previous"
 msgstr "anterior"
 
-#: blog/templates/blog/blog.html:84
+#: blog/templates/blog/blog.html:102
 msgid "next"
 msgstr "próximo"
 
@@ -162,14 +172,6 @@ msgstr "Desculpe, mas nada foi encontrado com o termo utilizado."
 #: blog/templates/blog/view_post.html:21
 msgid "Curriculum"
 msgstr "Currículo"
-
-#: blog/templates/blog/view_post.html:26 blog/templates/blog/view_post.html:29
-msgid "Live streaming by IPTV"
-msgstr "Transmissão ao vivo pelo IPTV"
-
-#: blog/templates/blog/view_post.html:36 blog/templates/blog/view_post.html:39
-msgid "Live streaming by Google"
-msgstr "Transmissão ao vivo pelo Google"
 
 #: blog/templates/blog/view_post.html:55
 #: pages/templates/pages/view_page.html:28

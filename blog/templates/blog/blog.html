@@ -35,6 +35,24 @@
                                 {% if post.affiliation %}
                                     <p class="text-justify"><strong>{% trans "Institutional affiliation of the speaker" %}:</strong> {{ post.affiliation }}</p>
                                 {% endif %}
+                                {% if post.link_to_iptv %}
+                                    {% if not post.publish %}
+                                        {% if request.user.is_authenticated and request.user.type_of_person.name == 'Profissional' or request.user.type_of_person.name == 'Estudante' %}
+                                            <p><strong>{% trans "Live streaming by IPTV" %}:</strong> <a href="{{ post.link_to_iptv }}" target="_blank">{{ post.link_to_iptv }}</a></p>
+                                        {% endif %}
+                                    {% else %}
+                                        <p><strong>{% trans "Live streaming by IPTV" %}:</strong> <a href="{{ post.link_to_iptv }}" target="_blank">{{ post.link_to_iptv }}</a></p>
+                                    {% endif %}
+                                {% endif %}
+                                {% if post.link_to_google %}
+                                    {% if not post.publish %}
+                                        {% if request.user.is_authenticated and request.user.type_of_person.name == 'Profissional' or request.user.type_of_person.name == 'Estudante' %}
+                                            <p><strong>{% trans "Live streaming by Youtube" %}:</strong> <a href="{{ post.link_to_google }}" target="_blank">{{ post.link_to_google }}</a></p>
+                                        {% endif %}
+                                    {% else %}
+                                        <p><strong>{% trans "Live streaming by Youtube" %}:</strong> <a href="{{ post.link_to_google }}" target="_blank">{{ post.link_to_google }}</a></p>
+                                    {% endif %}
+                                {% endif %}
                                 <p><i class="glyphicon glyphicon-plus-sign"></i><a href="{{ post.get_absolute_url }}"> {% trans "Read more" %}</a></p>
                             </ul>
                         </div>
