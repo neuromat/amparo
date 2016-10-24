@@ -96,7 +96,9 @@ class Questionnaires(ABCSearchEngine):
 @login_required
 def list_of_users(request):
     if request.user.has_perm('users.view_list_of_users'):
-        users = CustomUser.objects.all()
+        has_verified_email = [address['email'] for address in
+                              EmailAddress.objects.filter(verified=True).values('email')]
+        users = CustomUser.objects.filter(email__in=has_verified_email)
         total = users.count()
         professionals = users.filter(type_of_person__name='Profissional').count()
         students = users.filter(type_of_person__name='Estudante').count()
