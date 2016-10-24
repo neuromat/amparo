@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from abc import ABCMeta, abstractmethod
+from allauth.account.models import EmailAddress
 from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -116,17 +117,19 @@ def send_email_to_users(request):
             subject_typed = request.POST['subject']
             message_typed = request.POST['message']
             users = CustomUser.objects.all()
+            has_verified_email = [address['email'] for address in
+                                  EmailAddress.objects.filter(verified=True).values('email')]
             list_of_emails = []
             text_content = message_typed
             html_content = message_typed
 
             if selected_target == '2':
                 for user in users:
-                    if user.email:
+                    if user.email and user.email in has_verified_email:
                         list_of_emails.append(user.email)
             elif selected_target == '1':
                 for user in users.filter(Q(type_of_person__name='Profissional') | Q(type_of_person__name='Estudante')):
-                    if user.email:
+                    if user.email and user.email in has_verified_email:
                         list_of_emails.append(user.email)
 
             if subject_typed and message_typed and list_of_emails:
