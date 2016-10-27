@@ -10,7 +10,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>{% block head_title %}NeuroMat - {% settings_value "PROJECT_NAME" %}{% endblock %}</title>
+    {% get_solo 'configurations.ProjectName' as project %}
+    <title>{% block head_title %}NeuroMat - {{ project.name }}{% endblock %}</title>
 
     <!-- Jquery -->
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
