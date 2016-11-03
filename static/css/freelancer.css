@@ -90,7 +90,7 @@ header .intro-text .name {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 2em;
+  font-size: 1.4em;
   color: black;
 }
 header .intro-text .skills {
@@ -526,7 +526,6 @@ blockquote{
   border-radius: 17px;
   background-color: #18BC9C;
   color:white;
-  width: 325px;
   box-shadow: 2px 2px 2px 2px #E0E0E0;
 }
 .quote-text{
@@ -540,7 +539,6 @@ blockquote{
   border-radius: 17px;
   background-color: #faebcc;
   color:#8a6d3b;
-  width: 325px;
   box-shadow: 2px 2px 2px 2px #E0E0E0;
 }
 .quote-text-warning{
