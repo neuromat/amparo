@@ -9,116 +9,96 @@
                 <div class="col-lg-8">
                     <div id="amparo-banner" class="carousel slide" data-ride="carousel" data-interval="15000">
                         <!-- Wrapper for slides -->
-                        <div class="row">
-                            {% if open_lecture or private_lecture %}
-                                <ol class="carousel-indicators">
-                                    <li data-target="#amparo-banner" data-slide-to="0" class="active"></li>
-                                    {% if open_lecture %}<li data-target="#amparo-banner" data-slide-to="1"></li>{% endif %}
-                                    {% if private_lecture %}<li data-target="#amparo-banner" data-slide-to="{% if open_lecture %}2{% else %}1{% endif %}"></li>{% endif %}
-                                </ol>
-                            {% endif %}
-                            <div class="carousel-inner col-lg-8">
-                                <div class="item active">
+                        {% if open_lecture or private_lecture %}
+                            <ol class="carousel-indicators">
+                                <li data-target="#amparo-banner" data-slide-to="0" class="active"></li>
+                                {% if open_lecture %}<li data-target="#amparo-banner" data-slide-to="1"></li>{% endif %}
+                                {% if private_lecture %}<li data-target="#amparo-banner" data-slide-to="{% if open_lecture %}2{% else %}1{% endif %}"></li>{% endif %}
+                            </ol>
+                        {% endif %}
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="carousel-content">
+                                    <div class="intro-text">
+                                        <span class="name">Bem-vindo à Rede de Apoio NeuroMat a Amigos e <br>Pessoas com Doença de Parkinson (AMPARO)</span>
+                                    </div>
+                                    <br>
+                                    <div class="intro-text text-justify">
+                                        <span class="skills">
+                                            Esta iniciativa faz parte do <a href="http://neuromat.numec.prp.usp.br/" target="_blank">Centro de Pesquisa, Inovação e Difusão em Neuromatemática
+                                            (CEPID NeuroMat)</a> e tem como principal objetivo promover a melhora na qualidade de vida de pessoas vivendo com Doença de Parkinson no Brasil e
+                                            de seus familiares. <a href="/pages/como-esta-iniciativa-pode-melhorar-qualidade-de-vida-de-pessoas-vivendo-com-parkinson-no-brasil">Clique aqui</a>
+                                            para entender como esta iniciativa pode melhorar a qualidade de vida de pessoas vivendo com Parkinson. <a href="/pages/o-que-eu-tenho-que-fazer-para-participar">
+                                            Clique aqui</a> para saber o que é preciso fazer para participar desta rede.
+                                        </span>
+                                    </div>
+                                    <br>
+                                    <div class="col-sm-6">
+                                        <div class="intro-text"><span class="skills" style="color: black">Esta é uma iniciativa</span></div>
+                                        <a href="http://neuromat.numec.prp.usp.br/" target="_blank">
+                                            <img src="{% static "images/logo_neuromat_banner.png" %}" class="img-responsive" style="margin-top: 3px" alt="Logo do NeuroMat"/>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="intro-text"><span class="skills" style="color: black">Apoio</span></div>
+                                        <a href="http://www.fapesp.br/" target="_blank">
+                                            <img src="{% static "images/logo_fapesp_banner.png" %}" class="img-responsive" alt="Logo da FAPESP"/>
+                                        </a><br>
+                                    </div>
+                                </div>
+                            </div>
+                            {% if open_lecture %}
+                                <div class="item">
                                     <div class="carousel-content">
-                                        <div class="row">
-                                            <div class="intro-text">
-                                                <span class="name">Bem-vindo à Rede de Apoio NeuroMat a Amigos e <br>Pessoas com Doença de Parkinson (AMPARO)</span>
-                                            </div>
+                                        <div class="col-sm-12 intro-text text-left"><span class="skills"><em><mark>{% trans "Next public lecture:" %}</mark></em></span></div>
+                                        <br><br>
+                                        <div class="col-sm-3">
+                                            {% if open_lecture.image %}
+                                                <img src="{{ open_lecture.image.url }}" class="img-responsive" alt="Imagem do(a) palestrante {{ open_lecture.speaker }}"/>
+                                            {% else %}
+                                                <img src="{% static "images/person.png" %}" class="img-responsive" alt="Palestrante sem foto. Imagem de exemplo sendo exibido."/>
+                                            {% endif %}
                                         </div>
-                                        <br>
-                                        <div class="row">
-                                            <div class="intro-text text-justify">
-                                                <span class="skills">
-                                                    Esta iniciativa faz parte do <a href="http://neuromat.numec.prp.usp.br/" target="_blank">Centro de Pesquisa, Inovação e Difusão em Neuromatemática
-                                                    (CEPID NeuroMat)</a> e tem como principal objetivo promover a melhora na qualidade de vida de pessoas vivendo com Doença de Parkinson no Brasil e
-                                                    de seus familiares. <a href="/pages/como-esta-iniciativa-pode-melhorar-qualidade-de-vida-de-pessoas-vivendo-com-parkinson-no-brasil">Clique aqui</a>
-                                                    para entender como esta iniciativa pode melhorar a qualidade de vida de pessoas vivendo com Parkinson. <a href="/pages/o-que-eu-tenho-que-fazer-para-participar">
-                                                    Clique aqui</a> para saber o que é preciso fazer para participar desta rede.
-                                                </span>
-                                            </div>
+                                        <div class="col-sm-8 intro-text">
+                                            <span class="name">{{ open_lecture.title }}</span>
                                         </div>
-                                        <br>
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="intro-text"><span class="skills" style="color: black">Esta é uma iniciativa</span></div>
-                                                <a href="http://neuromat.numec.prp.usp.br/" target="_blank">
-                                                    <img src="{% static "images/logo_neuromat_banner.png" %}" class="img-responsive" style="margin-top: 3px" alt="Logo do NeuroMat"/>
-                                                </a>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="intro-text"><span class="skills" style="color: black">Apoio</span></div>
-                                                <a href="http://www.fapesp.br/" target="_blank">
-                                                    <img src="{% static "images/logo_fapesp_banner.png" %}" class="img-responsive" alt="Logo da FAPESP"/>
-                                                </a>
-                                            </div>
+                                        <div class="col-sm-12 intro-text text-justify">
+                                            <span class="skills">
+                                                <strong>{% trans "Speaker" %}:</strong> {{ open_lecture.speaker }}<br>
+                                                <strong>{% trans "Institutional affiliation" %}:</strong> {{ open_lecture.affiliation }}<br>
+                                                <strong>{% trans "Date / Time" %}:</strong> {{ open_lecture.date_time }} ({% trans "Brasília time zone" %})<br>
+                                                <i class="glyphicon glyphicon-plus-sign" style="margin-top: 10px"></i> <a href="{{ open_lecture.get_absolute_url }}">{% trans "Read more" %}</a><br><br>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
-                                {% if open_lecture %}
-                                    <div class="item">
-                                        <div class="carousel-content">
-                                            <div class="row">
-                                                <div class="intro-text text-left"><span class="skills"><em><mark>{% trans "Next public lecture:" %}</mark></em></span></div>
-                                            </div>
-                                            <div class="row" style="padding-top: 10px">
-                                                <div class="col-sm-3 col-lg-3">
-                                                    {% if open_lecture.image %}
-                                                        <img src="{{ open_lecture.image.url }}" class="img-responsive" alt="Imagem do(a) palestrante {{ open_lecture.speaker }}"/>
-                                                    {% else %}
-                                                        <img src="{% static "images/person.png" %}" class="img-responsive" alt="Palestrante sem foto. Imagem de exemplo sendo exibido."/>
-                                                    {% endif %}
-                                                </div>
-                                                <div class="intro-text">
-                                                    <span class="name">{{ open_lecture.title }}</span>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="intro-text text-justify">
-                                                    <span class="skills">
-                                                        <strong>{% trans "Speaker" %}:</strong> {{ open_lecture.speaker }}<br>
-                                                        <strong>{% trans "Institutional affiliation" %}:</strong> {{ open_lecture.affiliation }}<br>
-                                                        <strong>{% trans "Date / Time" %}:</strong> {{ open_lecture.date_time }} ({% trans "Brasília time zone" %})<br>
-                                                        <i class="glyphicon glyphicon-plus-sign" style="margin-top: 10px"></i> <a href="{{ open_lecture.get_absolute_url }}">{% trans "Read more" %}</a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <br>
+                            {% endif %}
+                            {% if private_lecture %}
+                                <div class="item">
+                                    <div class="carousel-content">
+                                        <div class="col-sm-12 intro-text text-left"><span class="skills"><em><mark style="background-color: #ccffdd">{% trans "Next lecture to professionals and students:" %}</mark></em></span></div>
+                                        <br><br>
+                                        <div class="col-sm-3">
+                                            {% if private_lecture.image %}
+                                                <img src="{{ private_lecture.image.url }}" class="img-responsive" alt="Imagem do(a) palestrante {{ private_lecture.speaker }}"/>
+                                            {% else %}
+                                                <img src="{% static "images/person.png" %}" class="img-responsive" alt="Palestrante sem foto. Imagem de exemplo sendo exibido."/>
+                                            {% endif %}
+                                        </div>
+                                        <div class="col-sm-8 intro-text">
+                                            <span class="name">{{ private_lecture.title }}</span>
+                                        </div>
+                                        <div class="col-sm-12 intro-text text-justify">
+                                            <span class="skills">
+                                                <strong>{% trans "Speaker" %}:</strong> {{ private_lecture.speaker }}<br>
+                                                <strong>{% trans "Institutional affiliation" %}:</strong> {{ private_lecture.affiliation }}<br>
+                                                <strong>{% trans "Date / Time" %}:</strong> {{ private_lecture.date_time }} ({% trans "Brasília time zone" %})<br>
+                                                <i class="glyphicon glyphicon-plus-sign" style="margin-top: 10px"></i> <a href="{{ private_lecture.get_absolute_url }}">{% trans "Read more" %}</a><br><br>
+                                            </span>
                                         </div>
                                     </div>
-                                {% endif %}
-                                {% if private_lecture %}
-                                    <div class="item">
-                                        <div class="carousel-content">
-                                            <div class="row">
-                                                <div class="intro-text text-left"><span class="skills"><em><mark style="background-color: #ccffdd">{% trans "Next lecture to professionals and students:" %}</mark></em></span></div>
-                                            </div>
-                                            <div class="row" style="padding-top: 10px">
-                                                <div class="col-sm-3 col-lg-3">
-                                                    {% if private_lecture.image %}
-                                                        <img src="{{ private_lecture.image.url }}" class="img-responsive" alt="Imagem do(a) palestrante {{ private_lecture.speaker }}"/>
-                                                    {% else %}
-                                                        <img src="{% static "images/person.png" %}" class="img-responsive" alt="Palestrante sem foto. Imagem de exemplo sendo exibido."/>
-                                                    {% endif %}
-                                                </div>
-                                                <div class="intro-text">
-                                                    <span class="name">{{ private_lecture.title }}</span>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="intro-text text-justify">
-                                                    <span class="skills">
-                                                        <strong>{% trans "Speaker" %}:</strong> {{ private_lecture.speaker }}<br>
-                                                        <strong>{% trans "Institutional affiliation" %}:</strong> {{ private_lecture.affiliation }}<br>
-                                                        <strong>{% trans "Date / Time" %}:</strong> {{ private_lecture.date_time }} ({% trans "Brasília time zone" %})<br>
-                                                        <i class="glyphicon glyphicon-plus-sign" style="margin-top: 10px"></i> <a href="{{ private_lecture.get_absolute_url }}">{% trans "Read more" %}</a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <br>
-                                        </div>
-                                    </div>
-                                {% endif %}
-                            </div>
+                                </div>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
