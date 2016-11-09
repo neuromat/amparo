@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+from datetime import date
 from embed_video.fields import EmbedVideoField
 
 from django.db import models
@@ -61,6 +62,11 @@ class Blog(TranslatableModel):
 
     def __unicode__(self):
         return '%s' % self.title
+
+    def is_past_due(self):
+        if self.date_time.date() >= date.today():
+            return True
+        return False
 
     @permalink
     def get_absolute_url(self):
