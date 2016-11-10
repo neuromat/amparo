@@ -41,14 +41,27 @@
                     {% endif %}
 
                     {% if post.videos.all %}
-                        {% if post.videos.all|length == 1 %}
-                            <p><strong>{% trans "Video of the lecture" %}:</strong></p>
+                        {% if post.publish %}
+                            {% if post.videos.all|length == 1 %}
+                                <p><strong>{% trans "Video of the lecture" %}:</strong></p>
+                            {% else %}
+                                <p><strong>{% trans "Videos of the lecture" %}:</strong></p>
+                            {% endif %}
+                            {% for item in post.videos.all %}
+                                <p class="text-center responsive-video">{% video item.video %}</p><br>
+                            {% endfor %}
                         {% else %}
-                            <p><strong>{% trans "Videos of the lecture" %}:</strong></p>
+                            {% if request.user.is_authenticated and request.user.type_of_person.name == 'Profissional' or request.user.type_of_person.name == 'Estudante' %}
+                                {% if post.videos.all|length == 1 %}
+                                    <p><strong>{% trans "Video of the lecture" %}:</strong></p>
+                                {% else %}
+                                    <p><strong>{% trans "Videos of the lecture" %}:</strong></p>
+                                {% endif %}
+                                {% for item in post.videos.all %}
+                                    <p class="text-center responsive-video">{% video item.video %}</p><br>
+                                {% endfor %}
+                            {% endif %}
                         {% endif %}
-                        {% for item in post.videos.all %}
-                            <p class="text-center responsive-video">{% video item.video %}</p><br>
-                        {% endfor %}
                     {% endif %}
                     <p>
                         <div class="fb-like" data-href="{{ post.get_absolute_url }}" data-layout="box_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
@@ -57,7 +70,6 @@
                     <button type="button" class="btn btn-success btn-lg" onclick="window.history.back()">
                         <span aria-hidden="true">&larr;</span> {% trans "Back" %}
                     </button>
-
                     <br><br>
                 </div>
             </div>
