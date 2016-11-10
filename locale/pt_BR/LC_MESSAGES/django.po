@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-21 09:55-0200\n"
+"POT-Creation-Date: 2016-11-10 10:37-0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,82 +18,82 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: blog/models.py:18 blog/models.py:44 pages/models.py:18
+#: blog/models.py:19 blog/models.py:45 pages/models.py:18
 msgid "Title"
 msgstr "Título"
 
-#: blog/models.py:19 blog/models.py:54 pages/models.py:23
+#: blog/models.py:20 blog/models.py:55 pages/models.py:23
 msgid "Slug"
 msgstr "Rótulo"
 
-#: blog/models.py:29 blog/models.py:53
+#: blog/models.py:30 blog/models.py:54
 msgid "Category"
 msgstr "Categoria"
 
-#: blog/models.py:30
+#: blog/models.py:31
 msgid "Categories"
 msgstr "Categorias"
 
-#: blog/models.py:45 pages/models.py:20
+#: blog/models.py:46 pages/models.py:20
 msgid "Body"
 msgstr "Texto"
 
-#: blog/models.py:46
+#: blog/models.py:47
 msgid "Date/Time"
 msgstr "Data/Hora"
 
-#: blog/models.py:47
+#: blog/models.py:48
 msgid "Resume of speaker"
 msgstr "Currículo do palestrante"
 
-#: blog/models.py:48 templates/main/default.html:80
-#: templates/main/default.html:112
+#: blog/models.py:49 templates/main/default.html:68
+#: templates/main/default.html:94
 msgid "Institutional affiliation"
 msgstr "Vínculo institucional"
 
-#: blog/models.py:51 blog/templates/blog/blog.html:34
-#: blog/templates/blog/view_post.html:20 templates/main/default.html:79
-#: templates/main/default.html:111
+#: blog/models.py:52 blog/templates/blog/blog.html:34
+#: blog/templates/blog/view_post.html:20 templates/main/default.html:67
+#: templates/main/default.html:93
 msgid "Speaker"
 msgstr "Convidado(a)"
 
-#: blog/models.py:52 blog/templates/blog/view_post.html:22
+#: blog/models.py:53 blog/templates/blog/view_post.html:22
 msgid "Moderator"
 msgstr "Moderador(a)"
 
-#: blog/models.py:55
+#: blog/models.py:56
 msgid "Image"
 msgstr "Imagem"
 
-#: blog/models.py:56
+#: blog/models.py:57
 msgid "IPTV"
 msgstr ""
 
-#: blog/models.py:57
+#: blog/models.py:58
 msgid "Google"
 msgstr ""
 
-#: blog/models.py:58
+#: blog/models.py:59
 msgid "Publish"
 msgstr "Público"
 
-#: blog/models.py:59
+#: blog/models.py:60
 msgid "Banner"
 msgstr "Banner"
 
-#: blog/models.py:60 pages/models.py:34
+#: blog/models.py:61 pages/models.py:34
 msgid "Posted"
 msgstr "Publicado"
 
-#: blog/models.py:101 blog/models.py:104 blog/templates/blog/view_post.html:45
+#: blog/models.py:107 blog/models.py:110
 msgid "Video"
 msgstr "Vídeo"
 
-#: blog/models.py:105 blog/templates/blog/view_post.html:47
+#: blog/models.py:111
 msgid "Videos"
 msgstr "Vídeos"
 
-#: blog/templates/blog/blog.html:16 templates/main/default.html:152
+#: blog/templates/blog/blog.html:16 templates/main/default.html:131
 #: templates/main/menu.html:43
 msgid "Schedule"
 msgstr "Programação"
@@ -116,12 +116,12 @@ msgid "Professionals and students"
 msgstr "Profissionais e estudantes"
 
 #: blog/templates/blog/blog.html:33 blog/templates/blog/view_post.html:19
-#: templates/main/default.html:81 templates/main/default.html:113
+#: templates/main/default.html:69 templates/main/default.html:95
 msgid "Date / Time"
 msgstr "Data / Hora"
 
 #: blog/templates/blog/blog.html:33 blog/templates/blog/view_post.html:19
-#: templates/main/default.html:81 templates/main/default.html:113
+#: templates/main/default.html:69 templates/main/default.html:95
 msgid "Brasília time zone"
 msgstr "horário de Brasília"
 
@@ -140,28 +140,28 @@ msgid "Live streaming by Youtube"
 msgstr "Transmissão ao vivo pelo Youtube"
 
 #: blog/templates/blog/blog.html:56 blog/templates/blog/search.html:27
-#: blog/templates/blog/search.html:32 templates/main/default.html:82
-#: templates/main/default.html:114
+#: blog/templates/blog/search.html:32 templates/main/default.html:70
+#: templates/main/default.html:96
 msgid "Read more"
 msgstr "Leia mais"
 
-#: blog/templates/blog/blog.html:74
+#: blog/templates/blog/blog.html:67
 msgid "No schedule found!"
 msgstr "Nenhuma programação encontrada!"
 
-#: blog/templates/blog/blog.html:86
+#: blog/templates/blog/blog.html:79
 msgid "page"
 msgstr "página"
 
-#: blog/templates/blog/blog.html:86
+#: blog/templates/blog/blog.html:79
 msgid "of"
 msgstr "de"
 
-#: blog/templates/blog/blog.html:98
+#: blog/templates/blog/blog.html:91
 msgid "previous"
 msgstr "anterior"
 
-#: blog/templates/blog/blog.html:102
+#: blog/templates/blog/blog.html:95
 msgid "next"
 msgstr "próximo"
 
@@ -173,7 +173,15 @@ msgstr "Desculpe, mas nada foi encontrado com o termo utilizado."
 msgid "Curriculum"
 msgstr "Currículo"
 
-#: blog/templates/blog/view_post.html:55
+#: blog/templates/blog/view_post.html:45
+msgid "Video of the lecture"
+msgstr "Vídeo da palestra"
+
+#: blog/templates/blog/view_post.html:47
+msgid "Videos of the lecture"
+msgstr "Vídeos da palestra"
+
+#: blog/templates/blog/view_post.html:58
 #: pages/templates/pages/view_page.html:28
 #: templates/contact_form/contact_form_sent.html:28
 msgid "Back"
@@ -729,51 +737,47 @@ msgstr "Enviar"
 msgid "Your message was sent successfully!"
 msgstr "Email enviado com sucesso!"
 
-#: templates/main/base.html:116
+#: templates/main/base.html:117
 msgid "This is an initiative by"
 msgstr "Esta é uma iniciativa"
 
-#: templates/main/base.html:122
+#: templates/main/base.html:123
 msgid "Support"
 msgstr "Apoio"
 
-#: templates/main/base.html:128
-msgid "NeuroMat on the Web"
-msgstr "NeuroMat na Web"
-
-#: templates/main/base.html:148
+#: templates/main/base.html:139
 msgid "Terms of use"
 msgstr "Termos de uso"
 
-#: templates/main/base.html:148
+#: templates/main/base.html:139
 msgid "Privacy policy"
 msgstr "Política de privacidade"
 
-#: templates/main/base.html:151
+#: templates/main/base.html:142
 msgid "This page is licensed under the"
 msgstr "Este projeto está licenciado sob os termos da"
 
-#: templates/main/default.html:62
+#: templates/main/default.html:53
 msgid "Next public lecture:"
 msgstr "Próxima palestra pública:"
 
-#: templates/main/default.html:94
+#: templates/main/default.html:79
 msgid "Next lecture to professionals and students:"
 msgstr "Próxima palestra para profissionais e estudantes:"
 
-#: templates/main/default.html:130
+#: templates/main/default.html:109
 msgid "Survey"
 msgstr "Formulário"
 
-#: templates/main/default.html:137
+#: templates/main/default.html:116
 msgid "Rede AMPARO"
 msgstr ""
 
-#: templates/main/default.html:145
+#: templates/main/default.html:124
 msgid "Join us!"
 msgstr "Participe!"
 
-#: templates/main/default.html:182
+#: templates/main/default.html:160
 msgid "No home page found!"
 msgstr "Nenhuma home page encontrada!"
 
@@ -878,13 +882,14 @@ msgstr "Anexo"
 msgid "Send"
 msgstr "Enviar"
 
-#: users/views.py:150
+#: users/views.py:155
 msgid "Email successfully sent!"
 msgstr "Email enviado com sucesso!"
 
-#: users/views.py:152
+#: users/views.py:157
 msgid ""
 "You must select the target audience and fill in the subject and message "
 "fields"
 msgstr ""
 "Você deve selecionar o público-alvo e preencher os campos assunto e mensagem"
+
