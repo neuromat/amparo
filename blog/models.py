@@ -63,7 +63,7 @@ class Blog(TranslatableModel):
     def __unicode__(self):
         return '%s' % self.title
 
-    def is_past_due(self):
+    def to_be_held(self):
         if self.date_time.date() >= date.today():
             return True
         return False

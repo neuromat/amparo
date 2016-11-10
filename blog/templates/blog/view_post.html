@@ -20,7 +20,7 @@
                     <p><strong>{% trans "Speaker" %}:</strong> {{ post.speaker }}</p>
                     <p class="text-justify"><strong>{% trans "Curriculum" %}:</strong> {{ post.resume_speaker }}</p>
                     <p><strong>{% trans "Moderator" %}:</strong> {{ post.moderator }}</p>
-                    {% if post.is_past_due and post.link_to_iptv %}
+                    {% if post.to_be_held and post.link_to_iptv %}
                         {% if not post.publish %}
                             {% if request.user.is_authenticated and request.user.type_of_person.name == 'Profissional' or request.user.type_of_person.name == 'Estudante' %}
                                 <p><strong>{% trans "Live streaming by IPTV" %}:</strong> <a href="{{ post.link_to_iptv }}" target="_blank">{{ post.link_to_iptv }}</a></p>
@@ -30,7 +30,7 @@
                         {% endif %}
                     {% endif %}
 
-                    {% if post.is_past_due and post.link_to_google %}
+                    {% if post.to_be_held and post.link_to_google %}
                         {% if not post.publish %}
                             {% if request.user.is_authenticated and request.user.type_of_person.name == 'Profissional' or request.user.type_of_person.name == 'Estudante' %}
                                 <p><strong>{% trans "Live streaming by Youtube" %}:</strong> <a href="{{ post.link_to_google }}" target="_blank">{{ post.link_to_google }}</a></p>
