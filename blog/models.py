@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from datetime import date
+import datetime
 from embed_video.fields import EmbedVideoField
 
 from django.db import models
@@ -64,7 +64,13 @@ class Blog(TranslatableModel):
         return '%s' % self.title
 
     def to_be_held(self):
-        if self.date_time.date() >= date.today():
+        if self.date_time.date() >= datetime.datetime.today():
+            return True
+        return False
+
+    def show_video(self):
+        tz_info = self.date_time.tzinfo
+        if self.date_time <= datetime.datetime.now(tz_info):
             return True
         return False
 

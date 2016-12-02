@@ -42,7 +42,7 @@
                         {% endif %}
                     {% endif %}
 
-                    {% if post.videos.all %}
+                    {% if post.show_video and post.videos.all %}
                         {% if post.publish %}
                             {% if post.videos.all|length == 1 %}
                                 <p><strong>{% trans "Video of the lecture" %}:</strong></p>
