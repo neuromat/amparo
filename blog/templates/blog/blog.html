@@ -56,7 +56,6 @@
                                     <p><strong>{% trans "Live streaming by Youtube" %}:</strong> <a href="{{ post.link_to_google }}" target="_blank">{{ post.link_to_google }}</a></p>
                                 {% endif %}
                             {% endif %}
-                            <div class="fb-like" data-href="{{ post.get_absolute_url }}" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
                         </div>
 
                         <!--Modal do item Currículo do evento-->
@@ -112,7 +111,6 @@
                                     {% if post.affiliation %}
                                         <p><strong>{% trans "Institutional affiliation of the speaker" %}:</strong> {{ post.affiliation }}</p>
                                     {% endif %}
-                                    <div class="fb-like" data-href="{{ post.get_absolute_url }}" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
                                 </div>
                             </div>
                         {% elif post.publish and post.show_video and post.videos.all %}
@@ -133,7 +131,6 @@
                                     {% if post.affiliation %}
                                         <p><strong>{% trans "Institutional affiliation of the speaker" %}:</strong> {{ post.affiliation }}</p>
                                     {% endif %}
-                                    <div class="fb-like" data-href="{{ post.get_absolute_url }}" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
                                 </div>
                             </div>
                         {% else %}
@@ -166,7 +163,6 @@
                                         <p><strong>{% trans "Live streaming by Youtube" %}:</strong> <a href="{{ post.link_to_google }}" target="_blank">{{ post.link_to_google }}</a></p>
                                     {% endif %}
                                 {% endif %}
-                                <div class="fb-like" data-href="{{ post.get_absolute_url }}" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
                             </div>
                         {% endif %}
 
