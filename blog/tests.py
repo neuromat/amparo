@@ -3,7 +3,6 @@ import datetime
 
 from django.contrib.auth import get_user_model
 from django.core.urlresolvers import reverse
-from django.shortcuts import get_object_or_404
 from django.test import TestCase
 from django.test.client import RequestFactory
 
@@ -65,14 +64,3 @@ class BlogTests(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(Blog.objects.filter(banner=True)), 1)
 
-    def test_view_blog_post(self):
-        """
-        Testing view posts
-        """
-        post = ObjectsFactory.create_post('titulo', 'outro-titulo', 'body', datetime.datetime.now().date(), 'speaker',
-                                          False, False)
-        response = self.client.get(reverse('view_blog_post', kwargs={'slug': 'outro-titulo'}))
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(get_object_or_404(Blog, slug='outro-titulo'), post)
-        self.assertEqual(len(Blog.objects.all()), 3)
-        self.assertEqual(len(Blog.objects.filter(publish=False)), 1)

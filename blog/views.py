@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
+import datetime
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
 from django.shortcuts import render, get_object_or_404
 from models import Blog, Category
+from parler.utils import get_active_language_choices
 
 
 def index(request):
@@ -12,7 +14,14 @@ def index(request):
 
     :return:        Retorna os posts do blog
     """
-    blog_list = Blog.objects.active_translations()
+    next_lectures = Blog.objects.filter(
+        translations__language_code__in=get_active_language_choices(),
+        translations__date_time__gt=datetime.datetime.now()
+    ).order_by('translations__date_time')
+
+    next_lectures_ids = next_lectures.values_list('pk', flat=True)
+
+    blog_list = Blog.objects.active_translations().exclude(pk__in=next_lectures_ids)
     number_of_posts = 4
     paginator = Paginator(blog_list, number_of_posts)
     page = request.GET.get('page')
@@ -26,27 +35,9 @@ def index(request):
         # Se a página está fora do intervalo (por exemplo 9999), mostrar a última página de resultados.
         posts = paginator.page(paginator.num_pages)
 
-    context = {'posts': posts}
+    context = {'posts': posts, 'next_lectures': next_lectures}
 
     return render(request, 'blog/blog.html', context)
-
-
-def view_post(request, slug):
-    """
-    Função que mostra o conteúdo de um post.
-
-    :return:        Retorna o conteúdo do post
-    """
-    context = {'post': get_object_or_404(Blog, slug=slug)}
-    return render(request, 'blog/view_post.html', context)
-
-
-def view_category(request, slug):
-    category = get_object_or_404(Category, slug=slug)
-    posts = Blog.objects.filter(category=category)[:5]
-    context = {'category': category, 'posts': posts}
-
-    return render(request, 'blog/view_category.html', context)
 
 
 def search_posts(request):

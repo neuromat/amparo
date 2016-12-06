@@ -64,7 +64,7 @@ class Blog(TranslatableModel):
         return '%s' % self.title
 
     def to_be_held(self):
-        if self.date_time.date() >= datetime.datetime.today():
+        if self.date_time.date() >= datetime.date.today():
             return True
         return False
 
@@ -73,10 +73,6 @@ class Blog(TranslatableModel):
         if self.date_time <= datetime.datetime.now(tz_info):
             return True
         return False
-
-    @permalink
-    def get_absolute_url(self):
-        return 'view_blog_post', None, {'slug': self.slug}
 
     def save(self, *args, **kwargs):
         if self.banner and self.publish:
