@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+import datetime
+
 from django.conf import settings
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, render_to_response
@@ -26,11 +28,15 @@ def index(request):
 
     try:
         open_lecture = banner.get(publish=True)
+        if datetime.date.today() > open_lecture.date_time.date():
+            open_lecture = False
     except Blog.DoesNotExist:
         open_lecture = False
 
     try:
         private_lecture = banner.get(publish=False)
+        if datetime.date.today() > private_lecture.date_time.date():
+            private_lecture = False
     except Blog.DoesNotExist:
         private_lecture = False
 
