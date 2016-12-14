@@ -82,8 +82,6 @@ class Blog(TranslatableModel):
                 if latest_banner:
                     latest_banner.banner = False
                     latest_banner.save()
-                    latest_banner.publish = False
-                    latest_banner.save()
             except Blog.DoesNotExist:
                 pass
         elif self.banner and not self.publish:
