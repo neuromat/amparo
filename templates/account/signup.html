@@ -14,13 +14,13 @@
     <section id="password_reset">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-md-12 text-center">
                     <h1>{% trans "Sign Up" %}</h1>
                     <hr class="star-light">
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-md-12">
                     <p class="text-justify">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
 
                     <p class="text-justify">{% blocktrans %}
@@ -31,12 +31,47 @@
 
                     <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
                         {% csrf_token %}
-                        {{ form.as_p }}
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label style="font-size: 20px">{% trans "I am" %} <b style="color: red;">*</b></label>
+                                        {{ form.type_of_person }}
+                                        <span>{{ form.type_of_person.errors.as_text }}</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label style="font-size: 20px">{% trans "Email" %} <b style="color: red;">*</b></label>
+                                        {{ form.email }}
+                                        <span>{{ form.email.errors.as_text }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label style="font-size: 20px">{% trans "Password" %} <b style="color: red;">*</b></label>
+                                        {{ form.password1 }}
+                                        <span>{{ form.password1.errors.as_text }}</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label style="font-size: 20px">{% trans "Password (again)" %} <b style="color: red;">*</b></label>
+                                        {{ form.password2 }}
+                                        <span>{{ form.password2.errors.as_text }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         {% if redirect_field_value %}
                         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                         {% endif %}
                         <p class="text-justify">{% blocktrans %}By clicking Sign Up, you agree to the <a href="/pages/termos-de-uso">Terms of Use</a> and <a href="/pages/politica-de-privacidade">Privacy Policy</a>.{% endblocktrans %}</p>
-                        <button type="submit" class="btn btn-success btn-lg">{% trans "Sign Up" %} &raquo;</button>
+                        <button type="submit" class="btn btn-success btn-lg">{% trans "Sign Up" %}</button>
                     </form>
                 </div>
             </div>

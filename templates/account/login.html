@@ -1,6 +1,6 @@
 {% extends "account/base.html" %}
 
-{% load i18n %}
+{% load i18n staticfiles %}
 {% load account socialaccount %}
 
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
@@ -30,13 +30,18 @@
                         of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
                         for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
-                        <div class="socialaccount_ballot">
-                            <ul class="socialaccount_providers">
-                                {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-                            </ul>
+{#                        <div class="socialaccount_ballot">#}
+{#                            <ul class="socialaccount_providers">#}
+{#                                {% include "socialaccount/snippets/provider_list.html" with process="login" %}#}
+{#                            </ul>#}
+{##}
+{#                            <div class="login-or">{% trans 'or' %}</div>#}
+{#                        </div>#}
 
-                            <div class="login-or">{% trans 'or' %}</div>
-                        </div>
+                        <a href="{% provider_login_url "facebook" method="js_sdk" %}">
+                            <img src="{% static "images/facebook.jpg" %}" class="img-responsive" alt="Botão de autenticação via Facebook"/>
+                        </a>
+                        <br>
                         {% include "socialaccount/snippets/login_extra.html" %}
                     {% else %}
                         <p>{% blocktrans %}If you have not created an account yet, then please

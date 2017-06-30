@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
     'solo',
 ]
 
@@ -132,6 +133,14 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
+SOCIALACCOUNT_PROVIDERS = \
+    {'facebook':
+       {'METHOD': 'oauth2',
+        'SCOPE': ['public_profile'],
+        'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
+        'LOCALE_FUNC': lambda request: 'pt_BR',
+        'VERSION': 'v2.4'}}
+
 # Use this to see the email confirmation on terminal
 #EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
 
@@ -149,7 +158,12 @@ ACCOUNT_USERNAME_REQUIRED = False
 LOGIN_REDIRECT_URL='/'
 
 # Custom form to sign up
-ACCOUNT_SIGNUP_FORM_CLASS = 'users.forms.SignupForm'
+ACCOUNT_FORMS = {'signup': 'users.forms.UserSignupForm'}
+
+# Sign up using Facebook
+SOCIALACCOUNT_AUTO_SIGNUP = False
+SOCIALACCOUNT_FORMS = {'signup': 'users.forms.SocialSignUpForm'}
+SOCIALACCOUNT_EMAIL_VERIFICATION = False
 
 # Hide the "Remember me?"
 ACCOUNT_SESSION_REMEMBER = False
