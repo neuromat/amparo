@@ -38,14 +38,14 @@
                                     <div class="form-group">
                                         <label style="font-size: 20px">{% trans "I am" %} <b style="color: red;">*</b></label>
                                         {{ form.type_of_person }}
-                                        <span>{{ form.type_of_person.errors.as_text }}</span>
+                                        <span style="color: red;">{{ form.type_of_person.errors.as_text }}</span>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label style="font-size: 20px">{% trans "Email" %} <b style="color: red;">*</b></label>
                                         {{ form.email }}
-                                        <span>{{ form.email.errors.as_text }}</span>
+                                        <span style="color: red;">{{ form.email.errors.as_text }}</span>
                                     </div>
                                 </div>
                             </div>
@@ -54,14 +54,14 @@
                                     <div class="form-group">
                                         <label style="font-size: 20px">{% trans "Password" %} <b style="color: red;">*</b></label>
                                         {{ form.password1 }}
-                                        <span>{{ form.password1.errors.as_text }}</span>
+                                        <span style="color: red;">{{ form.password1.errors.as_text }}</span>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label style="font-size: 20px">{% trans "Password (again)" %} <b style="color: red;">*</b></label>
                                         {{ form.password2 }}
-                                        <span>{{ form.password2.errors.as_text }}</span>
+                                        <span style="color: red;">{{ form.password2.errors.as_text }}</span>
                                     </div>
                                 </div>
                             </div>
