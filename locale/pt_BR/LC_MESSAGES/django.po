@@ -885,6 +885,8 @@ msgid ""
 "You are about to use your %(provider_name)s account to login to "
 "%(site_name)s. As a final step, please complete the following form:"
 msgstr ""
+"Você vai utilizar a sua conta do %(provider_name)s para fazer login na "
+"%(site_name)s. Como último passo, preencha o seguinte formulário:"
 
 #: templates/socialaccount/signup.html:39 users/forms.py:19
 msgid "E-mail (optional)"
