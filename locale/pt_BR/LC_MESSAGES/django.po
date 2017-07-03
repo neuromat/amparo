@@ -958,3 +958,7 @@ msgid ""
 "fields"
 msgstr ""
 "Você deve selecionar o público-alvo e preencher os campos assunto e mensagem"
+
+#: account/adapter.py:53
+msgid "Too many failed login attempts. Try again later."
+msgstr "Muitas tentativas de login. Tente novamente mais tarde."
