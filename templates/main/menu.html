@@ -49,7 +49,7 @@
         <!-- Login or logout link  -->
         {% if user.is_authenticated %}
             <li>
-                <a data-toggle="dropdown" href="/"><span style="font-size: 0.85em;" class="glyphicon glyphicon-user"></span>&nbsp;{{ user.username }} <span class="caret"></span></a>
+                <a data-toggle="dropdown" href="/"><span style="font-size: 0.85em;" class="glyphicon glyphicon-user"></span>&nbsp;{% if user.first_name %}{{ user.first_name }}{% else %}{{ user.username }}{% endif %} <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li class="page-scroll"><a href="/accounts/password/change/">{% trans "Change password" %}</a></li>
                     {% if perms.user.view_list_of_users %}
