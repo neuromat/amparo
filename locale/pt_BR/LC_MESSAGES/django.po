@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-06 11:54-0200\n"
+"POT-Creation-Date: 2017-07-03 15:07-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,8 +52,8 @@ msgid "Institutional affiliation"
 msgstr "Vínculo institucional"
 
 #: blog/models.py:52 blog/templates/blog/blog.html:37
-#: blog/templates/blog/blog.html:111 blog/templates/blog/blog.html:132
-#: blog/templates/blog/blog.html:147 templates/main/default.html:67
+#: blog/templates/blog/blog.html:110 blog/templates/blog/blog.html:130
+#: blog/templates/blog/blog.html:144 templates/main/default.html:67
 #: templates/main/default.html:93
 msgid "Speaker"
 msgstr "Convidado(a)"
@@ -86,11 +86,11 @@ msgstr "Banner"
 msgid "Posted"
 msgstr "Publicado"
 
-#: blog/models.py:109 blog/models.py:112
+#: blog/models.py:107 blog/models.py:110
 msgid "Video"
 msgstr "Vídeo"
 
-#: blog/models.py:113
+#: blog/models.py:111
 msgid "Videos"
 msgstr "Vídeos"
 
@@ -104,15 +104,15 @@ msgid "Next lectures"
 msgstr "Próximas palestras"
 
 #: blog/templates/blog/blog.html:32 blog/templates/blog/blog.html:34
-#: blog/templates/blog/blog.html:106 blog/templates/blog/blog.html:108
-#: blog/templates/blog/blog.html:127 blog/templates/blog/blog.html:129
-#: blog/templates/blog/blog.html:142 blog/templates/blog/blog.html:144
+#: blog/templates/blog/blog.html:105 blog/templates/blog/blog.html:107
+#: blog/templates/blog/blog.html:125 blog/templates/blog/blog.html:127
+#: blog/templates/blog/blog.html:139 blog/templates/blog/blog.html:141
 #: users/templates/users/send_email.html:26
 msgid "Target audience"
 msgstr "Público-alvo"
 
-#: blog/templates/blog/blog.html:32 blog/templates/blog/blog.html:106
-#: blog/templates/blog/blog.html:127 blog/templates/blog/blog.html:142
+#: blog/templates/blog/blog.html:32 blog/templates/blog/blog.html:105
+#: blog/templates/blog/blog.html:125 blog/templates/blog/blog.html:139
 msgid ""
 "People with Parkinson's disease, family members, caregivers, students and "
 "professionals."
@@ -120,70 +120,70 @@ msgstr ""
 "Pessoas com doença de Parkinson, familiares, cuidadores, estudantes e "
 "profissionais"
 
-#: blog/templates/blog/blog.html:34 blog/templates/blog/blog.html:108
-#: blog/templates/blog/blog.html:129 blog/templates/blog/blog.html:144
+#: blog/templates/blog/blog.html:34 blog/templates/blog/blog.html:107
+#: blog/templates/blog/blog.html:127 blog/templates/blog/blog.html:141
 #: users/templates/users/send_email.html:29
 msgid "Professionals and students"
 msgstr "Profissionais e estudantes"
 
-#: blog/templates/blog/blog.html:36 blog/templates/blog/blog.html:110
-#: blog/templates/blog/blog.html:131 blog/templates/blog/blog.html:146
+#: blog/templates/blog/blog.html:36 blog/templates/blog/blog.html:109
+#: blog/templates/blog/blog.html:129 blog/templates/blog/blog.html:143
 #: templates/main/default.html:69 templates/main/default.html:95
 msgid "Date / Time"
 msgstr "Data / Hora"
 
-#: blog/templates/blog/blog.html:36 blog/templates/blog/blog.html:110
-#: blog/templates/blog/blog.html:131 blog/templates/blog/blog.html:146
+#: blog/templates/blog/blog.html:36 blog/templates/blog/blog.html:109
+#: blog/templates/blog/blog.html:129 blog/templates/blog/blog.html:143
 #: templates/main/default.html:69 templates/main/default.html:95
 msgid "Brasília time zone"
 msgstr "horário de Brasília"
 
-#: blog/templates/blog/blog.html:37 blog/templates/blog/blog.html:68
-#: blog/templates/blog/blog.html:111 blog/templates/blog/blog.html:132
-#: blog/templates/blog/blog.html:147 blog/templates/blog/blog.html:179
+#: blog/templates/blog/blog.html:37 blog/templates/blog/blog.html:67
+#: blog/templates/blog/blog.html:110 blog/templates/blog/blog.html:130
+#: blog/templates/blog/blog.html:144 blog/templates/blog/blog.html:175
 msgid "Curriculum"
 msgstr "Currículo"
 
-#: blog/templates/blog/blog.html:39 blog/templates/blog/blog.html:113
-#: blog/templates/blog/blog.html:134 blog/templates/blog/blog.html:149
+#: blog/templates/blog/blog.html:39 blog/templates/blog/blog.html:112
+#: blog/templates/blog/blog.html:132 blog/templates/blog/blog.html:146
 msgid "Institutional affiliation of the speaker"
 msgstr "Vínculo institucional do(a) convidado(a)"
 
 #: blog/templates/blog/blog.html:44 blog/templates/blog/blog.html:47
-#: blog/templates/blog/blog.html:154 blog/templates/blog/blog.html:157
+#: blog/templates/blog/blog.html:151 blog/templates/blog/blog.html:154
 msgid "Live streaming by IPTV"
 msgstr "Transmissão ao vivo pelo IPTV"
 
 #: blog/templates/blog/blog.html:53 blog/templates/blog/blog.html:56
-#: blog/templates/blog/blog.html:163 blog/templates/blog/blog.html:166
+#: blog/templates/blog/blog.html:160 blog/templates/blog/blog.html:163
 msgid "Live streaming by Youtube"
 msgstr "Transmissão ao vivo pelo Youtube"
 
-#: blog/templates/blog/blog.html:74 blog/templates/blog/blog.html:185
+#: blog/templates/blog/blog.html:73 blog/templates/blog/blog.html:181
 msgid "Close"
 msgstr "Fechar"
 
-#: blog/templates/blog/blog.html:91
+#: blog/templates/blog/blog.html:90
 msgid "Past lectures"
 msgstr "Palestras realizadas"
 
-#: blog/templates/blog/blog.html:199
+#: blog/templates/blog/blog.html:195
 msgid "No schedule found!"
 msgstr "Nenhuma programação encontrada!"
 
-#: blog/templates/blog/blog.html:211
+#: blog/templates/blog/blog.html:207
 msgid "page"
 msgstr "página"
 
-#: blog/templates/blog/blog.html:211
+#: blog/templates/blog/blog.html:207
 msgid "of"
 msgstr "de"
 
-#: blog/templates/blog/blog.html:223
+#: blog/templates/blog/blog.html:219
 msgid "previous"
 msgstr "anterior"
 
-#: blog/templates/blog/blog.html:227
+#: blog/templates/blog/blog.html:223
 msgid "next"
 msgstr "próximo"
 
@@ -331,7 +331,7 @@ msgstr ""
 msgid "Re-send Verification"
 msgstr ""
 
-#: templates/account/email.html:47
+#: templates/account/email.html:47 templates/socialaccount/connections.html:35
 msgid "Remove"
 msgstr ""
 
@@ -445,35 +445,35 @@ msgid ""
 msgstr ""
 
 #: templates/account/login.html:6 templates/account/login.html:19
-#: templates/account/login.html:53
+#: templates/account/login.html:50
 msgid "Sign In"
 msgstr ""
 
-#: templates/account/login.html:29
-#, python-format
-msgid ""
-"Please sign in with one\n"
-"                        of your existing third party accounts. Or, <a href="
-"\"%(signup_url)s\">sign up</a>\n"
-"                        for a %(site_name)s account and sign in below:"
-msgstr ""
+#: templates/account/login.html:26
+msgid "Don't have an account?"
+msgstr "Não tem uma conta?"
 
-#: templates/account/login.html:38
-msgid "or"
-msgstr ""
+#: templates/account/login.html:26 templates/account/signup.html:18
+#: templates/account/signup.html:74 templates/socialaccount/signup.html:18
+#: templates/socialaccount/signup.html:48
+msgid "Sign Up"
+msgstr "Cadastre-se"
+
+#: templates/account/login.html:26
+msgid "now"
+msgstr "agora"
 
 #: templates/account/login.html:42
-#, python-format
-msgid ""
-"If you have not created an account yet, then please\n"
-"                        <a href=\"%(signup_url)s\">sign up</a> first."
-msgstr ""
-"Você ainda não tem uma conta na rede AMPARO?\n"
-"                        <a href=\"%(signup_url)s\">Registre-se</a> agora."
-
-#: templates/account/login.html:52
 msgid "Forgot Password?"
-msgstr ""
+msgstr "Esqueceu a sua senha?"
+
+#: templates/account/login.html:58
+msgid "Or sign in using social network:"
+msgstr "Ou faça login usando uma rede social:"
+
+#: templates/account/login.html:62
+msgid "Login with Facebook"
+msgstr "Entre com o Facebook"
 
 #: templates/account/logout.html:5 templates/account/logout.html:18
 #: templates/account/logout.html:31
@@ -613,13 +613,9 @@ msgstr "para acessar a rede AMPARO"
 msgid "Set Password"
 msgstr ""
 
-#: templates/account/signup.html:5
+#: templates/account/signup.html:5 templates/socialaccount/signup.html:5
 msgid "Signup"
 msgstr ""
-
-#: templates/account/signup.html:18 templates/account/signup.html:39
-msgid "Sign Up"
-msgstr "Cadastre-se"
 
 #: templates/account/signup.html:24
 #, python-format
@@ -645,7 +641,24 @@ msgstr ""
 "são pessoais e intransferíveis. Nunca divulgue a sua senha.\n"
 "                        "
 
-#: templates/account/signup.html:38
+#: templates/account/signup.html:39 templates/socialaccount/signup.html:32
+#: users/forms.py:13 users/forms.py:31 users/models.py:24
+msgid "I am"
+msgstr "Eu sou"
+
+#: templates/account/signup.html:46 templates/contact_form/contact_form.html:30
+msgid "Email"
+msgstr "Email"
+
+#: templates/account/signup.html:55
+msgid "Password"
+msgstr "Senha"
+
+#: templates/account/signup.html:62
+msgid "Password (again)"
+msgstr "Senha (novamente)"
+
+#: templates/account/signup.html:73
 msgid ""
 "By clicking Sign Up, you agree to the <a href=\"/pages/termos-de-uso\">Terms "
 "of Use</a> and <a href=\"/pages/politica-de-privacidade\">Privacy Policy</a>."
@@ -725,10 +738,6 @@ msgstr "Contato"
 #: templates/contact_form/contact_form.html:26
 msgid "Your name"
 msgstr "Seu nome"
-
-#: templates/contact_form/contact_form.html:30
-msgid "Email"
-msgstr "Email"
 
 #: templates/contact_form/contact_form.html:31
 msgid "Your email"
@@ -815,29 +824,74 @@ msgstr "Sair"
 msgid "Login"
 msgstr ""
 
-#: users/admin.py:22
-msgid "Permissions"
+#: templates/socialaccount/authentication_error.html:5
+#: templates/socialaccount/authentication_error.html:18
+msgid "Social Network Login Failure"
 msgstr ""
 
-#: users/forms.py:14 users/forms.py:43
-msgid "Password"
-msgstr "Senha"
-
-#: users/forms.py:15
-msgid "Password confirmation"
-msgstr "Repita a senha"
-
-#: users/forms.py:26
-msgid "Passwords don't match"
-msgstr "Senhas não coincidem"
-
-#: users/forms.py:44
+#: templates/socialaccount/authentication_error.html:25
 msgid ""
-"Raw passwords are not stored, so there is no way to see this\n"
-"                                         user's password, but you can change "
-"the password using\n"
-"                                         <a href=/admin/password_change>this "
-"form</a>."
+"An error occurred while attempting to login via your social network account."
+msgstr ""
+
+#: templates/socialaccount/connections.html:5
+#: templates/socialaccount/connections.html:8
+msgid "Account Connections"
+msgstr ""
+
+#: templates/socialaccount/connections.html:11
+msgid ""
+"You can sign in to your account using any of the following third party "
+"accounts:"
+msgstr ""
+
+#: templates/socialaccount/connections.html:43
+msgid ""
+"You currently have no social network accounts connected to this account."
+msgstr ""
+
+#: templates/socialaccount/connections.html:46
+msgid "Add a 3rd Party Account"
+msgstr ""
+
+#: templates/socialaccount/login_cancelled.html:5
+#: templates/socialaccount/login_cancelled.html:9
+msgid "Login Cancelled"
+msgstr ""
+
+#: templates/socialaccount/login_cancelled.html:13
+#, python-format
+msgid ""
+"You decided to cancel logging in to our site using one of your existing "
+"accounts. If this was a mistake, please proceed to <a href=\"%(login_url)s"
+"\">sign in</a>."
+msgstr ""
+
+#: templates/socialaccount/messages/account_connected.txt:2
+msgid "The social account has been connected."
+msgstr ""
+
+#: templates/socialaccount/messages/account_connected_other.txt:2
+msgid "The social account is already connected to a different account."
+msgstr ""
+
+#: templates/socialaccount/messages/account_disconnected.txt:2
+msgid "The social account has been disconnected."
+msgstr ""
+
+#: templates/socialaccount/signup.html:24
+#, python-format
+msgid ""
+"You are about to use your %(provider_name)s account to login to "
+"%(site_name)s. As a final step, please complete the following form:"
+msgstr ""
+
+#: templates/socialaccount/signup.html:39 users/forms.py:19
+msgid "E-mail (optional)"
+msgstr ""
+
+#: users/admin.py:15
+msgid "Permissions"
 msgstr ""
 
 #: users/models.py:18
@@ -848,15 +902,11 @@ msgstr "Tipo"
 msgid "Types"
 msgstr "Tipos"
 
-#: users/models.py:24
-msgid "I am"
-msgstr "Eu sou"
-
-#: users/models.py:34
+#: users/models.py:31
 msgid "Can see the list of users"
 msgstr "Pode ver a lista de usuários"
 
-#: users/models.py:35
+#: users/models.py:32
 msgid "Can send email to users"
 msgstr "Pode enviar email para usuários"
 
@@ -906,4 +956,3 @@ msgid ""
 "fields"
 msgstr ""
 "Você deve selecionar o público-alvo e preencher os campos assunto e mensagem"
-

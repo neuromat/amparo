@@ -158,7 +158,7 @@ ACCOUNT_USERNAME_REQUIRED = False
 LOGIN_REDIRECT_URL='/'
 
 # Custom form to sign up
-ACCOUNT_FORMS = {'signup': 'users.forms.UserSignupForm'}
+ACCOUNT_FORMS = {'signup': 'users.forms.UserSignupForm', 'login': 'users.forms.CustomLoginForm'}
 
 # Sign up using Facebook
 SOCIALACCOUNT_AUTO_SIGNUP = False

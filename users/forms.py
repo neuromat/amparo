@@ -3,7 +3,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from allauth.account.adapter import get_adapter
 from allauth.account.utils import setup_user_email
-from allauth.account.forms import SignupForm
+from allauth.account.forms import LoginForm, SignupForm
 from allauth.socialaccount.forms import SignupForm as AllAuthSocialSignUpForm
 from models import Type
 
@@ -50,3 +50,11 @@ class UserSignupForm(SignupForm):
         self.custom_signup(request, user)
         setup_user_email(request, user, [])
         return user
+
+
+class CustomLoginForm(LoginForm):
+    def __init__(self, *args, **kwargs):
+        super(CustomLoginForm, self).__init__(*args, **kwargs)
+
+        for field in ['login', 'password']:
+            self.fields[field].widget.attrs['class'] = 'form-control'
