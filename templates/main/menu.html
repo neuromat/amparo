@@ -10,7 +10,7 @@
         {% if submenu %}
             {% get_pages as pages %}
                 <li>
-                    <a data-toggle="dropdown" href="/"><span style="font-size: 0.85em;" class="glyphicon glyphicon-star"></span>&nbsp;{% trans "The project" %} <span class="caret"></span></a>
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="/"><span style="font-size: 0.85em;" class="glyphicon glyphicon-star"></span>&nbsp;{% trans "The project" %} <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                     {% for page in pages %}
                         {% if page.submenu %}
