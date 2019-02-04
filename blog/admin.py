@@ -1,7 +1,12 @@
 from django.contrib import admin
 from parler.admin import TranslatableAdmin
 
-from models import Blog, Category, LectureVideo
+from models import Blog, Category, LectureFile, LectureVideo
+
+
+class LectureFileInline(admin.TabularInline):
+    model = LectureFile
+    extra = 1
 
 
 class LectureVideoInline(admin.TabularInline):
@@ -20,7 +25,7 @@ class BlogAdmin(TranslatableAdmin):
     list_display = ('title', 'speaker', 'date_time', 'publish', 'banner')
     list_display_links = ('title', )
     search_fields = ['translations__title', 'speaker']
-    inlines = (LectureVideoInline,)
+    inlines = [LectureFileInline, LectureVideoInline]
 
     def get_prepopulated_fields(self, request, obj=None):
         # Can't use prepopulated_fields= yet, but this is a workaround.

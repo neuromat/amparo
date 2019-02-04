@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+import os
 import datetime
 from embed_video.fields import EmbedVideoField
 
@@ -7,6 +8,12 @@ from django.db import models
 from django.db.models import permalink
 from django.utils.translation import ugettext_lazy as _
 from parler.models import TranslatableModel, TranslatedFields
+
+
+def lecture_path(instance, filename):
+    return 'lecture/{0}/{1}'.format(
+        instance.blog_post.posted, str(filename)
+    )
 
 
 class Category(models.Model):
@@ -109,3 +116,11 @@ class LectureVideo(models.Model):
     class Meta:
         verbose_name = _('Video')
         verbose_name_plural = _('Videos')
+
+
+class LectureFile(models.Model):
+    blog_post = models.ForeignKey(Blog, related_name='lecture_files')
+    file = models.FileField(_('File'), upload_to=lecture_path)
+
+    def filename(self):
+        return os.path.basename(self.file.name)

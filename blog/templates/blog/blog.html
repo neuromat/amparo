@@ -111,6 +111,14 @@
                                     {% if post.affiliation %}
                                         <p><strong>{% trans "Institutional affiliation of the speaker" %}:</strong> {{ post.affiliation }}</p>
                                     {% endif %}
+                                    {% if post.lecture_files.all %}
+                                        <p><strong>{% trans "File(s)" %}: </strong>
+                                            {% for item in post.lecture_files.all %}
+                                                <a href="{{item.file.url}}" target="_blank">{{ item.filename }}</a>
+                                                <br>
+                                            {% endfor %}
+                                        </p>
+                                    {% endif %}
                                 </div>
                             </div>
                         {% elif post.publish and post.show_video and post.videos.all %}
@@ -130,6 +138,14 @@
                                     <p><strong>{% trans "Speaker" %}:</strong> {{ post.speaker }} {% if post.resume_speaker %}<a href="#modal_post_{{ post.id }}" class="portfolio-link" data-toggle="modal"><span class="formatacao_fonte_cv">[{% trans "Curriculum" %}]</span></a>{% endif %}</p>
                                     {% if post.affiliation %}
                                         <p><strong>{% trans "Institutional affiliation of the speaker" %}:</strong> {{ post.affiliation }}</p>
+                                    {% endif %}
+                                    {% if post.lecture_files.all %}
+                                        <p><strong>{% trans "File(s)" %}: </strong>
+                                            {% for item in post.lecture_files.all %}
+                                                <a href="{{item.file.url}}" target="_blank">{{ item.filename }}</a>
+                                                <br>
+                                            {% endfor %}
+                                        </p>
                                     {% endif %}
                                 </div>
                             </div>
