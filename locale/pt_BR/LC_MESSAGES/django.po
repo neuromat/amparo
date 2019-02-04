@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-03 15:07-0300\n"
+"POT-Creation-Date: 2019-02-04 11:17-0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,81 +18,85 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: blog/models.py:19 blog/models.py:45 pages/models.py:18
+#: blog/models.py:26 blog/models.py:52 pages/models.py:18
 msgid "Title"
 msgstr "Título"
 
-#: blog/models.py:20 blog/models.py:55 pages/models.py:23
+#: blog/models.py:27 blog/models.py:62 pages/models.py:23
 msgid "Slug"
 msgstr "Rótulo"
 
-#: blog/models.py:30 blog/models.py:54
+#: blog/models.py:37 blog/models.py:61
 msgid "Category"
 msgstr "Categoria"
 
-#: blog/models.py:31
+#: blog/models.py:38
 msgid "Categories"
 msgstr "Categorias"
 
-#: blog/models.py:46 pages/models.py:20
+#: blog/models.py:53 pages/models.py:20
 msgid "Body"
 msgstr "Texto"
 
-#: blog/models.py:47
+#: blog/models.py:54
 msgid "Date/Time"
 msgstr "Data/Hora"
 
-#: blog/models.py:48
+#: blog/models.py:55
 msgid "Resume of speaker"
 msgstr "Currículo do palestrante"
 
-#: blog/models.py:49 templates/main/default.html:68
+#: blog/models.py:56 templates/main/default.html:68
 #: templates/main/default.html:94
 msgid "Institutional affiliation"
 msgstr "Vínculo institucional"
 
-#: blog/models.py:52 blog/templates/blog/blog.html:37
-#: blog/templates/blog/blog.html:110 blog/templates/blog/blog.html:130
-#: blog/templates/blog/blog.html:144 templates/main/default.html:67
+#: blog/models.py:59 blog/templates/blog/blog.html:37
+#: blog/templates/blog/blog.html:110 blog/templates/blog/blog.html:138
+#: blog/templates/blog/blog.html:160 templates/main/default.html:67
 #: templates/main/default.html:93
 msgid "Speaker"
 msgstr "Convidado(a)"
 
-#: blog/models.py:53
+#: blog/models.py:60
 msgid "Moderator"
 msgstr "Moderador(a)"
 
-#: blog/models.py:56
+#: blog/models.py:63
 msgid "Image"
 msgstr "Imagem"
 
-#: blog/models.py:57
+#: blog/models.py:64
 msgid "IPTV"
 msgstr ""
 
-#: blog/models.py:58
+#: blog/models.py:65
 msgid "Google"
 msgstr ""
 
-#: blog/models.py:59
+#: blog/models.py:66
 msgid "Publish"
 msgstr "Público"
 
-#: blog/models.py:60
+#: blog/models.py:67
 msgid "Banner"
 msgstr "Banner"
 
-#: blog/models.py:61 pages/models.py:34
+#: blog/models.py:68 pages/models.py:34
 msgid "Posted"
 msgstr "Publicado"
 
-#: blog/models.py:107 blog/models.py:110
+#: blog/models.py:114 blog/models.py:117
 msgid "Video"
 msgstr "Vídeo"
 
-#: blog/models.py:111
+#: blog/models.py:118
 msgid "Videos"
 msgstr "Vídeos"
+
+#: blog/models.py:123
+msgid "File"
+msgstr "Arquivo"
 
 #: blog/templates/blog/blog.html:16 templates/main/default.html:131
 #: templates/main/menu.html:43
@@ -105,14 +109,14 @@ msgstr "Próximas palestras"
 
 #: blog/templates/blog/blog.html:32 blog/templates/blog/blog.html:34
 #: blog/templates/blog/blog.html:105 blog/templates/blog/blog.html:107
-#: blog/templates/blog/blog.html:125 blog/templates/blog/blog.html:127
-#: blog/templates/blog/blog.html:139 blog/templates/blog/blog.html:141
+#: blog/templates/blog/blog.html:133 blog/templates/blog/blog.html:135
+#: blog/templates/blog/blog.html:155 blog/templates/blog/blog.html:157
 #: users/templates/users/send_email.html:26
 msgid "Target audience"
 msgstr "Público-alvo"
 
 #: blog/templates/blog/blog.html:32 blog/templates/blog/blog.html:105
-#: blog/templates/blog/blog.html:125 blog/templates/blog/blog.html:139
+#: blog/templates/blog/blog.html:133 blog/templates/blog/blog.html:155
 msgid ""
 "People with Parkinson's disease, family members, caregivers, students and "
 "professionals."
@@ -121,45 +125,45 @@ msgstr ""
 "profissionais"
 
 #: blog/templates/blog/blog.html:34 blog/templates/blog/blog.html:107
-#: blog/templates/blog/blog.html:127 blog/templates/blog/blog.html:141
+#: blog/templates/blog/blog.html:135 blog/templates/blog/blog.html:157
 #: users/templates/users/send_email.html:29
 msgid "Professionals and students"
 msgstr "Profissionais e estudantes"
 
 #: blog/templates/blog/blog.html:36 blog/templates/blog/blog.html:109
-#: blog/templates/blog/blog.html:129 blog/templates/blog/blog.html:143
+#: blog/templates/blog/blog.html:137 blog/templates/blog/blog.html:159
 #: templates/main/default.html:69 templates/main/default.html:95
 msgid "Date / Time"
 msgstr "Data / Hora"
 
 #: blog/templates/blog/blog.html:36 blog/templates/blog/blog.html:109
-#: blog/templates/blog/blog.html:129 blog/templates/blog/blog.html:143
+#: blog/templates/blog/blog.html:137 blog/templates/blog/blog.html:159
 #: templates/main/default.html:69 templates/main/default.html:95
 msgid "Brasília time zone"
 msgstr "horário de Brasília"
 
 #: blog/templates/blog/blog.html:37 blog/templates/blog/blog.html:67
-#: blog/templates/blog/blog.html:110 blog/templates/blog/blog.html:130
-#: blog/templates/blog/blog.html:144 blog/templates/blog/blog.html:175
+#: blog/templates/blog/blog.html:110 blog/templates/blog/blog.html:138
+#: blog/templates/blog/blog.html:160 blog/templates/blog/blog.html:191
 msgid "Curriculum"
 msgstr "Currículo"
 
 #: blog/templates/blog/blog.html:39 blog/templates/blog/blog.html:112
-#: blog/templates/blog/blog.html:132 blog/templates/blog/blog.html:146
+#: blog/templates/blog/blog.html:140 blog/templates/blog/blog.html:162
 msgid "Institutional affiliation of the speaker"
 msgstr "Vínculo institucional do(a) convidado(a)"
 
 #: blog/templates/blog/blog.html:44 blog/templates/blog/blog.html:47
-#: blog/templates/blog/blog.html:151 blog/templates/blog/blog.html:154
+#: blog/templates/blog/blog.html:167 blog/templates/blog/blog.html:170
 msgid "Live streaming by IPTV"
 msgstr "Transmissão ao vivo pelo IPTV"
 
 #: blog/templates/blog/blog.html:53 blog/templates/blog/blog.html:56
-#: blog/templates/blog/blog.html:160 blog/templates/blog/blog.html:163
+#: blog/templates/blog/blog.html:176 blog/templates/blog/blog.html:179
 msgid "Live streaming by Youtube"
 msgstr "Transmissão ao vivo pelo Youtube"
 
-#: blog/templates/blog/blog.html:73 blog/templates/blog/blog.html:181
+#: blog/templates/blog/blog.html:73 blog/templates/blog/blog.html:197
 msgid "Close"
 msgstr "Fechar"
 
@@ -167,23 +171,27 @@ msgstr "Fechar"
 msgid "Past lectures"
 msgstr "Palestras realizadas"
 
-#: blog/templates/blog/blog.html:195
+#: blog/templates/blog/blog.html:115 blog/templates/blog/blog.html:143
+msgid "File(s)"
+msgstr "Arquivo(s)"
+
+#: blog/templates/blog/blog.html:211
 msgid "No schedule found!"
 msgstr "Nenhuma programação encontrada!"
 
-#: blog/templates/blog/blog.html:207
+#: blog/templates/blog/blog.html:223
 msgid "page"
 msgstr "página"
 
-#: blog/templates/blog/blog.html:207
+#: blog/templates/blog/blog.html:223
 msgid "of"
 msgstr "de"
 
-#: blog/templates/blog/blog.html:219
+#: blog/templates/blog/blog.html:235
 msgid "previous"
 msgstr "anterior"
 
-#: blog/templates/blog/blog.html:223
+#: blog/templates/blog/blog.html:239
 msgid "next"
 msgstr "próximo"
 
@@ -445,7 +453,7 @@ msgid ""
 msgstr ""
 
 #: templates/account/login.html:6 templates/account/login.html:19
-#: templates/account/login.html:50
+#: templates/account/login.html:52
 msgid "Sign In"
 msgstr ""
 
@@ -463,15 +471,15 @@ msgstr "Cadastre-se"
 msgid "now"
 msgstr "agora"
 
-#: templates/account/login.html:42
+#: templates/account/login.html:44
 msgid "Forgot Password?"
 msgstr "Esqueceu a sua senha?"
 
-#: templates/account/login.html:58
+#: templates/account/login.html:60
 msgid "Or sign in using social network:"
 msgstr "Ou faça login usando uma rede social:"
 
-#: templates/account/login.html:62
+#: templates/account/login.html:64
 msgid "Login with Facebook"
 msgstr "Entre com o Facebook"
 
@@ -855,11 +863,11 @@ msgid "Add a 3rd Party Account"
 msgstr ""
 
 #: templates/socialaccount/login_cancelled.html:5
-#: templates/socialaccount/login_cancelled.html:9
+#: templates/socialaccount/login_cancelled.html:19
 msgid "Login Cancelled"
 msgstr ""
 
-#: templates/socialaccount/login_cancelled.html:13
+#: templates/socialaccount/login_cancelled.html:27
 #, python-format
 msgid ""
 "You decided to cancel logging in to our site using one of your existing "
@@ -958,7 +966,3 @@ msgid ""
 "fields"
 msgstr ""
 "Você deve selecionar o público-alvo e preencher os campos assunto e mensagem"
-
-#: account/adapter.py:53
-msgid "Too many failed login attempts. Try again later."
-msgstr "Muitas tentativas de login. Tente novamente mais tarde."
