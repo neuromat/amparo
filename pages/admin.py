@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 from parler.admin import TranslatableAdmin
 
-from models import Page
+from .models import Page
 
 
 class PageAdmin(TranslatableAdmin):

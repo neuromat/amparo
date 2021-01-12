@@ -1,7 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.test import TestCase
 
-from models import CustomUser, Type
+from .models import CustomUser, Type
 
 # Create your tests here.
 USER_USERNAME = 'myadmin'

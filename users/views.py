@@ -12,7 +12,7 @@ from django.shortcuts import render
 from django.utils.translation import ugettext_lazy as _
 from jsonrpc_requests import Server, TransportError
 
-from models import CustomUser
+from .models import CustomUser
 
 
 class ABCSearchEngine:

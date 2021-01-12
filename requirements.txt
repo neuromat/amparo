@@ -1,8 +1,9 @@
 Django==1.9.8
-django-embed-video==1.1.0
+django-embed-video==1.1.2
 django-contact-form==1.2
 django-parler==1.6.5
 django-allauth==0.27.0
 jsonrpc-requests==0.3
 django-solo==1.1.2
 Pillow==3.3.1
+psycopg2==2.8.6

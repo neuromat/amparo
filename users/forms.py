@@ -5,7 +5,7 @@ from allauth.account.adapter import get_adapter
 from allauth.account.utils import setup_user_email
 from allauth.account.forms import LoginForm, SignupForm
 from allauth.socialaccount.forms import SignupForm as AllAuthSocialSignUpForm
-from models import Type
+from .models import Type
 
 
 class SocialSignUpForm(AllAuthSocialSignUpForm):

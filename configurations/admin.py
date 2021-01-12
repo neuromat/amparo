@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import ProjectLogo, ProjectName
+from .models import ProjectLogo, ProjectName
 from solo.admin import SingletonModelAdmin
 
 

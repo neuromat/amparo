@@ -216,6 +216,6 @@ MEDIA_URL = '/media/'
 GOOGLE_ANALYTICS_PROPERTY_ID = 'UA-XXXXXX-X'
 
 try:
-    from settings_local import *
+    from .settings_local import *
 except ImportError:
     pass
