@@ -53,6 +53,7 @@ PROJECT_APPS = (
     'configurations',
     'pages',
     'users',
+    'search',
 )
 
 INSTALLED_APPS += PROJECT_APPS

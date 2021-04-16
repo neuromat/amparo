@@ -110,7 +110,16 @@
         Antes do Content
     </div>
 
-    <div> Busca: </div>
+    <div>
+        <form action="{% url 'search:findresults' %}" method="post">
+            {% csrf_token %}
+            <label for="busca">Pesquisar: </label>
+            <input id="busca" type="text" name="busca"
+                   value="{{ valor_inicial }}">
+            <input type="submit" value="OK">
+        </form>
+    </div>
+
     {% block content %}{% endblock %}
 
     <div style="background-color: #c1e2b3">
