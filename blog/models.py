@@ -9,6 +9,8 @@ from django.db.models import permalink
 from django.utils.translation import ugettext_lazy as _
 from parler.models import TranslatableModel, TranslatedFields
 
+from search.models import PalavraChave
+
 
 def lecture_path(instance, filename):
     return 'lecture/{0}/{1}'.format(
@@ -66,6 +68,7 @@ class Blog(TranslatableModel):
     publish = models.BooleanField(_('Publish'), default=True)
     banner = models.BooleanField(_('Banner'), default=False)
     posted = models.DateField(_('Posted'), auto_now_add=True)
+    palavras = models.ManyToManyField(PalavraChave)
 
     def __unicode__(self):
         return '%s' % self.title
@@ -124,3 +127,4 @@ class LectureFile(models.Model):
 
     def filename(self):
         return os.path.basename(self.file.name)
+
