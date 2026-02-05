@@ -1,0 +1,22 @@
+services:
+  web:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "${PORT:-5000}:5000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      FLASK_ENV: production
+      SECRET_KEY: ${SECRET_KEY:?SECRET_KEY is required}
+      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-}
+      DB_NAME: ${DB_NAME:-amparoapp}
+      DB_USER: ${DB_USER:-admin}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_HOST: ${DB_HOST:-host.docker.internal}
+      DB_PORT: ${DB_PORT:-5432}
+    volumes:
+      - flask_sessions:/app/flask_session
+
+volumes:
+  flask_sessions:
