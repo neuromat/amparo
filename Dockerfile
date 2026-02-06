@@ -7,6 +7,7 @@ WORKDIR /app/frontend
 
 # Install dependencies first (cache layer)
 COPY frontend/package.json frontend/package-lock.json ./
+RUN npm install 
 RUN npm ci
 
 # Copy frontend source and build
