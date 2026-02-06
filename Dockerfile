@@ -5,14 +5,10 @@ FROM node:20-alpine AS frontend-build
 
 WORKDIR /app/frontend
 
-# Install dependencies first (cache layer)
-COPY frontend/package.json frontend/package-lock.json ./
+COPY frontend/package*.json ./
 RUN npm install 
-RUN npm ci
-
-# Copy frontend source and build
-COPY frontend/ ./
-RUN npm run build
+COPY frontend/ ./ 
+RUN npm run build 
 
 # ==========================================
 # Stage 2: Python runtime
