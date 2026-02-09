@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, User, Dumbbell, ChevronLeft, ChevronRight, Clock, Award } from 'lucide-react';
 import { API_ENDPOINTS } from '@/config/api';
-import type { Exercicio, ExerciciosResponse } from '@/types/content';
+import type { ExerciciosResponse } from '@/types/content';
 
 export function ExerciciosList() {
   const [searchParams, setSearchParams] = useSearchParams();
