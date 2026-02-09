@@ -8,7 +8,7 @@ import { API_ENDPOINTS } from '@/config/api';
 import type { ExerciciosResponse } from '@/types/content';
 
 export function ExerciciosList() {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const searchQuery = searchParams.get('search') || '';
   const subcategoryParam = searchParams.get('subcategory') || 'all';
   const [data, setData] = useState<ExerciciosResponse | null>(null);
