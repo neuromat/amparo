@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, User, BookOpen, ChevronLeft, ChevronRight, FileText, Link as LinkIcon, Clock, Play } from 'lucide-react';
 import { API_ENDPOINTS } from '@/config/api';
-import type { Estudo, EstudosResponse } from '@/types/content';
+import type { EstudosResponse } from '@/types/content';
 
 export function EstudosList() {
   const [searchParams] = useSearchParams();
