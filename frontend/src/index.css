@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Paleta 2 - Confiança e Calma */
+    /* Azul Principal: #1E6FD9 */
+    --background: 40 100% 97%; /* #FFF8F0 - Creme suave */
+    --foreground: 0 0% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 20%;
+
+    --primary: 212 76% 49%; /* #1E6FD9 - Azul Principal */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 180 38% 76%; /* #A8DADC - Azul Céu */
+    --secondary-foreground: 0 0% 20%;
+
+    --muted: 240 67% 94%; /* #E6E6FA - Lavanda Calmante */
+    --muted-foreground: 0 0% 61%; /* #9B9B9B - Cinza Quente */
+
+    --accent: 240 67% 94%; /* #E6E6FA - Lavanda */
+    --accent-foreground: 212 76% 49%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 67% 94%; /* #E6E6FA - Lavanda suave */
+    --input: 240 67% 94%;
+    --ring: 212 76% 49%; /* Azul Principal */
+
+    --radius: 0.75rem;
+
+    /* Cores customizadas da paleta */
+    --peach: 22 100% 93%; /* #FFE5D4 - Pêssego Suave */
+    --lavender: 240 67% 94%; /* #E6E6FA - Lavanda */
+    --sky-blue: 180 38% 76%; /* #A8DADC - Azul Céu */
+    --cream: 40 100% 97%; /* #FFF8F0 - Creme */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Compatibilidade com classes Bootstrap de video embed (conteúdo legado) */
+.embed-responsive {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.embed-responsive-16by9::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Iframes dentro de prose (páginas estáticas) sem classes Bootstrap */
+.prose iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 0.5rem;
+}

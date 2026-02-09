@@ -1,8 +1,0 @@
-{% load account %}{% user_display user as user_display %}{% load i18n %}{% autoescape off %}{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Hello!
-
-To complete the account creation process on the site {{ site_domain }} we need you to confirm your email address. To confirm this is correct, go to {{ activate_url }}
-
-If you did not request any registration, just ignore this email.
-{% endblocktrans %}{% endautoescape %}
-{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Thank you for using {{ site_name }}!
-{{ site_domain }}{% endblocktrans %}
