@@ -26,7 +26,7 @@ interface PalestrasResponse {
 }
 
 export function Blog() {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const searchQuery = searchParams.get('search') || '';
   const subcategoryParam = searchParams.get('subcategory') || 'all';
   const [data, setData] = useState<PalestrasResponse | null>(null);
