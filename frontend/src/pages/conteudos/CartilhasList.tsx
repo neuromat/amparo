@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, User, FileText, ChevronLeft, ChevronRight, Download, Building2 } from 'lucide-react';
 import { API_ENDPOINTS } from '@/config/api';
-import type { Cartilha, CartilhasResponse } from '@/types/content';
+import type { CartilhasResponse } from '@/types/content';
 
 export function CartilhasList() {
   const [searchParams] = useSearchParams();
