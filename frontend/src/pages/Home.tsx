@@ -4,19 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Logo } from '@/components/Logo';
-import { Users, Video, BookOpen, ArrowRight, Play, ChevronLeft, ChevronRight, Mail, Phone, User, Heart, Dumbbell, FileText } from 'lucide-react';
-import { API_ENDPOINTS, API_BASE_URL } from '@/config/api';
-
-interface Stats {
-  total_usuarios: number;
-  total_palestras: number;
-  total_videos: number;
-  total_exercicios: number;
-  total_estudos: number;
-  total_cartilhas: number;
-  total_conteudos: number;
-  usuarios_por_tipo: Record<string, number>;
-}
+import { Video, BookOpen, ArrowRight, Play, ChevronLeft, ChevronRight, Mail, Phone, User, Heart, Users } from 'lucide-react';
+import { API_BASE_URL } from '@/config/api';
 
 interface LatestVideo {
   id: number;
@@ -29,7 +18,6 @@ interface LatestVideo {
 }
 
 export function Home() {
-  const [stats, setStats] = useState<Stats | null>(null);
   const [latestVideos, setLatestVideos] = useState<LatestVideo[]>([]);
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -87,12 +75,6 @@ export function Home() {
   };
 
   useEffect(() => {
-    // Carregar estatísticas
-    fetch(API_ENDPOINTS.stats)
-      .then(res => res.json())
-      .then(data => setStats(data))
-      .catch(err => console.error('Erro ao carregar estatísticas:', err));
-
     // Carregar 6 vídeos mais recentes de todas as categorias
     fetch(`${API_BASE_URL}/api/latest-videos?limit=6`)
       .then(res => res.json())
@@ -165,89 +147,6 @@ export function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      {stats && (
-        <section className="py-16 px-4 bg-white">
-          <div className="container mx-auto max-w-6xl">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold text-primary mb-2">Nossos Números</h2>
-              <p className="text-muted-foreground">Conteúdo disponível para você</p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-              {/* Card Usuários */}
-              <Card className="border-2 border-[#E6E6FA] hover:shadow-lg transition-shadow">
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">Usuários</CardTitle>
-                  <Users className="h-5 w-5 text-muted-foreground" />
-                </CardHeader>
-                <CardContent>
-                  <div className="text-3xl font-bold text-primary">{stats.total_usuarios.toLocaleString('pt-BR')}</div>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    Membros ativos
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Card Palestras */}
-              <Card className="border-2 border-[#E6E6FA] hover:shadow-lg transition-shadow">
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">Palestras</CardTitle>
-                  <Play className="h-5 w-5 text-muted-foreground" />
-                </CardHeader>
-                <CardContent>
-                  <div className="text-3xl font-bold text-primary">{stats.total_palestras}</div>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    Vídeos educacionais
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Card Exercícios */}
-              <Card className="border-2 border-[#E6E6FA] hover:shadow-lg transition-shadow">
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">Exercícios</CardTitle>
-                  <Dumbbell className="h-5 w-5 text-muted-foreground" />
-                </CardHeader>
-                <CardContent>
-                  <div className="text-3xl font-bold text-primary">{stats.total_exercicios}</div>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    Atividades físicas
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Card Estudos */}
-              <Card className="border-2 border-[#E6E6FA] hover:shadow-lg transition-shadow">
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">Pesquisas</CardTitle>
-                  <BookOpen className="h-5 w-5 text-muted-foreground" />
-                </CardHeader>
-                <CardContent>
-                  <div className="text-3xl font-bold text-primary">{stats.total_estudos}</div>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    Artigos e materiais
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Card Cartilhas */}
-              <Card className="border-2 border-[#E6E6FA] hover:shadow-lg transition-shadow">
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">Cartilhas</CardTitle>
-                  <FileText className="h-5 w-5 text-muted-foreground" />
-                </CardHeader>
-                <CardContent>
-                  <div className="text-3xl font-bold text-primary">{stats.total_cartilhas}</div>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    PDFs disponíveis
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* Latest Videos Carousel Section */}
       {latestVideos.length > 0 && (

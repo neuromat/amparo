@@ -10,6 +10,7 @@ import { Blog } from './pages/Blog';
 import { PalestraDetail } from './pages/PalestraDetail';
 import { Page } from './pages/Page';
 import { PesquisadorForm } from './pages/PesquisadorForm';
+import { SearchResults } from './pages/SearchResults';
 
 // Páginas de Conteúdos
 import { ExerciciosList } from './pages/conteudos/ExerciciosList';
@@ -36,6 +37,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="cadastro-pesquisador" element={<PesquisadorForm />} />
+            <Route path="search" element={<SearchResults />} />
 
             {/* Rota Admin (protegida) */}
             <Route path="admin" element={

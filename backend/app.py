@@ -999,6 +999,108 @@ def get_conteudos_stats():
     })
 
 
+@app.route('/api/search', methods=['GET'])
+def global_search():
+    """Busca global em palestras, exercícios, estudos e cartilhas"""
+    q = request.args.get('q', '').strip()
+    if not q or len(q) < 2:
+        return jsonify({"results": [], "total": 0})
+
+    search_term = f'%{q}%'
+
+    # Buscar palestras
+    palestras = query_all("""
+        SELECT b.id, t.title, b.speaker, t.affiliation, t.date_time,
+               b.subcategory
+        FROM blog_blog_translation t
+        JOIN blog_blog b ON b.id = t.master_id
+        WHERE t.language_code = 'pt-br'
+          AND (t.title ILIKE %s OR b.speaker ILIKE %s
+               OR t.affiliation ILIKE %s OR t.body ILIKE %s)
+        ORDER BY t.date_time DESC
+        LIMIT 10
+    """, (search_term, search_term, search_term, search_term))
+
+    # Buscar exercícios
+    exercicios = query_all("""
+        SELECT id, title, description, instructor, published_date
+        FROM exercicios
+        WHERE title ILIKE %s OR description ILIKE %s
+              OR instructor ILIKE %s OR body ILIKE %s
+        ORDER BY published_date DESC
+        LIMIT 10
+    """, (search_term, search_term, search_term, search_term))
+
+    # Buscar estudos
+    estudos = query_all("""
+        SELECT id, title, description, author, published_date
+        FROM estudos
+        WHERE title ILIKE %s OR description ILIKE %s
+              OR author ILIKE %s OR body ILIKE %s
+        ORDER BY published_date DESC
+        LIMIT 10
+    """, (search_term, search_term, search_term, search_term))
+
+    # Buscar cartilhas
+    cartilhas = query_all("""
+        SELECT lf.id, t.title, t.body as description, b.speaker,
+               t.date_time as published_date
+        FROM blog_lecturefile lf
+        JOIN blog_blog_translation t ON t.master_id = lf.blog_post_id AND t.language_code = 'pt-br'
+        JOIN blog_blog b ON b.id = lf.blog_post_id
+        WHERE t.title ILIKE %s OR t.body ILIKE %s OR b.speaker ILIKE %s
+        ORDER BY t.date_time DESC
+        LIMIT 10
+    """, (search_term, search_term, search_term))
+
+    results = []
+
+    for r in palestras:
+        results.append({
+            "id": r['id'],
+            "type": "palestra",
+            "title": r['title'],
+            "subtitle": r['speaker'] or r['affiliation'] or '',
+            "date": r['date_time'].isoformat() if r['date_time'] else None,
+            "link": f"/conteudos/palestras/{r['id']}"
+        })
+
+    for r in exercicios:
+        results.append({
+            "id": r['id'],
+            "type": "exercicio",
+            "title": r['title'] or '',
+            "subtitle": r['instructor'] or r['description'] or '',
+            "date": r['published_date'].isoformat() if r['published_date'] else None,
+            "link": f"/conteudos/exercicios/{r['id']}"
+        })
+
+    for r in estudos:
+        results.append({
+            "id": r['id'],
+            "type": "estudo",
+            "title": r['title'] or '',
+            "subtitle": r['author'] or r['description'] or '',
+            "date": r['published_date'].isoformat() if r['published_date'] else None,
+            "link": f"/conteudos/estudos/{r['id']}"
+        })
+
+    for r in cartilhas:
+        results.append({
+            "id": r['id'],
+            "type": "cartilha",
+            "title": r['title'] or 'Cartilha',
+            "subtitle": r['speaker'] or '',
+            "date": r['published_date'].isoformat() if r['published_date'] else None,
+            "link": f"/conteudos/cartilhas/{r['id']}"
+        })
+
+    # Ordenar por data (mais recentes primeiro)
+    results.sort(key=lambda x: x['date'] or '', reverse=True)
+
+    return jsonify({"results": results, "total": len(results)})
+
+
 @app.route('/api/pages', methods=['GET'])
 def get_pages():
     """Retorna páginas estáticas"""
