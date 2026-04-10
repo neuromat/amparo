@@ -14,7 +14,7 @@ export function Layout() {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      navigate(`/blog?search=${encodeURIComponent(searchQuery.trim())}`);
+      navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
       setSearchQuery('');
       setMobileMenuOpen(false);
     }
@@ -144,7 +144,7 @@ export function Layout() {
               <div className="relative">
                 <input
                   type="text"
-                  placeholder="Buscar palestras..."
+                  placeholder="Buscar conteúdos..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-64 px-4 py-2 pl-10 rounded-full border-2 border-[#E6E6FA] focus:border-[#A8DADC] focus:outline-none focus:ring-2 focus:ring-[#A8DADC]/20 transition-all"
