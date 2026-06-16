@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, User, ArrowLeft, FileText, Download, Building2 } from 'lucide-react';
-import { API_ENDPOINTS } from '@/config/api';
+import { API_ENDPOINTS, API_BASE_URL } from '@/config/api';
 import type { Cartilha } from '@/types/content';
 
 export function CartilhaDetail() {
@@ -163,19 +163,16 @@ export function CartilhaDetail() {
               <p className="text-sm text-muted-foreground mb-4">
                 Baixe o material completo em formato PDF
               </p>
-              <div className="mb-6">
-                <code className="bg-muted px-3 py-2 rounded text-xs block max-w-md mx-auto overflow-hidden text-ellipsis">
-                  {cartilha.pdf_file}
-                </code>
-              </div>
-              <Button className="gap-2 bg-red-700 hover:bg-red-800" disabled>
-                <Download className="w-4 h-4" />
-                Baixar PDF
-                <span className="text-xs ml-2">(link mockup)</span>
-              </Button>
-              <p className="text-xs text-muted-foreground mt-4">
-                Este é um link de exemplo. Em produção, o download real estará disponível.
-              </p>
+              <a
+                href={`${API_BASE_URL}/${cartilha.pdf_file}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="gap-2 bg-red-700 hover:bg-red-800">
+                  <Download className="w-4 h-4" />
+                  Baixar PDF
+                </Button>
+              </a>
             </div>
           </CardContent>
         </Card>
